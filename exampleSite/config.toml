@@ -1,5 +1,5 @@
 baseURL = "gethugothemes.com"
-theme = "doclist"
+theme = "dot"
 
 
 [params]
@@ -19,7 +19,7 @@ whiteColor = "#ffffff"
   title = "Doc List"
   dateFormat = "2 January 2006"
   home = "Home"
-  logo = "DOC LIST"
+  logo = "Dot"
   copyright = "The Hugo Documents are copyright © gethugothemes 2018."
 
     # navigation
