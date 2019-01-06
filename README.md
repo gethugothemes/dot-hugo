@@ -4,6 +4,9 @@ Dot, a responsive and feature reach documentation theme ever build in hugo eco s
 
 [Demo](https://demo.gethugothemes.com/dot/) 
 
+## Screenshots
+
+![dot-showcase](https://raw.githubusercontent.com/Gethugothemes/dot-hugo-documentation-theme/master/images/screenshot.png)
 
 ## Main features
 
