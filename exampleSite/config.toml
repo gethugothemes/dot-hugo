@@ -1,0 +1,208 @@
+baseURL = "gethugothemes.com"
+theme = "doclist"
+
+
+[params]
+primaryColor = "#02007e"
+secondaryColor = "#f9f9f9"
+textColor = "#636363"
+textColorDark = "#242738"
+whiteColor = "#ffffff"
+
+[Languages]
+
+  # English Language
+  [Languages.en]
+  languageName = "En"
+  weight = 1
+  languageCode = "en-us"
+  title = "Doc List"
+  dateFormat = "2 January 2006"
+  home = "Home"
+  logo = "DOC LIST"
+  copyright = "The Hugo Documents are copyright © gethugothemes 2018."
+
+    # navigation
+    [Languages.en.menu]
+    
+      [[Languages.en.menu.main]]
+        weight = 2
+        name = "Faq"
+        url = "/faq"
+        
+      [[Languages.en.menu.main]]
+        weight = 2
+        name = "contact"
+        url = "/contact"
+        
+      [[Languages.en.menu.main]]
+        weight = 2
+        name = "pages"
+        url = "/pages"
+        hasChildren = true
+
+          [[Languages.en.menu.main]]
+          parent = "pages"
+          name = "Elements"
+          URL = "/elements"
+          weight = 1
+
+          [[Languages.en.menu.main]]
+          parent = "pages"
+          name = "Installation"
+          URL = "/installation"
+          weight = 2
+
+          [[Languages.en.menu.main]]
+          parent = "pages"
+          name = "Billing and Pricing"
+          URL = "/billing-pricing"
+          weight = 3
+
+          [[Languages.en.menu.main]]
+          parent = "pages"
+          name = "Features"
+          URL = "/features"
+          weight = 4
+
+
+
+
+    # banner
+    [Languages.en.params.banner]
+      title = "Support Center & Knowledge base"
+      description = "Find advice and answers from our support team fast or get in touch"
+      image = "images/banner.jpg"
+      placeholder = "Have a question? Just ask here or enter terms"
+
+    # Topics
+    [Languages.en.params.topics]
+      title = "Find your answer by subject"
+    
+    # call to action
+    [Languages.en.params.cta]
+      enable = true
+      title = "Didn't find an answer to your question?"
+      description = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
+      btnText = "contact us"
+      btnURL = "/contact"
+
+    # contact
+    [Languages.en.params.contact]
+      title = "Got Any Questions"
+      content = "Submit the form and confirm your email address at <a class='text-primary' href='https://formspree.io/'>Formspree</a> Then add the following lines to contact page YAML Front Matter."
+
+    # footer social icon
+    [[Languages.en.socialIcon]]
+      icon = "ti-facebook"
+      URL = "/#"
+
+    [[Languages.en.socialIcon]]
+      icon = "ti-twitter-alt"
+      URL = "/#"
+      
+    [[Languages.en.socialIcon]]
+      icon = "ti-vimeo-alt"
+      URL = "/#"
+      
+    [[Languages.en.socialIcon]]
+      icon = "ti-instagram"
+      URL = "/#"
+
+
+
+
+
+  # Franch Language
+  [Languages.fr]
+  languageName = "Fr"
+  weight = 1
+  languageCode = "fr-fr"
+  title = "Doc List"
+  dateFormat = "2 January 2006"
+  home = "Aidez-moi"
+  logo = "DOC LIST"
+  copyright = "Les documents Hugo sont sous copyright © gethugothemes 2018."
+
+    # navigation
+    [Languages.fr.menu]
+    
+      [[Languages.fr.menu.main]]
+        weight = 2
+        name = "Faq"
+        url = "/fr/faq"
+
+      [[Languages.fr.menu.main]]
+        weight = 2
+        name = "contact"
+        url = "/fr/contact"
+
+      [[Languages.fr.menu.main]]
+        weight = 2
+        name = "les sujets"
+        hasChildren = true
+
+          [[Languages.fr.menu.main]]
+          parent = "pages"
+          name = "Elements"
+          URL = "/elements"
+          weight = 1
+
+          [[Languages.fr.menu.main]]
+          parent = "les sujets"
+          name = "Commencer"
+          URL = "/fr/installation"
+          weight = 2
+
+          [[Languages.fr.menu.main]]
+          parent = "les sujets"
+          name = "Compte et facturation"
+          URL = "/fr/billing-pricing"
+          weight = 3
+
+          [[Languages.fr.menu.main]]
+          parent = "les sujets"
+          name = "Dépannage"
+          URL = "/fr/features"
+          weight = 4
+
+    # banner
+    [Languages.fr.params.banner]
+      title = "Comment pouvons nous aider?"
+      description = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
+      image = "images/banner.jpg"
+      placeholder = "Have a question? Just ask here or enter terms"
+
+    # pages
+    [Languages.fr.params.pages]
+      title = "Parcourir tous les sujets"
+    
+    # call to action
+    [Languages.fr.params.cta]
+      enable = true
+      title = "Vous n'avez pas trouvé de réponse à votre question?"
+      description = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
+      btnText = "Contactez nous"
+      btnURL = "fr/contact/"
+
+    # contact
+    [Languages.fr.params.contact]
+      title = "Vous avez des questions"
+      content = "Envoyez le formulaire et confirmez votre adresse e-mail à l'adresse <a class='text-primary' href='https://formspree.io/'>Formspree</a> Ajoutez ensuite les lignes suivantes pour contacter la page YAML Front Matter."
+
+    # footer social icon
+    [[Languages.fr.socialIcon]]
+      icon = "ti-facebook"
+      URL = "/#"
+
+    [[Languages.fr.socialIcon]]
+      icon = "ti-twitter-alt"
+      URL = "/#"
+      
+    [[Languages.fr.socialIcon]]
+      icon = "ti-vimeo-alt"
+      URL = "/#"
+      
+    [[Languages.fr.socialIcon]]
+      icon = "ti-instagram"
+      URL = "/#"

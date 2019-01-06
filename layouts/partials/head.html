@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+
+  {{ .Hugo.Generator }}
+
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  {{ "<!-- ** Plugins Needed for the Project ** -->" | safeHTML }}
+  {{ "<!-- Bootstrap -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/bootstrap/bootstrap.min.css">
+  {{ "<!-- themefy-icon -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/themify-icons/themify-icons.css">
+  {{ "<!-- highlight -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/highlight/hybrid.css">
+  {{ "<!-- fonts -->" | safeHTML }}
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+  <style>
+  :root{
+    --primary-color:{{ .Site.Params.primaryColor }};
+    --secondary-color:{{ .Site.Params.secondaryColor }};
+    --text-color:{{ .Site.Params.textColor }};
+    --text-color-dark:{{ .Site.Params.textColorDark }};
+    --white-color:{{ .Site.Params.whiteColor }};
+  }  
+  </style>
+
+
+  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  {{ $styles := resources.Get "css/style.css" | minify}}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+  {{ "<!-- jquiry -->" | safeHTML }}
+  <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
+
+  {{ "<!-- jquary ui -->" | safeHTML }}
+  <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
+
+  {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>

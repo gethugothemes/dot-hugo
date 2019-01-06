@@ -1,0 +1,93 @@
+{{ partial "head.html" . }}
+
+
+{{ "<!-- navigation -->" | safeHTML }}
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    {{ partial "navigation.html" . }}
+  </div>
+</header>
+{{ "<!-- /navigation -->" | safeHTML }}
+
+
+<!-- page title -->
+<section class="section bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        {{ with .Site.Params.banner.title }} <h1 class="text-white mb-4">{{ . }}</h1> {{ end }}
+        {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
+          <!-- Javascript -->
+          <script>
+            $(function() {
+              var projects = [
+                {{ range .Data.Pages }}
+                  {
+                    value: "{{ .Title }}",
+                    label: "{{ .Title }}",
+                    url:"{{ .Permalink }}"
+                  },
+                {{ end }}
+              ];
+              $( "#search" ).autocomplete({
+                  minLength: 0,
+                  source: projects,
+                  focus: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                      return false;
+                  },
+                  select: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                    $( "#project-id" ).val( ui.item.value );
+                    return false;
+                  }
+              })
+              .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                return $( "<li>" )
+                .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+                .appendTo( ul );
+              };
+            });
+          </script>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- details page -->
+<section class="single section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="mb-5 bg-white p-4 sticky-top">
+          <a href="{{ .Permalink }}">
+            <h4 class="mb-4">{{ .Title }}</h4>
+          </a>
+          <ul class="list-styled">
+            {{ range .Data.Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>{{ .Title }}</h2>
+            <div class="bg-gray p-4">
+                <h3 class="mt-0">Article</h3>
+                <ul class="list-unstyled">
+                  {{ range .Data.Pages }}
+                  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                  {{ end }}
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /details page -->
+
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,33 @@
+{{ "<!-- footer -->" | safeHTML }}
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+       {{ with .Site.Params.copyright }} <p>{{ .}}</p> {{ end }}
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          {{ range .Site.Params.socialIcon }}
+          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="{{ .URL | absURL}}"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+{{ "<!-- /footer -->" | safeHTML }}
+
+{{ "<!-- Bootstrap JS -->" | safeHTML }}
+<script src="{{ .Site.BaseURL }}plugins/bootstrap/bootstrap.min.js"></script>
+{{ "<!-- highlight -->" | safeHTML }}
+<script src="{{ .Site.BaseURL }}plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+
+</body>
+
+</html>

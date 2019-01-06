@@ -1,0 +1,98 @@
+{{ partial "head.html" . }}
+
+{{ "<!-- header -->" | safeHTML }}
+<header class="hero-section overlay bg-cover banner" data-background="{{ .Site.Params.banner.image | absURL }}">
+  <div class="container mb-100">
+    {{ "<!-- navigation -->" | safeHTML }}
+    {{ partial "navigation.html" . }}
+    {{ "<!-- /navigation -->" | safeHTML }}
+  </div>
+  {{ "<!-- banner -->" | safeHTML }}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 text-center mx-auto">
+       {{ with .Site.Params.banner.title }} <h1 class="text-white mb-3">{{ . }}</h1> {{ end }}
+       {{ with .Site.Params.banner.description }} <p class="text-white mb-4">{{ . }}</p> {{ end }}
+        <div class="position-relative">
+          {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
+          <!-- Javascript -->
+          <script>
+            $(function() {
+              var projects = [
+                {{ range .Data.Pages }}
+                  {
+                    value: "{{ .Title }}",
+                    label: "{{ .Title }}",
+                    url:"{{ .Permalink }}"
+                  },
+                {{ end }}
+              ];
+              $( "#search" ).autocomplete({
+                  minLength: 0,
+                  source: projects,
+                  focus: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                      return false;
+                  },
+                  select: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                    $( "#project-id" ).val( ui.item.value );
+                    return false;
+                  }
+              })
+              .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                return $( "<li>" )
+                .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+                .appendTo( ul );
+              };
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ "<!-- /banner -->" | safeHTML }}
+</header>
+{{ "<!-- /header -->" | safeHTML }}
+
+{{ "<!-- topics -->" | safeHTML }}
+<section class="section bg-gray">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            {{with .Site.Params.topics.title}} <h2 class="section-title">{{ . }}</h2> {{ end }}
+          </div>
+          {{ "<!-- topic-item -->" | safeHTML }}
+          {{ range (where .Site.Pages "Type" "pages") }}
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
+              <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>
+              <h3 class="mb-3">{{ .Title }}</h3>
+              <p class="mb-0">{{ .Params.Description }}</p>
+            </a>
+          </div>
+          {{ end }}
+      </div>
+  </div>
+</section>
+{{ "<!-- /topics -->" | safeHTML }}
+
+{{ if .Site.Params.cta.enable }}
+{{ "<!-- call to action -->" | safeHTML }}
+<section class="bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section bg-white shadow text-center">
+        {{ with .Site.Params.cta.title }} <h2 class="mb-4">{{ . }}</h2> {{ end }}
+        {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
+        <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}" class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- /call to action -->" | safeHTML }}
+{{ end }}
+
+{{ partial "footer.html" . }}

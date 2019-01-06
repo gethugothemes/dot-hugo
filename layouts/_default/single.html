@@ -1,0 +1,110 @@
+{{ partial "head.html" . }}
+
+{{ "<!-- navigation -->" | safeHTML }}
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    {{ partial "navigation.html" . }}
+  </div>
+</header>
+{{ "<!-- /navigation -->" | safeHTML }}
+
+
+<!-- details page -->
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top">
+            {{$currentNode := .}}
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+                {{- range .Site.Sections.ByWeight -}}
+                  {{template "menu" dict "sect" . "currentnode" $currentNode}}
+                {{- end -}}
+              </ul>
+            </nav>
+    
+            {{define "menu"}}
+            {{- $currentNode := .currentnode -}}
+            {{ with .sect }}
+            {{ if in .Site.Params.menu_exclusion .Section }}
+            {{- else -}}
+              {{- safeHTML .Params.head -}}
+            <li class="{{ if .IsAncestor $currentNode }}parent d-block {{ end }}{{ if eq .UniqueID $currentNode.UniqueID }} active {{ end }}{{ if .Params.alwaysopen }} parent {{ end }}"><a href="{{ .URL }}">{{ .Title }}</a>
+              {{- $numberOfPages := (add (len .Pages) (len .Sections)) -}}
+              {{if ne $numberOfPages 0}}
+              <ul class="{{ if .IsAncestor $currentNode }}sub-menu{{ end }}">
+              {{- .Scratch.Set "pages" .Data.Pages -}}
+              {{- $pages := (.Scratch.Get "pages") -}}
+                {{- range $pages.ByWeight -}}
+                  {{template "menu" dict "sect" . "currentnode" $currentNode}}
+                {{- end -}}
+              </ul>
+              {{end}}
+            </li>
+            {{- end -}}
+            {{- else -}}
+              {{- if not .Params.Hidden -}}
+              <li class="{{ if eq .UniqueID $currentNode.UniqueID }}active{{ end }}"><a href="{{ .URL }}">{{ .Title }}</a></li>
+              {{- end -}}
+            {{ end -}}
+            {{ end }}
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>{{ .Title }}</h2>
+            {{ .Content }}
+            <p class="post-meta border-bottom pb-3 mb-0">Updated on {{ .PublishDate.Format "02 Jan 2006" }}</p>
+            {{- $currentNode := . -}}
+            <nav class="pagination mt-3">
+            {{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
+            {{- with ($.Scratch.Get "prevPage") -}}
+            <a class="nav nav-prev" href="{{ .URL }}" title="{{ .Title }}"><i class="ti-arrow-left mr-2"></i>{{ .Title }}</a>
+            {{ end -}}
+            {{- with ($.Scratch.Get "nextPage") -}}
+            <a class="nav nav-next" href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}<i class="ti-arrow-right ml-2"></i></a>
+            {{- end }}
+            </nav>
+    
+            {{- define "pagination" -}}
+            {{- $currentNode := .currentnode -}}
+            {{- $menu_exclusion := .menu_exclusion -}}
+    
+            {{- if hasPrefix $currentNode.URL .menu.URL -}}
+              {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
+              {{- if .menu.IsHome -}}
+                {{- $currentNode.Scratch.Set "prevPage" "" -}}
+              {{- else -}}
+                {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+              {{- end -}}
+            {{- else -}}
+              {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
+                {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
+                {{ if in $menu_exclusion .menu.Section }}
+                {{- else -}}
+                  {{- $currentNode.Scratch.Set "nextPage" .menu -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+    
+            {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
+            {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
+            {{- if .menu.IsHome -}}
+              {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
+            {{- else if .menu.Sections -}}
+              {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
+            {{- end -}}
+            {{- $pages := ($currentNode.Scratch.Get "pages") -}}
+            {{- range $pages.ByWeight -}}
+              {{- template "pagination" dict "menu" . "currentnode" $currentNode "menu_exclusion" $menu_exclusion -}}
+            {{- end -}}
+            {{- end -}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /details page -->
+
+{{ partial "footer.html" . }}
