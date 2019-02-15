@@ -5,12 +5,12 @@ name = "Dot"
 license = "Creative Commons — Attribution 3.0 Unported — CC BY 3.0"
 licenselink = "https://creativecommons.org/licenses/by/3.0/"
 description = "Dot, A documentation theme powered by hugo"
-homepage = "https://gethugothemes.com"
-tags = ["documentation", "bootstrap", "blog", "contact","responsive", "gethugothemes", "Syntax highlighting " , "Multilingual" , "Single page"]
+homepage = "https://themefisher.com/hugo-themes"
+tags = ["documentation", "bootstrap", "blog", "contact","responsive", "gethugothemes", "Syntax highlighting " , "Multilingual" , "Single page", "Themefisher"]
 features = []
-min_version = "0.41"
+min_version = "0.54"
 
 [author]
-  name = "Gethugothemes.com"
-  homepage = "https://gethugothemes.com"
+  name = "Themefisher"
+  homepage = "https://themefisher.com"
 
