@@ -1,0 +1,45 @@
+{{ "<!-- banner -->" | safeHTML }}
+<div class="container">
+    <div class="row">
+    <div class="col-lg-8 text-center mx-auto">
+    {{ with .Site.Params.banner.title }} <h1 class="text-white mb-3">{{ . }}</h1> {{ end }}
+    {{ with .Site.Params.banner.description }} <p class="text-white mb-4">{{ . }}</p> {{ end }}
+        <div class="position-relative">
+        {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
+        <!-- Javascript -->
+        <script>
+            $(function() {
+            var projects = [
+                {{ range .Data.Pages }}
+                {
+                    value: "{{ .Title }}",
+                    label: "{{ .Title }}",
+                    url:"{{ .Permalink }}"
+                },
+                {{ end }}
+            ];
+            $( "#search" ).autocomplete({
+                minLength: 0,
+                source: projects,
+                focus: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                    return false;
+                },
+                select: function( event, ui ) {
+                    $( "#search" ).val( ui.item.label );
+                    $( "#project-id" ).val( ui.item.value );
+                    return false;
+                }
+            })
+            .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                return $( "<li>" )
+                .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+                .appendTo( ul );
+            };
+            });
+        </script>
+        </div>
+    </div>
+    </div>
+</div>
+{{ "<!-- /banner -->" | safeHTML }}

@@ -1,12 +1,4 @@
-{{ partial "head.html" . }}
-
-{{ "<!-- navigation -->" | safeHTML }}
-<header class="shadow-bottom position-relative">
-  <div class="container">
-    {{ partial "navigation.html" . }}
-  </div>
-</header>
-{{ "<!-- /navigation -->" | safeHTML }}
+{{ define "main" }}
 
 {{ "<!-- contact -->" | safeHTML }}
 <section class="section">
@@ -28,4 +20,4 @@
 </section>
 {{ "<!-- /contact -->" | safeHTML }}
 
-{{ partial "footer.html" . }}
+{{ end }}

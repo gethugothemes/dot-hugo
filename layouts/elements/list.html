@@ -1,21 +1,13 @@
-{{ partial "head.html" . }}
+{{ define "main" }}
 
-{{ "<!-- navigation -->" | safeHTML }}
-<header class="shadow-bottom position-relative">
-  <div class="container">
-    {{ partial "navigation.html" . }}
-  </div>
-</header>
-{{ "<!-- /navigation -->" | safeHTML }}
-
-<section class="elements pt-5 bg-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        {{ .Content }}
+  <section class="elements pt-5 bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{ .Content }}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-{{ partial "footer.html" . }}
+{{ end }}

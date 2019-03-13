@@ -23,6 +23,9 @@ This theme's repository is: https://github.com/matcornic/Doc-List.git
 
 Alternatively, you can [download the theme as .zip](https://github.com/matcornic/Doc-List/archive/master.zip) file and extract it in the `themes` directory
 
+Or you can check this video documentation for installing this template:
+{{< youtube Srt3lTmRxzQ >}}
+
 ### Basic configuration
 
 When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (`config.toml`) and set the theme as the default.

@@ -288,6 +288,9 @@ pre {
   z-index: 1;
 }
 
+.top-100{
+  top: 100px;
+}
 
 .hero-section {
   padding-bottom: 150px;

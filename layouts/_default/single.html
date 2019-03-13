@@ -1,20 +1,19 @@
 {{ partial "head.html" . }}
 
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="shadow-bottom position-relative">
+<header class="shadow-bottom sticky-top bg-white">
   <div class="container">
     {{ partial "navigation.html" . }}
   </div>
 </header>
 {{ "<!-- /navigation -->" | safeHTML }}
 
-
 <!-- details page -->
 <section class="single pt-5 bg-gray">
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
-        <div class="p-4 bg-white sticky-top">
+        <div class="p-4 bg-white sticky-top top-100">
             {{$currentNode := .}}
             <nav class="sidebar-menu">
               <ul class="list-styled">
@@ -23,7 +22,7 @@
                 {{- end -}}
               </ul>
             </nav>
-    
+
             {{define "menu"}}
             {{- $currentNode := .currentnode -}}
             {{ with .sect }}

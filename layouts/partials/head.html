@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html  lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-
 <head>
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
@@ -21,7 +18,6 @@
   {{ "<!-- fonts -->" | safeHTML }}
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
-
   <style>
   :root{
     --primary-color:{{ .Site.Params.primaryColor }};
@@ -31,7 +27,6 @@
     --white-color:{{ .Site.Params.whiteColor }};
   }  
   </style>
-
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
   {{ $styles := resources.Get "css/style.css" | minify}}
@@ -47,5 +42,3 @@
   <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon">
 
 </head>
-
-<body>
