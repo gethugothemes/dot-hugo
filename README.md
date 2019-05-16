@@ -28,7 +28,7 @@ Dot, a responsive and feature reach documentation theme ever build in hugo eco s
 |---|---|---|---|
 | ![Elements page](https://user-images.githubusercontent.com/37659754/54081094-e1f20c00-4328-11e9-90e8-eeda5e3cb427.png) | ![FAQ page](https://user-images.githubusercontent.com/37659754/54081095-e1f20c00-4328-11e9-8009-24987d98e2d0.png) | ![Inner page](https://user-images.githubusercontent.com/37659754/54081096-e28aa280-4328-11e9-97d2-6eb94da191ca.png) | ![Contact page](https://user-images.githubusercontent.com/37659754/54081093-e1597580-4328-11e9-981b-859b1a7e94d9.png) |
 
-[Live Demo](http://demo.gethugothemes.com/dot/).
+[Live Demo](https://themes.gohugo.io/theme/dot-hugo-documentation-theme/).
 
 ## Installation
 
@@ -37,7 +37,7 @@ Navigate to your themes folder in your Hugo site and use the following commands:
 ```
 $ mkdir themes
 $ cd themes
-$ git clone git@github.com:themefisher/navigator-hugo.git
+$ git clone git@github.com:themefisher/dot-hugo-documentation-theme.git
 ```
 
 [Full Documentation](http://demo.gethugothemes.com/dot/installation/requirments/).
