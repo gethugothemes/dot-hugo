@@ -31,7 +31,7 @@
           <div class="section bg-white shadow text-center">
           {{ with .Site.Params.cta.title }} <h2 class="mb-4">{{ . }}</h2> {{ end }}
           {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
-          <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}" class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
+          <a href="{{ with .Site.Params.cta.btnURL}}{{ . | relLangURL }}{{ end }}" class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
           </div>
         </div>
       </div>
