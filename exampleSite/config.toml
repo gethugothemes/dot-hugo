@@ -1,5 +1,5 @@
 baseURL = "gethugothemes.com"
-theme = "dot"
+theme = "dot-hugo-documentation-theme"
 
 
 [params]
@@ -28,41 +28,41 @@ whiteColor = "#ffffff"
       [[Languages.en.menu.main]]
         weight = 2
         name = "Faq"
-        url = "/faq"
+        url = "faq"
         
       [[Languages.en.menu.main]]
         weight = 2
         name = "contact"
-        url = "/contact"
+        url = "contact"
         
       [[Languages.en.menu.main]]
         weight = 2
         name = "pages"
-        url = "/pages"
+        url = "pages"
         hasChildren = true
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Elements"
-          URL = "/elements"
+          url = "elements"
           weight = 1
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Installation"
-          URL = "/installation"
+          url = "installation"
           weight = 2
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Billing and Pricing"
-          URL = "/billing-pricing"
+          url = "billing-pricing"
           weight = 3
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Features"
-          URL = "/features"
+          url = "features"
           weight = 4
 
 
@@ -85,7 +85,7 @@ whiteColor = "#ffffff"
       title = "Didn't find an answer to your question?"
       description = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
       btnText = "contact us"
-      btnURL = "/contact"
+      btnURL = "contact"
 
     # contact
     [Languages.en.params.contact]
@@ -95,19 +95,19 @@ whiteColor = "#ffffff"
     # footer social icon
     [[Languages.en.socialIcon]]
       icon = "ti-facebook"
-      URL = "/#"
+      linkURL = "#"
 
     [[Languages.en.socialIcon]]
       icon = "ti-twitter-alt"
-      URL = "/#"
+      linkURL = "#"
       
     [[Languages.en.socialIcon]]
       icon = "ti-vimeo-alt"
-      URL = "/#"
+      linkURL = "#"
       
     [[Languages.en.socialIcon]]
       icon = "ti-instagram"
-      URL = "/#"
+      linkURL = "#"
 
 
 
@@ -130,12 +130,12 @@ whiteColor = "#ffffff"
       [[Languages.fr.menu.main]]
         weight = 2
         name = "Faq"
-        url = "/fr/faq"
+        url = "fr/faq"
 
       [[Languages.fr.menu.main]]
         weight = 2
         name = "contact"
-        url = "/fr/contact"
+        url = "fr/contact"
 
       [[Languages.fr.menu.main]]
         weight = 2
@@ -145,25 +145,25 @@ whiteColor = "#ffffff"
           [[Languages.fr.menu.main]]
           parent = "pages"
           name = "Elements"
-          URL = "/elements"
+          url = "elements"
           weight = 1
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
           name = "Commencer"
-          URL = "/fr/installation"
+          url = "fr/installation"
           weight = 2
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
           name = "Compte et facturation"
-          URL = "/fr/billing-pricing"
+          url = "fr/billing-pricing"
           weight = 3
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
           name = "Dépannage"
-          URL = "/fr/features"
+          url = "fr/features"
           weight = 4
 
     # banner
@@ -193,16 +193,16 @@ whiteColor = "#ffffff"
     # footer social icon
     [[Languages.fr.socialIcon]]
       icon = "ti-facebook"
-      URL = "/#"
+      linkURL = "#"
 
     [[Languages.fr.socialIcon]]
       icon = "ti-twitter-alt"
-      URL = "/#"
+      linkURL = "#"
       
     [[Languages.fr.socialIcon]]
       icon = "ti-vimeo-alt"
-      URL = "/#"
+      linkURL = "#"
       
     [[Languages.fr.socialIcon]]
       icon = "ti-instagram"
-      URL = "/#"
+      linkURL = "#"

@@ -29,7 +29,7 @@
             {{ if in .Site.Params.menu_exclusion .Section }}
             {{- else -}}
               {{- safeHTML .Params.head -}}
-            <li class="{{ if .IsAncestor $currentNode }}parent d-block {{ end }}{{ if eq .UniqueID $currentNode.UniqueID }} active {{ end }}{{ if .Params.alwaysopen }} parent {{ end }}"><a href="{{ .URL }}">{{ .Title }}</a>
+            <li class="{{ if .IsAncestor $currentNode }}parent d-block {{ end }}{{ if eq .File.UniqueID $currentNode.File.UniqueID }} active {{ end }}{{ if .Params.alwaysopen }} parent {{ end }}"><a href="{{ .Permalink }}">{{ .Title }}</a>
               {{- $numberOfPages := (add (len .Pages) (len .Sections)) -}}
               {{if ne $numberOfPages 0}}
               <ul class="{{ if .IsAncestor $currentNode }}sub-menu{{ end }}">
@@ -44,7 +44,7 @@
             {{- end -}}
             {{- else -}}
               {{- if not .Params.Hidden -}}
-              <li class="{{ if eq .UniqueID $currentNode.UniqueID }}active{{ end }}"><a href="{{ .URL }}">{{ .Title }}</a></li>
+              <li class="{{ if eq .File.UniqueID $currentNode.File.UniqueID }}active{{ end }}"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
               {{- end -}}
             {{ end -}}
             {{ end }}
@@ -59,10 +59,10 @@
             <nav class="pagination mt-3">
             {{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
             {{- with ($.Scratch.Get "prevPage") -}}
-            <a class="nav nav-prev" href="{{ .URL }}" title="{{ .Title }}"><i class="ti-arrow-left mr-2"></i>{{ .Title }}</a>
+            <a class="nav nav-prev" href="{{ .Permalink }}" title="{{ .Title }}"><i class="ti-arrow-left mr-2"></i>{{ .Title }}</a>
             {{ end -}}
             {{- with ($.Scratch.Get "nextPage") -}}
-            <a class="nav nav-next" href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}<i class="ti-arrow-right ml-2"></i></a>
+            <a class="nav nav-next" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}<i class="ti-arrow-right ml-2"></i></a>
             {{- end }}
             </nav>
     
@@ -70,7 +70,7 @@
             {{- $currentNode := .currentnode -}}
             {{- $menu_exclusion := .menu_exclusion -}}
     
-            {{- if hasPrefix $currentNode.URL .menu.URL -}}
+            {{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
               {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
               {{- if .menu.IsHome -}}
                 {{- $currentNode.Scratch.Set "prevPage" "" -}}
