@@ -2,10 +2,10 @@
 
 # [Dot Hugo](https://gethugothemes.com/)
 
-[![GitHub stars](https://img.shields.io/github/stars/themefisher/dot-hugo-documentation-theme.svg)](https://github.com/themefisher/dot-hugo-documentation-theme/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/themefisher/dot-hugo-documentation-theme.svg)](https://github.com/themefisher/dot-hugo-documentation-theme/issues) 
-[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themefisher/dot-hugo-documentation-theme.svg?maxAge=2592000)]() 
-[![GitHub forks](https://img.shields.io/github/forks/themefisher/dot-hugo-documentation-theme.svg)](https://github.com/themefisher/dot-hugo-documentation-theme/network)
+<p><a href="https://github.com/themefisher/dot-hugo-documentation-theme/stargazers"><img src="https://camo.githubusercontent.com/7d6b302902df5eaa1a880850777f6cbc089abc5b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
+<a href="https://github.com/themefisher/dot-hugo-documentation-theme/issues"><img src="https://camo.githubusercontent.com/82ea79e787e3159369049285257d62b85e2c0d35/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
+<a href="/themefisher/dot-hugo-documentation-theme/blob/master"><img src="https://camo.githubusercontent.com/5cb0da6a96f0f7b4861202b46486e3b36f813831/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d636c6f7365642d7261772f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e7376673f6d61784167653d32353932303030" alt="GitHub issues closed" data-canonical-src="https://img.shields.io/github/issues-closed-raw/themefisher/dot-hugo-documentation-theme.svg?maxAge=2592000" style="max-width:100%;"></a>
+<a href="https://github.com/themefisher/dot-hugo-documentation-theme/network"><img src="https://camo.githubusercontent.com/a740e4878301293eb179787617f3335fe6b7dbe6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub forks" data-canonical-src="https://img.shields.io/github/forks/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a></p>
 
 <img src="https://user-images.githubusercontent.com/37659754/54081086-cc7ce200-4328-11e9-9f7d-74d9b32fa68c.gif" alt="screenshot" width="100%">
 

@@ -19,9 +19,9 @@ hugo new site <new_project>
 
 Install the **Doc-List** theme by following [this documentation](https://gohugo.io/themes/installing/)
 
-This theme's repository is: https://github.com/matcornic/Doc-List.git
+This theme's repository is: https://github.com/themefisher/dot-hugo-documentation-theme.git
 
-Alternatively, you can [download the theme as .zip](https://github.com/matcornic/Doc-List/archive/master.zip) file and extract it in the `themes` directory
+Alternatively, you can [download the theme as .zip](https://github.com/themefisher/dot-hugo-documentation-theme/archive/master.zip) file and extract it in the `themes` directory
 
 Or you can check this video documentation for installing this template:
 {{< youtube Srt3lTmRxzQ >}}
