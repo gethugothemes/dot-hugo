@@ -31,10 +31,23 @@
       {{ end }}
     </ul>
     <!-- Language List -->
-    <ul class="list-inline text-center mb-0">
-      {{ range $.Site.Home.AllTranslations }}
-      <li class="list-inline-item"><a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    <select id="select-language" onchange="location = this.value;">
+      {{ $siteLanguages := .Site.Languages}}
+      {{ $pageLang := .Page.Lang}}
+      {{ range .Page.AllTranslations }}
+      {{ $translation := .}}
+      {{ range $siteLanguages }}
+      {{ if eq $translation.Lang .Lang }}
+      {{ $selected := false }}
+      {{ if eq $pageLang .Lang}}
+      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}
+      </option>
+      {{ else }}
+      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
       {{ end }}
-    </ul>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    </select>
   </div>
 </nav>
