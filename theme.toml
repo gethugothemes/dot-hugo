@@ -8,7 +8,7 @@ description = "Dot, A documentation theme powered by hugo"
 homepage = "https://gethugothemes.com/"
 tags = ["documentation", "bootstrap", "blog", "contact","responsive", "gethugothemes", "Syntax highlighting " , "Multilingual" , "Single page", "Themefisher"]
 features = []
-min_version = "0.54"
+min_version = "0.55"
 
 [author]
   name = "Themefisher"
