@@ -1,0 +1,108 @@
+{{ "<!-- details page -->" | safeHTML }}
+<section class="single section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="mb-5 bg-white p-4 sticky-top top-100">
+          <ul class="list-styled">
+            {{ $currentNode := . }}
+            {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
+            <a class="d-block h4 back-btn" href="{{ .Site.BaseURL }}{{ .Language.LanguageName | lower }}">{{ i18n "Back-home"}}</a>
+            {{range .Site.Home.Sections.ByWeight}}
+            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+            {{end}}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+          <h2 class="mb-5">{{ .Title }}</h2>
+          {{ if .Content }}
+          <div class="content">{{.Content}}</div>
+          {{ else }}
+          <div class="bg-gray p-4">
+            <ul class="page-list">
+              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            </ul>
+          </div>
+          {{ end }}
+          <p class="post-meta border-bottom pb-3 mb-0 mt-3">Updated on {{ .PublishDate.Format "02 Jan 2006" }}</p>
+          <nav class="pagination mt-3">
+            <!-- Next prev page -->
+            {{ $currentNode := . }}
+            {{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}
+            {{ define "menu-nextprev" }}
+            {{$currentNode := .currentnode }}
+            {{ if ne .menu.Params.hidden true}}
+            {{if hasPrefix $currentNode.URL .menu.URL }}
+            {{ $currentNode.Scratch.Set "NextPageOK" "OK" }}
+            {{ $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") }}
+            {{else}}
+            {{if eq ($currentNode.Scratch.Get "NextPageOK") "OK"}}
+            {{ $currentNode.Scratch.Set "NextPageOK" nil }}
+            {{ $currentNode.Scratch.Set "nextPage" .menu }}
+            {{end}}
+            {{end}}
+            {{ $currentNode.Scratch.Set "prevPageTmp" .menu }}
+
+            {{ $currentNode.Scratch.Set "pages" .menu.Pages }}
+            {{ if .menu.IsHome}}
+            {{ $currentNode.Scratch.Set "pages" .menu.Sections }}
+            {{ else if .menu.Sections}}
+            {{ $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) }}
+            {{end}}
+            {{ $pages := ($currentNode.Scratch.Get "pages") }}
+
+            {{ range $pages.ByWeight  }}
+            {{ template "menu-nextprev" dict "menu" . "currentnode" $currentNode }}
+            {{end}}
+            {{ end }}
+            {{ end }}
+
+            {{with ($.Scratch.Get "prevPage")}}
+            <a class="nav nav-prev" href="{{.URL | absURL}}"><i class="ti-arrow-left mr-2"></i>{{.Title}}</a>
+            {{end}}
+            {{with ($.Scratch.Get "nextPage")}}
+            <a class="nav nav-next" href="{{.URL | absURL}}">{{.Title}}<i class="ti-arrow-right ml-2"></i></a>
+            {{end}}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- /details page -->" | safeHTML }}
+
+<!-- templates -->
+{{ define "section-tree-nav" }}
+{{ $showvisitedlinks := .showvisitedlinks }}
+{{ $currentNode := .currentnode }}
+{{with .sect}}
+{{safeHTML .Params.head}}
+<li data-nav-id="{{.URL | absURL}}" title="{{.Title}}" class="sidelist
+  {{if .IsAncestor $currentNode }}parent{{end}}
+  {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
+  {{if .Params.alwaysopen}}parent{{end}}">
+  <a href="{{.RelPermalink}}">
+    {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+  </a>
+  {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+  {{ if ne $numberOfPages 0 }}
+  <ul>
+    {{ $currentNode.Scratch.Set "pages" .Pages }}
+    {{ if .Sections}}
+    {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
+    {{end}}
+    {{ $pages := ($currentNode.Scratch.Get "pages") }}
+
+    {{ range $pages.ByWeight }}
+    {{ if and .Params.hidden (not $.showhidden) }}
+    {{else}}
+    {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+    {{end}}
+    {{end}}
+  </ul>
+</li>
+{{ end }}
+{{ end }}
+{{ end }}

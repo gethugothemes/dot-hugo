@@ -1,7 +1,7 @@
-baseURL = "gethugothemes.com"
-theme = "dot-hugo-documentation-theme"
+baseURL = "https://gethugothemes.com/"
+theme = "dot"
 
-
+# customize color
 [params]
 primaryColor = "#02007e"
 secondaryColor = "#f9f9f9"
@@ -16,11 +16,11 @@ whiteColor = "#ffffff"
   languageName = "En"
   weight = 1
   languageCode = "en-us"
-  title = "Doc List"
+  title = "Dot"
   dateFormat = "2 January 2006"
   home = "Home"
   logo = "Dot"
-  copyright = "The Hugo Documents are copyright © gethugothemes 2018."
+  copyright = "The Hugo Documents are copyright © gethugothemes 2019."
 
     # navigation
     [Languages.en.menu]
@@ -35,17 +35,12 @@ whiteColor = "#ffffff"
         name = "contact"
         url = "contact"
         
+      # Dropdown menu
       [[Languages.en.menu.main]]
         weight = 2
         name = "pages"
         url = "pages"
         hasChildren = true
-
-          [[Languages.en.menu.main]]
-          parent = "pages"
-          name = "Elements"
-          url = "elements"
-          weight = 1
 
           [[Languages.en.menu.main]]
           parent = "pages"
@@ -118,11 +113,11 @@ whiteColor = "#ffffff"
   languageName = "Fr"
   weight = 1
   languageCode = "fr-fr"
-  title = "Doc List"
+  title = "Dot"
   dateFormat = "2 January 2006"
   home = "Aidez-moi"
-  logo = "DOC LIST"
-  copyright = "Les documents Hugo sont sous copyright © gethugothemes 2018."
+  logo = "Dot"
+  copyright = "Les documents Hugo sont sous copyright © gethugothemes 2019."
 
     # navigation
     [Languages.fr.menu]
@@ -137,16 +132,11 @@ whiteColor = "#ffffff"
         name = "contact"
         url = "fr/contact"
 
+      # Dropdown menu
       [[Languages.fr.menu.main]]
         weight = 2
         name = "les sujets"
         hasChildren = true
-
-          [[Languages.fr.menu.main]]
-          parent = "pages"
-          name = "Elements"
-          url = "elements"
-          weight = 1
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
