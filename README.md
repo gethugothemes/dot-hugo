@@ -12,6 +12,7 @@
 </div>
 
 Dot, a responsive and feature reach documentation theme ever build in hugo eco system . We have analysised a lot of documentation and knowledge base theme to come up with this design . The readability and the cleaness is also another key feature of this theme. 
+**The images are only for demonstration purpose, Please don't use those images.**
 
 ## Table of Contents
 
