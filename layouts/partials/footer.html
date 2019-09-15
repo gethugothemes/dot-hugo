@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 text-md-left text-center">
-       {{ with .Site.Params.copyright }} <p>{{ .}}</p> {{ end }}
+       <p>{{ .Site.Params.copyright | markdownify }}</p>
       </div>
       <div class="col-md-4 text-md-right text-center">
         <ul class="list-inline mb-3">
