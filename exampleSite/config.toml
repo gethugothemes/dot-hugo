@@ -19,7 +19,10 @@ whiteColor = "#ffffff"
   title = "Dot"
   dateFormat = "2 January 2006"
   home = "Home"
-  logo = "Dot"
+  # logo is for all page
+  logo = ""
+  # logo white is for homepage logo, you can use colorful logo too...
+  logoWhite = ""
   copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2019."
 
     # navigation
