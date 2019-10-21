@@ -8,6 +8,7 @@ secondaryColor = "#f9f9f9"
 textColor = "#636363"
 textColorDark = "#242738"
 whiteColor = "#ffffff"
+disableLanguageSwitchingButton = false
 
 [Languages]
 
