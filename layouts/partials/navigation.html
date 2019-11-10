@@ -43,6 +43,7 @@
       {{ end }}
     </ul>
     <!-- Language List -->
+    {{- if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
     <select id="select-language" onchange="location = this.value;">
       {{ $siteLanguages := .Site.Languages}}
       {{ $pageLang := .Page.Lang}}
@@ -61,5 +62,6 @@
       {{ end }}
       {{ end }}
     </select>
+    {{ end }}
   </div>
 </nav>
