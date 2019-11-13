@@ -6,11 +6,15 @@
     <p class="text-white mb-4">{{ .Site.Params.banner.description }}</p>
         <div class="position-relative">
         <input id="search" class="form-control" placeholder="{{ .Site.Params.banner.placeholder }}">
+
         <!-- Javascript -->
+        {{ $currentNode := . }}
+        {{ $currentNode.Scratch.Set "pages" .Site.Pages }}
+        {{ $pages := ($currentNode.Scratch.Get "pages") }}
         <script>
             $(function() {
             var projects = [
-                {{ range .Data.Pages }}
+                {{ range $pages }}
                 {
                     value: "{{ .Title }}",
                     label: "{{ .Title }}",

@@ -7,7 +7,8 @@
           <ul class="list-styled">
             {{ $currentNode := . }}
             {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
-            <a class="d-block h4 back-btn" href="{{ .Site.BaseURL }}{{ .Language.LanguageName | lower }}">{{ i18n "Back-home"}}</a>
+            <a class="d-block h4 back-btn"
+              href="{{ .Site.BaseURL }}{{ .Language.LanguageName | lower }}">{{ i18n "Back-home"}}</a>
             {{range .Site.Home.Sections.ByWeight}}
             {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
             {{end}}
@@ -81,7 +82,7 @@
 {{safeHTML .Params.head}}
 <li data-nav-id="{{.URL | absURL}}" title="{{.Title}}" class="sidelist
   {{if .IsAncestor $currentNode }}parent{{end}}
-  {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
+  {{with .File}} {{if eq .UniqueID $currentNode.UniqueID}}active{{end}} {{ end }}
   {{if .Params.alwaysopen}}parent{{end}}">
   <a href="{{.RelPermalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}

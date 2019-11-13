@@ -1,29 +1,55 @@
-baseURL = "https://gethugothemes.com/"
+################################# Default configuration ###################
+# provide your domain here
+baseURL = "https://examplesite.com/"
+# theme
 theme = "dot"
+# site title
+title = "Dot"
+# disable language switch selection box
+disableLanguageSwitchingButton = true
+
+############################# Default Parameters ##########################
+[params]
+# logo is for all page
+logo = ""
+# logo white is for homepage logo, you can use colorful logo too...
+logoWhite = ""
+# when logo is empty, it will shown your site title
 
 # customize color
-[params]
 primaryColor = "#02007e"
 secondaryColor = "#f9f9f9"
 textColor = "#636363"
 textColorDark = "#242738"
 whiteColor = "#ffffff"
-disableLanguageSwitchingButton = false
 
+############################## social links ##############################
+[[params.social]]
+icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+
+[[params.social]]
+icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+  
+[[params.social]]
+icon = "ti-vimeo-alt" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+  
+[[params.social]]
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+
+
+################################# language ################################
 [Languages]
 
-  # English Language
+  ################################ English Language ######################
   [Languages.en]
   languageName = "En"
-  weight = 1
   languageCode = "en-us"
-  title = "Dot"
-  dateFormat = "2 January 2006"
+  weight = 1
   home = "Home"
-  # logo is for all page
-  logo = ""
-  # logo white is for homepage logo, you can use colorful logo too...
-  logoWhite = ""
   copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2019."
 
     # navigation
@@ -91,36 +117,16 @@ disableLanguageSwitchingButton = false
       title = "Got Any Questions"
       content = "Submit the form and confirm your email address at <a class='text-primary' href='https://formspree.io/'>Formspree</a> Then add the following lines to contact page YAML Front Matter."
 
-    # footer social icon
-    [[Languages.en.socialIcon]]
-      icon = "ti-facebook"
-      linkURL = "#"
-
-    [[Languages.en.socialIcon]]
-      icon = "ti-twitter-alt"
-      linkURL = "#"
-      
-    [[Languages.en.socialIcon]]
-      icon = "ti-vimeo-alt"
-      linkURL = "#"
-      
-    [[Languages.en.socialIcon]]
-      icon = "ti-instagram"
-      linkURL = "#"
 
 
 
 
-
-  # Franch Language
+  ################################### Franch Language ######################
   [Languages.fr]
   languageName = "Fr"
-  weight = 1
   languageCode = "fr-fr"
-  title = "Dot"
-  dateFormat = "2 January 2006"
+  weight = 2
   home = "Aidez-moi"
-  logo = "Dot"
   copyright = "Les documents Hugo sont sous copyright © gethugothemes 2019."
 
     # navigation
@@ -183,20 +189,3 @@ disableLanguageSwitchingButton = false
     [Languages.fr.params.contact]
       title = "Vous avez des questions"
       content = "Envoyez le formulaire et confirmez votre adresse e-mail à l'adresse <a class='text-primary' href='https://formspree.io/'>Formspree</a> Ajoutez ensuite les lignes suivantes pour contacter la page YAML Front Matter."
-
-    # footer social icon
-    [[Languages.fr.socialIcon]]
-      icon = "ti-facebook"
-      linkURL = "#"
-
-    [[Languages.fr.socialIcon]]
-      icon = "ti-twitter-alt"
-      linkURL = "#"
-      
-    [[Languages.fr.socialIcon]]
-      icon = "ti-vimeo-alt"
-      linkURL = "#"
-      
-    [[Languages.fr.socialIcon]]
-      icon = "ti-instagram"
-      linkURL = "#"
