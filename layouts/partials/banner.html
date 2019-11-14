@@ -2,15 +2,19 @@
 <div class="container">
     <div class="row">
     <div class="col-lg-8 text-center mx-auto">
-    {{ with .Site.Params.banner.title }} <h1 class="text-white mb-3">{{ . }}</h1> {{ end }}
-    {{ with .Site.Params.banner.description }} <p class="text-white mb-4">{{ . }}</p> {{ end }}
+    <h1 class="text-white mb-3">{{ .Site.Params.banner.title }}</h1>
+    <p class="text-white mb-4">{{ .Site.Params.banner.description }}</p>
         <div class="position-relative">
-        {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
+        <input id="search" class="form-control" placeholder="{{ .Site.Params.banner.placeholder }}">
+
         <!-- Javascript -->
+        {{ $currentNode := . }}
+        {{ $currentNode.Scratch.Set "pages" .Site.Pages }}
+        {{ $pages := ($currentNode.Scratch.Get "pages") }}
         <script>
             $(function() {
             var projects = [
-                {{ range .Data.Pages }}
+                {{ range $pages }}
                 {
                     value: "{{ .Title }}",
                     label: "{{ .Title }}",

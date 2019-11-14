@@ -16,7 +16,7 @@
   {{ "<!-- highlight -->" | safeHTML }}
   <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/highlight/hybrid.css">
   {{ "<!-- fonts -->" | safeHTML }}
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
   <style>
   :root{
@@ -25,20 +25,20 @@
     --text-color:{{ .Site.Params.textColor }};
     --text-color-dark:{{ .Site.Params.textColorDark }};
     --white-color:{{ .Site.Params.whiteColor }};
-  }  
+  }
   </style>
 
-  {{ "<!-- Main Stylesheet -->" | safeHTML }}
-  {{ $styles := resources.Get "css/style.css" | minify}}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+{{ "<!-- Main Stylesheet -->" | safeHTML }}
+{{ $styles := resources.Get "css/style.css" | minify}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-  {{ "<!-- jquiry -->" | safeHTML }}
-  <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
+{{ "<!-- jquiry -->" | safeHTML }}
+<script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
 
-  {{ "<!-- jquary ui -->" | safeHTML }}
-  <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
+{{ "<!-- jquary ui -->" | safeHTML }}
+<script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
 
-  {{ "<!--Favicon-->" | safeHTML }}
-  <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon">
+{{ "<!--Favicon-->" | safeHTML }}
+<link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon">
 
 </head>

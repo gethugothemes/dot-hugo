@@ -1,5 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.logo }}</a>
+  <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}{{ .Language.LanguageName | lower }}">
+    {{ $logo:= .Site.Params.logo }}
+    {{ $logoWhite:= .Site.Params.logoWhite }}
+    {{ if (or (eq $logo "") (eq $logoWhite "")) }}
+    {{ .Site.Title }}
+    {{ else }}
+    {{ if .IsHome }}
+    <img class="img-fluid" src="{{ $logoWhite | absURL }}" alt="{{ .Site.Title }}">
+    {{ else }}
+    <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ .Site.Title }}">
+    {{ end }}
+    {{ end }}
+  </a>
   <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -31,10 +43,25 @@
       {{ end }}
     </ul>
     <!-- Language List -->
-    <ul class="list-inline text-center mb-0">
-      {{ range $.Site.Home.AllTranslations }}
-      <li class="list-inline-item"><a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    {{- if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
+    <select id="select-language" onchange="location = this.value;">
+      {{ $siteLanguages := .Site.Languages}}
+      {{ $pageLang := .Page.Lang}}
+      {{ range .Page.AllTranslations }}
+      {{ $translation := .}}
+      {{ range $siteLanguages }}
+      {{ if eq $translation.Lang .Lang }}
+      {{ $selected := false }}
+      {{ if eq $pageLang .Lang}}
+      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}
+      </option>
+      {{ else }}
+      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
       {{ end }}
-    </ul>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    </select>
+    {{ end }}
   </div>
 </nav>
