@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}{{ .Language.LanguageName | lower }}">
+  <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
     {{ $logo:= .Site.Params.logo }}
     {{ $logoWhite:= .Site.Params.logoWhite }}
     {{ if (or (eq $logo "") (eq $logoWhite "")) }}
@@ -43,7 +43,7 @@
       {{ end }}
     </ul>
     <!-- Language List -->
-    {{- if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
+    {{- if .Site.IsMultiLingual }}
     <select id="select-language" onchange="location = this.value;">
       {{ $siteLanguages := .Site.Languages}}
       {{ $pageLang := .Page.Lang}}

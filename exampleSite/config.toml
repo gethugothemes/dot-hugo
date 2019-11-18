@@ -5,8 +5,9 @@ baseURL = "https://examplesite.com/"
 theme = "dot"
 # site title
 title = "Dot"
-# disable language switch selection box
-disableLanguageSwitchingButton = true
+# default content language
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
 ############################# Default Parameters ##########################
 [params]
@@ -89,8 +90,6 @@ link = "#"
           name = "Features"
           url = "features"
           weight = 4
-
-
 
 
     # banner
