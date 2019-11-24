@@ -62,13 +62,13 @@ link = "#"
         url = "faq"
         
       [[Languages.en.menu.main]]
-        weight = 2
+        weight = 3
         name = "contact"
         url = "contact"
         
       # Dropdown menu
       [[Languages.en.menu.main]]
-        weight = 2
+        weight = 4
         name = "pages"
         url = "pages"
         hasChildren = true
@@ -77,19 +77,19 @@ link = "#"
           parent = "pages"
           name = "Installation"
           url = "installation"
-          weight = 2
+          weight = 1
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Billing and Pricing"
           url = "billing-pricing"
-          weight = 3
+          weight = 2
 
           [[Languages.en.menu.main]]
           parent = "pages"
           name = "Features"
           url = "features"
-          weight = 4
+          weight = 3
 
 
     # banner
@@ -137,13 +137,13 @@ link = "#"
         url = "fr/faq"
 
       [[Languages.fr.menu.main]]
-        weight = 2
+        weight = 3
         name = "contact"
         url = "fr/contact"
 
       # Dropdown menu
       [[Languages.fr.menu.main]]
-        weight = 2
+        weight = 4
         name = "les sujets"
         hasChildren = true
 
@@ -151,19 +151,19 @@ link = "#"
           parent = "les sujets"
           name = "Commencer"
           url = "fr/installation"
-          weight = 2
+          weight = 1
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
           name = "Compte et facturation"
           url = "fr/billing-pricing"
-          weight = 3
+          weight = 2
 
           [[Languages.fr.menu.main]]
           parent = "les sujets"
           name = "Dépannage"
           url = "fr/features"
-          weight = 4
+          weight = 3
 
     # banner
     [Languages.fr.params.banner]
