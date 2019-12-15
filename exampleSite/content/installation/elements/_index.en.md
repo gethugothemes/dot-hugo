@@ -94,19 +94,19 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 #### Tab
 
-{{% tabs %}}
+{{< tabs >}}
   {{% tab "first" %}}
    This is first tab
-  {{% /tab %}}
+  {{%/ tab %}}
 
   {{% tab "second" %}}
   this is second tab
-  {{% /tab %}}
+  {{%/ tab %}}
 
   {{% tab "third" %}}
   this is third tab
-  {{% /tab %}}
-{{% tabs %}}
+  {{%/ tab %}}
+{{</ tabs >}}
 
 <hr>
 
