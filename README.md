@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1><a href="https://gethugothemes.com/">Dot Hugo Documentation Theme [Version : 2.0]</a></h1>
+<h1><a href="https://gethugothemes.com/products/hugo-documentation-theme/">Dot Hugo Documentation Theme [Version : 2.0]</a></h1>
 
 <p><a href="https://github.com/themefisher/dot-hugo-documentation-theme/stargazers"><img src="https://camo.githubusercontent.com/7d6b302902df5eaa1a880850777f6cbc089abc5b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
 <a href="https://github.com/themefisher/dot-hugo-documentation-theme/issues"><img src="https://camo.githubusercontent.com/82ea79e787e3159369049285257d62b85e2c0d35/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
@@ -12,7 +12,7 @@
 </div>
 
 Dot, a responsive and feature reach documentation theme ever build in hugo eco system . We have analysised a lot of documentation and knowledge base theme to come up with this design . The readability and the cleaness is also another key feature of this theme. 
-**The images are only for demonstration purpose, Please don't use those images.**
+
 
 ### What's New in version 2.0
 This template is now in a new layout. You can create page with folder, and also gives required images in this folder. Multilangual is now more fun. No more bugs and issues. It's all like a new experience. Configuration of this theme is now more easier.
@@ -34,6 +34,8 @@ This template is now in a new layout. You can create page with folder, and also 
 |---|---|---|---|
 | ![Elements page](https://user-images.githubusercontent.com/37659754/54081094-e1f20c00-4328-11e9-90e8-eeda5e3cb427.png) | ![FAQ page](https://user-images.githubusercontent.com/37659754/54081095-e1f20c00-4328-11e9-8009-24987d98e2d0.png) | ![Inner page](https://user-images.githubusercontent.com/37659754/54081096-e28aa280-4328-11e9-97d2-6eb94da191ca.png) | ![Contact page](https://user-images.githubusercontent.com/37659754/54081093-e1597580-4328-11e9-981b-859b1a7e94d9.png) |
 
+**The images are only for demonstration purpose, Please don't use those images.**
+
 [Live Demo](http://demo.themefisher.com/dot-hugo/).
 
 ## Installation
@@ -46,8 +48,7 @@ $ cd themes
 $ git clone git@github.com:themefisher/dot-hugo-documentation-theme.git
 ```
 
-[Full Documentation](http://demo.gethugothemes.com/dot/installation/requirments/).
-
+[Full Documentation](http://demo.themefisher.com/dot-hugo/installation/install/).
 
 ## Main features
 
