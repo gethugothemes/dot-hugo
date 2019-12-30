@@ -7,8 +7,7 @@
           <ul class="list-styled">
             {{ $currentNode := . }}
             {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
-            <a class="d-block h4 back-btn"
-              href="{{ "/" | absLangURL }}">{{ i18n "Back-home"}}</a>
+            <a class="d-block h4 back-btn" href="{{ `/` | absLangURL }}">{{ i18n "Back-home"}}</a>
             {{range .Site.Home.Sections.ByWeight}}
             {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
             {{end}}
@@ -35,7 +34,7 @@
             {{ define "menu-nextprev" }}
             {{$currentNode := .currentnode }}
             {{ if ne .menu.Params.hidden true}}
-            {{if hasPrefix $currentNode.URL .menu.URL }}
+            {{if hasPrefix $currentNode.Permalink .menu.Permalink }}
             {{ $currentNode.Scratch.Set "NextPageOK" "OK" }}
             {{ $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") }}
             {{else}}
@@ -61,10 +60,10 @@
             {{ end }}
 
             {{with ($.Scratch.Get "prevPage")}}
-            <a class="nav nav-prev" href="{{.URL | absURL}}"><i class="ti-arrow-left mr-2"></i>{{.Title}}</a>
+            <a class="nav nav-prev" href="{{.Permalink }}"><i class="ti-arrow-left mr-2"></i>{{.Title}}</a>
             {{end}}
             {{with ($.Scratch.Get "nextPage")}}
-            <a class="nav nav-next" href="{{.URL | absURL}}">{{.Title}}<i class="ti-arrow-right ml-2"></i></a>
+            <a class="nav nav-next" href="{{.Permalink }}">{{.Title}}<i class="ti-arrow-right ml-2"></i></a>
             {{end}}
           </nav>
         </div>
@@ -80,11 +79,11 @@
 {{ $currentNode := .currentnode }}
 {{with .sect}}
 {{safeHTML .Params.head}}
-<li data-nav-id="{{.URL | absURL}}" title="{{.Title}}" class="sidelist
+<li data-nav-id="{{.Permalink}}" title="{{.Title}}" class="sidelist
   {{if .IsAncestor $currentNode }}parent{{end}}
   {{with .File}} {{if eq .UniqueID $currentNode.UniqueID}}active{{end}} {{ end }}
   {{if .Params.alwaysopen}}parent{{end}}">
-  <a href="{{.RelPermalink}}">
+  <a href="{{.Permalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
   </a>
   {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}

@@ -78,35 +78,37 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 #### Notice
 
-{{% notice note %}}
+{{< notice note >}}
   This is a simple note.
-{{% /notice %}}
+{{< /notice >}}
 
-{{% notice tip %}}
+{{< notice tip >}}
   This is a simple tip.
-{{% /notice %}}
+{{< /notice >}}
 
-{{% notice info %}}
+{{< notice info >}}
   This is a simple info.
-{{% /notice %}}
+{{< /notice >}}
 
 <hr>
 
 #### Tab
 
-{{% tabs %}}
-  {{% tab "first" %}}
+{{< tabs >}}
+
+  {{< tab "first" >}}
    This is first tab
-  {{% /tab %}}
+  {{< /tab >}}
 
-  {{% tab "second" %}}
+  {{< tab "second" >}}
   this is second tab
-  {{% /tab %}}
+  {{< /tab >}}
 
-  {{% tab "third" %}}
+  {{< tab "third" >}}
   this is third tab
-  {{% /tab %}}
-{{% tabs %}}
+  {{< /tab >}}
+
+{{</ tabs >}}
 
 <hr>
 
