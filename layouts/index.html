@@ -8,7 +8,7 @@
           {{with .Site.Params.topics.title}} <h2 class="section-title">{{ . }}</h2> {{ end }}
         </div>
         {{ "<!-- topic-item -->" | safeHTML }}
-        {{ range (where .Site.Pages "Type" "pages") }}
+        {{ range (where .Site.Pages "Type" "docs") }}
         <div class="col-lg-4 col-sm-6 mb-4">
           <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block match-height">
             <i class="{{ .Params.Icon }} icon text-primary d-block mb-4"></i>

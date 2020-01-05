@@ -1,7 +1,9 @@
 ---
 title: "Customization"
 date: 2018-12-29T11:02:05+06:00
+lastmod: 2020-01-05T10:42:26+06:00
 weight: 4
+draft: false
 ---
 
 **Dot** has been built to be as configurable as possible.

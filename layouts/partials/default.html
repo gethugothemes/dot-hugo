@@ -26,7 +26,7 @@
             </ul>
           </div>
           {{ end }}
-          <p class="post-meta border-bottom pb-3 mb-0 mt-3">Updated on {{ .PublishDate.Format "02 Jan 2006" }}</p>
+          <p class="post-meta border-bottom pb-3 mb-0 mt-3">Updated on {{ .Lastmod.Format "02 Jan 2006" }}</p>
           <nav class="pagination mt-3">
             <!-- Next prev page -->
             {{ $currentNode := . }}

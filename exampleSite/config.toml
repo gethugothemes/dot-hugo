@@ -69,24 +69,24 @@ link = "#"
       # Dropdown menu
       [[Languages.en.menu.main]]
         weight = 4
-        name = "pages"
-        url = "pages"
+        name = "docs"
+        url = "docs"
         hasChildren = true
 
           [[Languages.en.menu.main]]
-          parent = "pages"
+          parent = "docs"
           name = "Installation"
           url = "installation"
           weight = 1
 
           [[Languages.en.menu.main]]
-          parent = "pages"
+          parent = "docs"
           name = "Billing and Pricing"
           url = "billing-pricing"
           weight = 2
 
           [[Languages.en.menu.main]]
-          parent = "pages"
+          parent = "docs"
           name = "Features"
           url = "features"
           weight = 3
@@ -172,8 +172,8 @@ link = "#"
       image = "images/banner.jpg"
       placeholder = "Have a question? Just ask here or enter terms"
 
-    # pages
-    [Languages.fr.params.pages]
+    # docs
+    [Languages.fr.params.docs]
       title = "Parcourir tous les sujets"
     
     # call to action
