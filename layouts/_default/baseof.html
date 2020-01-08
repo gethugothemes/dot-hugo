@@ -4,7 +4,7 @@
 <body>
   {{ if .IsHome }}
   {{ "<!-- header -->" | safeHTML }}
-  <header class="hero-section overlay bg-cover banner" data-background="{{ .Site.Params.banner.image | absURL }}">
+  <header class="hero-section overlay bg-cover banner" data-background="{{ .Site.Params.banner.bg_image | absURL }}">
     <div class="container mb-100">
       {{ "<!-- navigation -->" | safeHTML }}
       {{ partial "navigation.html" . }}

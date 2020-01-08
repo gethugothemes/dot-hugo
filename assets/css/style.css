@@ -1,6 +1,6 @@
 body {
   line-height: 1.5;
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family), sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 17px;
   color: var(--text-color);
@@ -19,7 +19,7 @@ h4,
 h5,
 h6 {
   color: var(--text-color-dark);
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family), sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -57,7 +57,7 @@ h6,
 /* Button style */
 .btn {
   font-size: 14px;
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family), sans-serif;
   text-transform: uppercase;
   padding: 16px 44px;
   border-radius: 0px;
@@ -410,7 +410,7 @@ header.sticky-top {
   position: relative;
   color: var(--text-color-dark);
   transition: .2s ease;
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family), sans-serif;
 }
 
 @media (max-width: 991px) {

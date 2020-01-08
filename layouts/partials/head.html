@@ -5,26 +5,32 @@
   {{ hugo.Generator }}
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   {{ "<!-- ** Plugins Needed for the Project ** -->" | safeHTML }}
   {{ "<!-- Bootstrap -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/bootstrap/bootstrap.min.css">
-  {{ "<!-- themefy-icon -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/themify-icons/themify-icons.css">
-  {{ "<!-- highlight -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/highlight/hybrid.css">
-  {{ "<!-- fonts -->" | safeHTML }}
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap.min.css` | absURL }}">
 
+  {{ "<!-- themefy-icon -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ `plugins/themify-icons/themify-icons.css` | absURL }}">
+
+  {{ "<!-- highlight -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ `plugins/highlight/hybrid.css` | absURL }}">
+
+  {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+
+  {{ "<!-- fonts -->" | safeHTML }}
+  <link href="https://fonts.googleapis.com/css?family={{replace .Site.Params.font_family ' ' '+' | title}}:300,400,700&display=swap" rel="stylesheet">
+  
   <style>
   :root{
-    --primary-color:{{ .Site.Params.primaryColor }};
-    --secondary-color:{{ .Site.Params.secondaryColor }};
-    --text-color:{{ .Site.Params.textColor }};
-    --text-color-dark:{{ .Site.Params.textColorDark }};
-    --white-color:{{ .Site.Params.whiteColor }};
+    --primary-color:{{ .Site.Params.primary_color }};
+    --secondary-color:{{ .Site.Params.secondary_color }};
+    --text-color:{{ .Site.Params.text_color }};
+    --text-color-dark:{{ .Site.Params.text_color_dark }};
+    --white-color:{{ .Site.Params.white_color }};
+    --font-family:{{ replace .Site.Params.font_family ' ' '+' | title }};
   }
   </style>
 
@@ -33,12 +39,19 @@
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
 {{ "<!-- jquiry -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
+<script src="{{ `plugins/jquery/jquery-1.12.4.js` | absURL }}"></script>
 
 {{ "<!-- jquary ui -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
+<script src="{{ `plugins/jquery/jquery-ui.js`| absURL }}"></script>
 
-{{ "<!--Favicon-->" | safeHTML }}
-<link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon">
+{{ "<!-- Bootstrap JS -->" | safeHTML }}
+<script src="{{ `plugins/bootstrap/bootstrap.min.js` | absURL }}"></script>
+
+{{ "<!-- match-height JS -->" | safeHTML }}
+<script src="{{ `plugins/match-height/jquery.matchHeight-min.js` | absURL }}"></script>
+
+{{ "<!-- highlight -->" | safeHTML }}
+<script src="{{ `plugins/highlight/highlight.pack.js` | absURL }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
