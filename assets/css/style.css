@@ -334,6 +334,12 @@ header.sticky-top {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 0;
+  }
+}
+
 .navbar-brand img {
   max-width: 100px;
   margin-bottom: 0;
@@ -341,7 +347,7 @@ header.sticky-top {
 
 .navbar .nav-item .nav-link {
   text-transform: uppercase;
-  padding: 18px 15px !important;
+  padding: 10px 15px !important;
   font-size: 15px;
 }
 
@@ -356,7 +362,7 @@ header.sticky-top {
   box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.12);
   padding: 15px;
   border: 0;
-  top: 60px;
+  top: 40px;
   left: -25px;
   border-radius: 0;
   display: block;
@@ -368,7 +374,7 @@ header.sticky-top {
   background: var(--white-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .navbar .dropdown-menu {
     display: none;
     opacity: 1;
@@ -389,7 +395,7 @@ header.sticky-top {
   transform-origin: top;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .navbar .dropdown-menu.view {
     display: block;
   }
@@ -399,7 +405,7 @@ header.sticky-top {
   visibility: hidden;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .navbar .dropdown-menu.show {
     visibility: visible;
     display: block;
@@ -413,14 +419,10 @@ header.sticky-top {
   font-family: var(--font-family), sans-serif;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .navbar .dropdown-item {
     text-align: center;
   }
-}
-
-.navbar .dropdown-item:not(:last-child) {
-  margin-bottom: 10px;
 }
 
 .navbar .dropdown-item:hover {
@@ -428,6 +430,14 @@ header.sticky-top {
   background: transparent;
 }
 
+.lang-list{
+  background: transparent;
+  color: var(--white-color);
+}
+
+.lang-list.dark{
+  color: var(--text-color-dark);
+}
 
 .banner p {
   font-size: 20px;
@@ -905,9 +915,4 @@ code{
   z-index: 1;
   left: -15px;
   top: -3px;
-}
-
-#select-language{
-  background: transparent;
-  color: var(--white-color);
 }

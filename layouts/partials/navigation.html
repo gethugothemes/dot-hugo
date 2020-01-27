@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark">
+<nav class="navbar navbar-expand-md {{ if .IsHome }}navbar-dark{{ else }}navbar-light{{ end }}">
   <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
     {{ $logo:= .Site.Params.logo }}
     {{ $logoWhite:= .Site.Params.logo_white }}
@@ -44,7 +44,7 @@
     </ul>
     <!-- Language List -->
     {{- if .Site.IsMultiLingual }}
-    <select id="select-language" onchange="location = this.value;">
+    <select class="lang-list {{ if not .IsHome }}dark{{ end }}" id="select-language" onchange="location = this.value;">
       {{ $siteLanguages := .Site.Languages}}
       {{ $pageLang := .Page.Lang}}
       {{ range .Page.AllTranslations }}
