@@ -6,10 +6,9 @@
         <div class="mb-5 bg-white p-4 sticky-top top-100">
           <ul class="list-styled">
             {{ $currentNode := . }}
-            {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
-            <a class="d-block h4 back-btn" href="{{ `/` | absLangURL }}">{{ i18n "Back-home"}}</a>
+            <a class="d-block h4 back-btn" href="{{ .Site.BaseURL | relLangURL }}">{{ i18n "Back-home"}}</a>
             {{range .Site.Home.Sections.ByWeight}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
             {{end}}
           </ul>
         </div>
@@ -22,7 +21,7 @@
           {{ else }}
           <div class="bg-gray p-4">
             <ul class="page-list">
-              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
             </ul>
           </div>
           {{ end }}
@@ -98,7 +97,7 @@
     {{ range $pages.ByWeight }}
     {{ if and .Params.hidden (not $.showhidden) }}
     {{else}}
-    {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+    {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
     {{end}}
     {{end}}
   </ul>
