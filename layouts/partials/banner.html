@@ -1,9 +1,9 @@
 {{ "<!-- banner -->" | safeHTML }}
-<div class="container">
+<div class="container section">
 	<div class="row">
 		<div class="col-lg-8 text-center mx-auto">
-			<h1 class="text-white mb-3">{{ .Site.Params.banner.title }}</h1>
-			<p class="text-white mb-4">{{ .Site.Params.banner.description }}</p>
+			<h1 class="text-white mb-3">{{ .Site.Params.banner.title | markdownify }}</h1>
+			<p class="text-white mb-4">{{ .Site.Params.banner.description | markdownify }}</p>
 			<div class="position-relative">
 				<input id="search" class="form-control" placeholder="{{ .Site.Params.banner.placeholder }}">
 

@@ -201,9 +201,21 @@ select:focus {
   padding-bottom: 100px;
 }
 
+@media (max-width: 768px) {
+  .section{
+    padding-top: 60px;
+  }
+}
+
 .section-sm {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .section-sm{
+    padding-top: 40px;
+  }
 }
 
 .section-title {
@@ -324,10 +336,6 @@ header.sticky-top {
 
 .top-100 {
   top: 100px;
-}
-
-.hero-section {
-  padding-bottom: 150px;
 }
 
 .navbar {
