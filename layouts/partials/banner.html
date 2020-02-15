@@ -17,27 +17,17 @@
 						{{ range $pages }}
 						{
 							value: "{{ .Title }}",
-							label: "{{ .Title }}",
+							label: "{{.Content}}{{range.Params.Keywords}}<p>{{.}}</p>{{end}}",
 							url:"{{ .Permalink }}"
 						},
 						{{ end }}
 					];
 					$( "#search" ).autocomplete({
-							minLength: 0,
-							source: projects,
-							focus: function( event, ui ) {
-								$( "#search" ).val( ui.item.label );
-								return false;
-							},
-							select: function( event, ui ) {
-								$( "#search" ).val( ui.item.label );
-								$( "#project-id" ).val( ui.item.value );
-								return false;
-							}
+						source: projects
 					})
 					.data( "ui-autocomplete" )._renderItem = function( ul, item ) {
 						return $( "<li>" )
-						.append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+						.append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label )
 						.appendTo( ul );
 					};
 					});

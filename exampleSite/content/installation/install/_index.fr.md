@@ -4,6 +4,8 @@ date: 2018-12-29T11:02:05+06:00
 lastmod: 2020-01-05T10:42:26+06:00
 weight: 2
 draft: false
+# search related keywords
+keywords: ["induct", "instate"]
 ---
 
 The following steps are here to help you initialize your new website. If you don't know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
