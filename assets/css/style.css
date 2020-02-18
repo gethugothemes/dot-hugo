@@ -4,7 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 17px;
   color: var(--text-color);
-  background-color: var(--secondary-color);
+  background-color: var(--body-color);
 }
 
 P {
@@ -98,24 +98,6 @@ h6,
   border-color: var(--primary-color);
 }
 
-.btn-default {
-  color: #333 !important;
-  background-color: #fff !important;
-  border: 1px solid #ccc !important;
-  display: inline-block !important;
-  padding: 6px 12px !important;
-  margin-bottom: 0 !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 1.42857143 !important;
-  text-align: center !important;
-  white-space: nowrap !important;
-  vertical-align: middle !important;
-  -ms-touch-action: manipulation !important;
-  touch-action: manipulation !important;
-  border-radius: 4px !important;
-}
-
 .inline-button {
   line-height: .8rem !important;
   padding: 5px 8px !important;
@@ -123,9 +105,8 @@ h6,
   margin-top: -5px;
 }
 
-body {
-  background-color: var(--white-color);
-  overflow-x: hidden;
+.overflow-hidden{
+  overflow: hidden !important;
 }
 
 ::-moz-selection {
@@ -234,7 +215,6 @@ select:focus {
 
 pre {
   padding: 20px;
-  background: var(--secondary-color);
   border-radius: 2px;
 }
 
@@ -266,8 +246,12 @@ pre {
   background: var(--primary-color) !important;
 }
 
-.bg-gray {
-  background-color: var(--secondary-color);
+.bg-white {
+  background-color: var(--white-color) !important;
+}
+
+.bg-light {
+  background-color: var(--light-color) !important;
 }
 
 .text-primary {
@@ -275,7 +259,7 @@ pre {
 }
 
 .text-color {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 .text-dark {
@@ -651,7 +635,7 @@ blockquote {
   border-left: 2px solid var(--primary-color);
   margin: 40px 0;
   font-weight: bold;
-  background: #f9f9f9;
+  background: var(--light-color);
 }
 
 blockquote p {

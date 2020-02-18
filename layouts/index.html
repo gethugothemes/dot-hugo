@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   {{ "<!-- topics -->" | safeHTML }}
-  <section class="section bg-gray">
+  <section class="section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 text-center">
@@ -23,16 +23,19 @@
   {{ "<!-- /topics -->" | safeHTML }}
 
   {{ if .Site.Params.cta.enable }}
+  {{ with .Site.Params.cta }}
   {{ "<!-- call to action -->" | safeHTML }}
-  <section class="bg-gray">
+  <section>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="section bg-white shadow text-center">
-          {{ with .Site.Params.cta.title }}<h2 class="mb-4">{{ . }}</h2>{{ end }}
-          {{ with .Site.Params.cta.description }}<p class="mb-4">{{ . }}</p>{{ end }}
-          {{ if .Site.Params.cta.button.enable }}
-          <a href="{{ .Site.Params.cta.button.link | relLangURL }}" class="btn btn-primary">{{ .Site.Params.cta.button.label}}</a>
+          <div class="section px-3 bg-white shadow text-center">
+          <h2 class="mb-4">{{ .title | markdownify }}</h2>
+          <p class="mb-4">{{ .content | markdownify }}</p>
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | relLangURL }}" class="btn btn-primary">{{ .label }}</a>
+          {{ end }}
           {{ end }}
           </div>
         </div>
@@ -40,6 +43,7 @@
     </div>
   </section>
   {{ "<!-- /call to action -->" | safeHTML }}
+  {{ end }}
   {{ end }}
 
 {{ end }}

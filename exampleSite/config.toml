@@ -8,44 +8,6 @@ title = "Dot"
 # desable language
 disableLanguages = []
 
-############################# Default Parameters ##########################
-[params]
-# logo is for all page
-logo = ""
-# logo white is for homepage logo, you can use colorful logo too...
-logo_white = ""
-# when logo is empty, it will shown your site title
-
-# customize color
-primary_color = "#02007e"
-secondary_color = "#f9f9f9"
-text_color = "#636363"
-text_color_dark = "#242738"
-white_color = "#ffffff"
-
-# font family
-font_family = "lato" # Choose font family from : https://fonts.google.com/
-
-# contact form action
-contact_form_action = "#" # contact form works with : https://formspree.io
-
-############################## social links ##############################
-[[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-  
-[[params.social]]
-icon = "ti-vimeo-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-  
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
 
 ################################# navigation ################################
 [[menu.main]]
@@ -82,6 +44,47 @@ hasChildren = true
   url = "features"
   weight = 3
 
+
+############################# Default Parameters ##########################
+[params]
+# logo is for all page
+logo = ""
+# logo white is for homepage logo, you can use colorful logo too...
+logo_white = ""
+# when logo is empty, it will shown your site title
+
+# customize color
+primary_color = "#02007e"
+body_color = "#f9f9f9"
+text_color = "#636363"
+text_color_dark = "#242738"
+white_color = "#ffffff"
+light_color = "#f8f9fa"
+
+# font family
+font_family = "lato" # Choose font family from : https://fonts.google.com/
+
+# contact form action
+contact_form_action = "#" # contact form works with : https://formspree.io
+
+
+############################## social links ##############################
+[[params.social]]
+icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+
+[[params.social]]
+icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+  
+[[params.social]]
+icon = "ti-vimeo-alt" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+  
+[[params.social]]
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+
 ################################ English Language ######################
 [Languages.en]
 languageName = "En"
@@ -93,7 +96,7 @@ copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugo
 # banner
 [Languages.en.params.banner]
 title = "Support Center & Knowledge base"
-description = "Find advice and answers from our support team fast or get in touch"
+subtitle = "Find advice and answers from our support team fast or get in touch"
 bg_image = "images/banner.jpg"
 placeholder = "Have a question? Just ask here or enter terms"
 
@@ -101,7 +104,8 @@ placeholder = "Have a question? Just ask here or enter terms"
 [Languages.en.params.cta]
 enable = true
 title = "Didn't find an answer to your question?"
-description = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
+content = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
+# call to action button
 [Languages.en.params.cta.button]
 enable = true
 label = "contact us"
@@ -119,7 +123,7 @@ copyright = "Les documents Hugo sont sous copyright © [gethugothemes](https://g
 # banner
 [Languages.fr.params.banner]
 title = "Comment pouvons nous aider?"
-description = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
+subtitle = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
 bg_image = "images/banner.jpg"
 placeholder = "Avoir une question? Il suffit de demander ici ou de saisir les termes"
 
@@ -127,7 +131,8 @@ placeholder = "Avoir une question? Il suffit de demander ici ou de saisir les te
 [Languages.fr.params.cta]
 enable = true
 title = "Vous n'avez pas trouvé de réponse à votre question?"
-description = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
+content = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
+# call to action button
 [Languages.fr.params.cta.button]
 enable = true
 label = "Contactez nous"
