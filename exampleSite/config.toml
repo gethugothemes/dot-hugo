@@ -8,6 +8,8 @@ title = "Dot"
 # desable language
 disableLanguages = []
 
+[markup.goldmark.renderer]
+unsafe= true
 
 ################################# navigation ################################
 [[menu.main]]
