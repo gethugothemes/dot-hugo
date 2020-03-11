@@ -763,7 +763,7 @@ tbody {
 
 /* side list */
 .sidelist {
-  display: none;
+  display: block;
 }
 
 li.sidelist>a {
@@ -774,18 +774,6 @@ li.sidelist>a {
 
 li.sidelist li a {
   margin: 0;
-}
-
-.sidelist.parent {
-  display: block;
-}
-
-.sidelist.parent::before {
-  display: none;
-}
-
-.sidelist.parent.active::before {
-  display: block;
 }
 
 .sidelist li.sidelist {
