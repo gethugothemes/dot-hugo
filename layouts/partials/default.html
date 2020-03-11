@@ -80,8 +80,12 @@
 {{ $currentNode := .currentnode }}
 {{with .sect}}
 {{safeHTML .Params.head}}
+{{ $fileUniqueID := "" }}
+{{ with .File }}{{ $fileUniqueID = .UniqueID }}{{ end }}
+{{ $currentNodeFileUniqueID := "" }}
+{{ with $currentNode.File }}{{ $currentNodeFileUniqueID = .UniqueID }}{{ end }}
 <li data-nav-id="{{.Permalink}}" title="{{.Title}}" class="sidelist
-  {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}">
+  {{if eq $fileUniqueID $currentNodeFileUniqueID}}active{{end}}">
   <a href="{{.Permalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
   </a>
