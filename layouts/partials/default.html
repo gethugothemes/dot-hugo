@@ -8,8 +8,10 @@
             {{ $currentNode := . }}
             <a class="d-block h4 back-btn" href="{{ .Site.BaseURL | relLangURL }}">{{ i18n "Back-home"}}</a>
             {{range .Site.Home.Sections.ByWeight}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
-            {{end}}
+              {{ if eq . $currentNode.FirstSection }} {{/* print current section only */}}
+              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
+              {{ end }}
+            {{ end }}
           </ul>
         </div>
       </div>
@@ -79,29 +81,21 @@
 {{with .sect}}
 {{safeHTML .Params.head}}
 <li data-nav-id="{{.Permalink}}" title="{{.Title}}" class="sidelist
-  {{if .IsAncestor $currentNode }}parent{{end}}
-  {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
-  {{if .Params.alwaysopen}}parent{{end}}">
+  {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}">
   <a href="{{.Permalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
   </a>
   {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
   {{ if ne $numberOfPages 0 }}
-  <ul>
-    {{ $currentNode.Scratch.Set "pages" .Pages }}
-    {{ if .Sections}}
-    {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
-    {{end}}
-    {{ $pages := ($currentNode.Scratch.Get "pages") }}
-
-    {{ range $pages.ByWeight }}
-    {{ if and .Params.hidden (not $.showhidden) }}
-    {{else}}
-    {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-    {{end}}
-    {{end}}
-  </ul>
+    <ul>
+      {{ range .Pages.ByWeight }}
+        {{ if and .Params.hidden (not $.showhidden) }}
+        {{else}}
+          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+        {{end}}
+      {{end}}
+    </ul>
+  {{ end }}
 </li>
-{{ end }}
 {{ end }}
 {{ end }}
