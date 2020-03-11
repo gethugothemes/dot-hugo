@@ -8,7 +8,7 @@
             {{ $currentNode := . }}
             <a class="d-block h4 back-btn" href="{{ .Site.BaseURL | relLangURL }}">{{ i18n "Back-home"}}</a>
             {{range .Site.Home.Sections.ByWeight}}
-              {{ if eq . $currentNode.FirstSection }} {{/* print current section only */}}
+              {{ if eq .FirstSection $currentNode.FirstSection }} {{/* print current section only */}}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
               {{ end }}
             {{ end }}
