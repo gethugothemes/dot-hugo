@@ -8,6 +8,7 @@ title = "Dot"
 # desable language
 disableLanguages = []
 
+# unsafe html
 [markup.goldmark.renderer]
 unsafe= true
 
