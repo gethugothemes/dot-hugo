@@ -1,12 +1,12 @@
 {{ "<!-- footer -->" | safeHTML }}
-<footer class="section pb-0">
+<footer class="section pb-4">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-md-8 text-md-left text-center">
-       <p>{{ .Site.Params.copyright | markdownify }}</p>
+       <p class="mb-md-0 mb-4">{{ .Site.Params.copyright | markdownify }}</p>
       </div>
       <div class="col-md-4 text-md-right text-center">
-        <ul class="list-inline mb-3">
+        <ul class="list-inline">
           {{ range .Site.Params.social }}
           <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
           {{ end }}

@@ -39,9 +39,9 @@
 {{ $css := resources.Get "css/style.css" }}
 {{ $css = $css | minify }}
 {{ if hugo.IsProduction }}
-{{ $css = $css | minify | resources.PostProcess }}
+{{ $css = $css | resources.PostProcess }}
 {{ end }}
-<link href="{{ $css.RelPermalink }}" rel="stylesheet" media="screen"/>
+<link href="{{ $css.Permalink }}" rel="stylesheet" media="screen"/>
 
 {{ "<!-- jquiry -->" | safeHTML }}
 <script src="{{ `plugins/jquery/jquery-1.12.4.js` | absURL }}"></script>
