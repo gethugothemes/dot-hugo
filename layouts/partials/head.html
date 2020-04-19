@@ -36,11 +36,7 @@
   </style>
 
 {{ "<!-- Main Stylesheet -->" | safeHTML }}
-{{ $css := resources.Get "css/style.css" }}
-{{ $css = $css | minify }}
-{{ if hugo.IsProduction }}
-{{ $css = $css | resources.PostProcess }}
-{{ end }}
+{{ $css := resources.Get "css/style.css" | minify }}
 <link href="{{ $css.Permalink }}" rel="stylesheet" media="screen"/>
 
 {{ "<!-- jquiry -->" | safeHTML }}
