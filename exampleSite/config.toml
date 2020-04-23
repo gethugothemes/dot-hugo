@@ -5,8 +5,10 @@ baseURL = "https://examplesite.com/"
 theme = "dot"
 # site title
 title = "Dot"
-# desable language
+# disable language
 disableLanguages = []
+# google analytics
+googleAnalytics = "" # paste your analytics ID here. Ex: UA-123-45
 
 # unsafe html
 [markup.goldmark.renderer]
