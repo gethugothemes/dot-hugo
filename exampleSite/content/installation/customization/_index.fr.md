@@ -37,9 +37,19 @@ If you need to change this default behavior, create a new file in `layouts/parti
 ```toml
 [params]
   # Change default color scheme with a color name or color code.
-  primaryColor = "yourColor"
-  secondaryColor = "yourColor"
-  textColor = "yourColor"
-  textColorDark = "yourColor"
-  whiteColor = "yourColor"
+  primary_color = "#02007e"
+  body_color = "#f9f9f9"
+  text_color = "#636363"
+  text_color_dark = "#242738"
+  white_color = "#ffffff"
+  light_color = "#f8f9fa"
+```
+
+### Change default Fonts
+
+
+```toml
+[params]
+  # font family
+  font_family = "lato" # Choose font family from : https://fonts.google.com/
 ```
