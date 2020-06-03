@@ -423,7 +423,7 @@ header.sticky-top {
 }
 
 .lang-list {
-  background: transparent;
+  background: var(--primary-color);
   color: var(--white-color);
 }
 
