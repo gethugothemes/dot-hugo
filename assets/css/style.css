@@ -429,6 +429,7 @@ header.sticky-top {
 
 .lang-list.dark {
   color: var(--text-color-dark);
+  background: var(--white-color);
 }
 
 .banner {
