@@ -311,6 +311,7 @@ pre {
 }
 
 header.sticky-top {
+  overflow: hidden;
   z-index: 9999;
 }
 
@@ -319,7 +320,7 @@ header.sticky-top {
 }
 
 .top-100 {
-  top: 100px;
+  top: 50px;
 }
 
 .navbar {
@@ -518,7 +519,7 @@ header.sticky-top {
   font-size: 15px;
 }
 
-.ui-menu-item a:hover{
+.ui-menu-item a:hover {
   color: var(--primary-color);
 }
 
@@ -621,7 +622,7 @@ textarea.form-control {
   background: var(--primary-color);
   opacity: .3;
   left: 0;
-  top: 18px;
+  top: 17px;
 }
 
 .post-meta {
@@ -787,6 +788,10 @@ li.sidelist li a {
   color: var(--primary-color);
 }
 
+.sidelist li.sidelist.active::before{
+  opacity: 1;
+}
+
 .page-list li a {
   display: none;
 }
@@ -930,4 +935,10 @@ code {
   right: 20px;
   top: 18px;
   font-size: 14px;
+}
+i{
+  transition: .2s ease;
+}
+a:hover i {
+  color: var(--primary-color);
 }
