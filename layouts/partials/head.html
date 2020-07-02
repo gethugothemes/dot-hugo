@@ -21,8 +21,10 @@
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
 
   {{ "<!-- fonts -->" | safeHTML }}
-  <link href="https://fonts.googleapis.com/css?family={{replace .Site.Params.font_family ' ' '+' | title}}:300,400,700&display=swap" rel="stylesheet">
-  
+  <link href="../../assets/css/circular.css" rel="stylesheet">
+{{/*  Uncomment the line below if you want the font to be imported from Google Fonts */}}
+{{/*  <link href="https://fonts.googleapis.com/css?family={{replace .Site.Params.font_family ' ' '+' | title}}:300,400,700&display=swap" rel="stylesheet">*/}}
+
   <style>
   :root{
     --primary-color:{{ .Site.Params.primary_color }};
@@ -31,7 +33,9 @@
     --text-color-dark:{{ .Site.Params.text_color_dark }};
     --white-color:{{ .Site.Params.white_color }};
     --light-color:{{ .Site.Params.light_color }};
-    --font-family:{{ replace .Site.Params.font_family ' ' '+' | title }};
+    --font-family:'Circular';
+    /* Uncomment the line below if you want to use the font-family from the config file */
+    {{/*--font-family:{{ replace .Site.Params.font_family ' ' '+' | title }};*/}}
   }
   </style>
 
