@@ -137,10 +137,12 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding-left: 0;
+  font-size: 15px;
 }
 
 ol {
   padding-left: 20px;
+  font-size: 15px;
 }
 
 img {
