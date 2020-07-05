@@ -582,7 +582,6 @@ textarea.form-control {
   color: var(--text-color);
   font-style: italic;
   font-size: 14px;
-  font-weight: bold;
 }
 
 blockquote {
