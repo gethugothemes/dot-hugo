@@ -719,6 +719,14 @@ tbody {
 /* /single page */
 
 /* side list */
+.sidebar{
+  background-color: var(--white-color);
+  position: sticky;
+  top: 50px;
+  margin-bottom: 30px;
+  padding: 40px 10px 20px 10px;
+}
+
 .sidelist {
   display: block;
 }
@@ -865,12 +873,12 @@ code {
   content: "\e6bc";
   font-size: 25px;
   height: 30px;
-  width: 50px;
-  background: #fff;
+  width: 40px;
+  background-color: var(--white-color);
   color: inherit;
   text-align: right;
   z-index: 1;
-  left: -15px;
+  left: -5px;
   top: -3px;
 }
 
