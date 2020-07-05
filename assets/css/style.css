@@ -272,56 +272,7 @@ pre {
   color: var(--white-color) !important;
 }
 
-.mb-10 {
-  margin-bottom: 10px !important;
-}
-
-.mb-20 {
-  margin-bottom: 20px !important;
-}
-
-.mb-30 {
-  margin-bottom: 30px !important;
-}
-
-.mb-40 {
-  margin-bottom: 40px !important;
-}
-
-.mb-50 {
-  margin-bottom: 50px !important;
-}
-
-.mb-60 {
-  margin-bottom: 60px !important;
-}
-
-.mb-70 {
-  margin-bottom: 70px !important;
-}
-
-.mb-80 {
-  margin-bottom: 80px !important;
-}
-
-.mb-90 {
-  margin-bottom: 90px !important;
-}
-
-.mb-100 {
-  margin-bottom: 100px !important;
-}
-
-header.sticky-top {
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.zindex-1 {
-  z-index: 1;
-}
-
-.top-100 {
+.top-50 {
   top: 50px;
 }
 
@@ -355,10 +306,10 @@ header.sticky-top {
 
 .navbar .dropdown-menu {
   box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.12);
-  padding: 15px;
+  padding: 15px 0px;
   border: 0;
   top: 40px;
-  left: -25px;
+  left: -35px;
   border-radius: 0;
   display: block;
   visibility: hidden;

@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-md {{ if .IsHome }}navbar-dark{{ else }}navbar-light{{ end }}">
   <div class="container">
-    <a class="navbar-brand px-2" href="{{ .Site.BaseURL | relLangURL }}">
-      {{ $logo:= .Site.Params.logo }}
-      {{ $logoWhite:= .Site.Params.logo_white }}
+    <a class="navbar-brand px-2" href="{{ site.BaseURL | relLangURL }}">
+      {{ $logo:= site.Params.logo }}
+      {{ $logoWhite:= site.Params.logo_white }}
       {{ if (or $logo $logoWhite) }}
       {{ if .IsHome }}
       <img class="img-fluid" src="{{if $logoWhite }}{{ $logoWhite | absURL }} {{ else }} {{ $logo | absURL }}{{ end }}"
-        alt="{{ .Site.Title }}">
+        alt="{{ site.Title }}">
       {{ else }}
-      <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ .Site.Title }}">
+      <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ site.Title }}">
       {{ end }}
       {{ else }}
-      {{ .Site.Title }}
+      {{ site.Title }}
       {{ end }}
     </a>
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -22,9 +22,9 @@
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.home }}</a>
+          <a class="nav-link text-dark" href="{{ site.BaseURL | relLangURL }}">{{ site.Params.home }}</a>
         </li>
-        {{ range .Site.Menus.main }}
+        {{ range site.Menus.main }}
         {{ if .HasChildren }}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown"
@@ -45,10 +45,10 @@
         {{ end }}
       </ul>
       <!-- Language List -->
-      {{- if .Site.IsMultiLingual }}
+      {{- if site.IsMultiLingual }}
       <select class="lang-list {{ if not .IsHome }}dark{{ end }}" id="select-language"
         onchange="location = this.value;">
-        {{ $siteLanguages := .Site.Languages}}
+        {{ $siteLanguages := site.Languages}}
         {{ $pageLang := .Page.Lang}}
         {{ range .Page.AllTranslations }}
         {{ $translation := .}}
