@@ -734,6 +734,7 @@ li.sidelist>a {
   margin-left: 20px;
   margin-bottom: 10px;
   display: block;
+  font-size: 20px;
 }
 
 li.sidelist li a {
@@ -878,7 +879,7 @@ code {
   text-align: right;
   z-index: 1;
   left: -5px;
-  top: -3px;
+  top: -5px;
 }
 
 .ui-autocomplete-input {
