@@ -14,7 +14,7 @@ The following steps are here to help you initialize your new website. If you don
 
 Hugo provides a `new` command to create a new website.
 
-```
+```bash
 hugo new site <new_project>
 ```
 
@@ -43,7 +43,7 @@ theme = "Dot"
 
 Then, create content pages inside the previously created chapter. Here are two ways to create content in the chapter:
 
-```
+```bash
 hugo new installation/first-content.md
 hugo new installation/second-content/_index.md
 ```
@@ -54,7 +54,7 @@ Feel free to edit thoses files by adding some sample content and replacing the `
 
 Launch by using the following command:
 
-```
+```bash
 hugo serve
 ```
 
@@ -64,7 +64,7 @@ Go to `http://localhost:1313`
 
 When your site is ready to deploy, run the following command:
 
-```
+```bash
 hugo
 ```
 

@@ -1,21 +1,16 @@
 <head>
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
-
-  {{ hugo.Generator }}
-
-  {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {{ hugo.Generator }}
   
-  {{ "<!-- ** Plugins Needed for the Project ** -->" | safeHTML }}
+  {{ "<!-- ** CSS Plugins Needed for the Project ** -->" | safeHTML }}
+  
   {{ "<!-- Bootstrap -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap.min.css` | absURL }}">
 
   {{ "<!-- themefy-icon -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/themify-icons/themify-icons.css` | absURL }}">
-
-  {{ "<!-- highlight -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ `plugins/highlight/hybrid.css` | absURL }}">
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
@@ -38,6 +33,8 @@
 {{ "<!-- Main Stylesheet -->" | safeHTML }}
 {{ $css := resources.Get "css/style.css" | minify }}
 <link href="{{ $css.Permalink }}" rel="stylesheet" media="screen"/>
+  
+{{ "<!-- ** JS Plugins Needed for the Project ** -->" | safeHTML }}
 
 {{ "<!-- jquiry -->" | safeHTML }}
 <script src="{{ `plugins/jquery/jquery-1.12.4.js` | absURL }}"></script>
@@ -50,10 +47,6 @@
 
 {{ "<!-- match-height JS -->" | safeHTML }}
 <script src="{{ `plugins/match-height/jquery.matchHeight-min.js` | absURL }}"></script>
-
-{{ "<!-- highlight -->" | safeHTML }}
-<script src="{{ `plugins/highlight/highlight.pack.js` | absURL }}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 {{ template "_internal/google_analytics.html" . }}
 
