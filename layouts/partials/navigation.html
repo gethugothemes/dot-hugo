@@ -21,9 +21,6 @@
 
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="{{ site.BaseURL | relLangURL }}">{{ site.Params.home }}</a>
-        </li>
         {{ range site.Menus.main }}
         {{ if .HasChildren }}
         <li class="nav-item dropdown">

@@ -9,45 +9,9 @@ title = "Dot"
 disableLanguages = []
 # google analytics
 googleAnalytics = "" # paste your analytics ID here. (Ex: UA-123-45)
-
 # unsafe html
 [markup.goldmark.renderer]
-unsafe= true
-
-################################# navigation ################################
-[[menu.main]]
-name = "Faq"
-url = "faq"
-weight = 1
-
-[[menu.main]]
-name = "contact"
-url = "contact"
-weight = 2
-
-# Dropdown menu
-[[menu.main]]
-weight = 3
-name = "docs"
-hasChildren = true
-
-  [[menu.main]]
-  parent = "docs"
-  name = "Installation"
-  url = "installation"
-  weight = 1
-
-  [[menu.main]]
-  parent = "docs"
-  name = "Billing and Pricing"
-  url = "billing-pricing"
-  weight = 2
-
-  [[menu.main]]
-  parent = "docs"
-  name = "Features"
-  url = "features"
-  weight = 3
+unsafe = true
 
 
 ############################# Default Parameters ##########################
@@ -95,7 +59,6 @@ link = "#"
 languageName = "En"
 languageCode = "en-us"
 weight = 1
-home = "Home"
 copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2020."
 
 # banner
@@ -117,12 +80,52 @@ label = "contact us"
 link = "contact"
 
 
+################## english navigation #################
+[[Languages.en.menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "Faq"
+url = "faq"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "contact"
+url = "contact"
+weight = 3
+
+# Dropdown menu
+[[Languages.en.menu.main]]
+weight = 4
+name = "docs"
+hasChildren = true
+
+  [[Languages.en.menu.main]]
+  parent = "docs"
+  name = "Installation"
+  url = "installation"
+  weight = 1
+
+  [[Languages.en.menu.main]]
+  parent = "docs"
+  name = "Billing and Pricing"
+  url = "billing-pricing"
+  weight = 2
+
+  [[Languages.en.menu.main]]
+  parent = "docs"
+  name = "Features"
+  url = "features"
+  weight = 3
+
+
 ################################### Franch Language ######################
 [Languages.fr]
 languageName = "Fr"
 languageCode = "fr-fr"
 weight = 2
-home = "Accueil"
 copyright = "Les documents Hugo sont sous copyright © [gethugothemes](https://gethugothemes.com/) 2020."
 
 # banner
@@ -142,3 +145,44 @@ content = "Contactez-nous pour plus de détails sur les services supplémentaire
 enable = true
 label = "Contactez nous"
 link = "contact"
+
+
+################## french navigation #################
+[[Languages.fr.menu.main]]
+name = "Accueil"
+url = "/"
+weight = 1
+
+[[Languages.fr.menu.main]]
+name = "Faq"
+url = "faq"
+weight = 2
+
+[[Languages.fr.menu.main]]
+name = "contact"
+url = "contact"
+weight = 3
+
+# Dropdown menu
+[[Languages.fr.menu.main]]
+weight = 4
+name = "docs"
+hasChildren = true
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Installation"
+  url = "installation"
+  weight = 1
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Billing and Pricing"
+  url = "billing-pricing"
+  weight = 2
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Features"
+  url = "features"
+  weight = 3
