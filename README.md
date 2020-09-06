@@ -71,10 +71,10 @@ If your problem or idea is not addressed yet, [open a new issue](https://github.
 
 ## Technical Support or Questions (Paid)
 
-If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.  
+If you have questions or need help integrating the product please [contact us](mailto:mehedi@themefisher.com) instead of opening an issue.  
 
 ## Hire Us
-We are available for Hiring of your next HUGO project. Drop Us a mail [themefisher@gmail.com](mailto:themefisher@gmail.com)
+We are available for Hiring of your next HUGO project. Drop Us a mail [mehedi@themefisher.com](mailto:mehedi@themefisher.com)
 
 ## Premium Themes
 
