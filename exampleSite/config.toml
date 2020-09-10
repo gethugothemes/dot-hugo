@@ -59,7 +59,7 @@ link = "#"
 languageName = "En"
 languageCode = "en-us"
 weight = 1
-copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2020."
+copyright = "Copyright © 2020 a Hugo theme by [Gethugothemes](https://gethugothemes.com/)"
 
 # banner
 [Languages.en.params.banner]
@@ -126,7 +126,7 @@ hasChildren = true
 languageName = "Fr"
 languageCode = "fr-fr"
 weight = 2
-copyright = "Les documents Hugo sont sous copyright © [gethugothemes](https://gethugothemes.com/) 2020."
+copyright = "Copyright © 2020 un thème Hugo par [Gethugothemes](https://gethugothemes.com/)"
 
 # banner
 [Languages.fr.params.banner]
