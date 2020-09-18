@@ -30,13 +30,13 @@
           </a>
           <div class="dropdown-menu">
             {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            <a class="dropdown-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
             {{ end }}
           </div>
         </li>
         {{ else }}
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          <a class="nav-link text-dark" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
         {{ end }}
