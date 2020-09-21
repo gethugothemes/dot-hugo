@@ -49,5 +49,11 @@
 <script src="{{ `plugins/match-height/jquery.matchHeight-min.js` | absURL }}"></script>
 
 {{ template "_internal/google_analytics.html" . }}
+  
+{{ if templates.Exists ( printf "partials/overrides/header.html" ) }}
+  {{ partial "partials/overrides/header.html" . }}
+{{ else }}
+  {{ "<!-- create /layouts/partials/overrides/header.html in your own theme or root directory to add your custom content here -->" | safeHTML }}
+{{ end }}
 
 </head>
