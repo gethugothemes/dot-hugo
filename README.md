@@ -64,10 +64,16 @@ $ git clone git@github.com:themefisher/dot-hugo-documentation-theme.git
 - Buttons, Tip/Note/Info/Warning boxes, Expand
 - Responsive Ready
 
-## Reporting Issues
-
+## Reporting Issues or Contributing
 We use GitHub Issues as the official bug tracker for the Navigator Template. Please Search [existing issues](https://github.com/themefisher/dot-hugo-documentation-theme/issues). It’s possible someone has already reported the same problem.
 If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/dot-hugo-documentation-theme/issues)
+
+Contributions are welcome and we will review and consider pull requests.
+Primary goals are:
+- Keep it simple.
+- Keep minimal (or zero) default configuration.
+- Avoid interference with user-defined layouts.
+- Avoid using JS if it can be solved by CSS.
 
 ## Technical Support or Questions (Paid)
 
@@ -88,6 +94,7 @@ Of course, you can also choose what you want to donate, all donations are awesom
 
 ## Hire Us
 We are available for Hiring of your next HUGO project. Drop Us a mail [mehedi@themefisher.com](mailto:mehedi@themefisher.com)
+
 
 ## Premium Themes
 
