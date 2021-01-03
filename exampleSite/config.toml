@@ -3,7 +3,6 @@
 baseURL = "https://examplesite.com/"
 # theme
 theme = "dot"
-themesDir = "../.."
 # site title
 title = "Dot"
 # disable language
