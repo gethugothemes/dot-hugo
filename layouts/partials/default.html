@@ -6,7 +6,6 @@
         <div class="sidebar">
         <a class="back-btn" href="{{ .Site.BaseURL | relLangURL }}" aria-label="back"></a>
           <ul class="list-styled">
-            
             {{ $currentNode := . }}
             {{range .Site.Home.Sections.ByWeight}}
               {{ if eq .FirstSection $currentNode.FirstSection }}
