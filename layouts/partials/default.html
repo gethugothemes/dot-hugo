@@ -4,9 +4,10 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="sidebar">
+        <a class="back-btn" href="{{ .Site.BaseURL | relLangURL }}" aria-label="back"></a>
           <ul class="list-styled">
+            
             {{ $currentNode := . }}
-            <a class="back-btn" href="{{ .Site.BaseURL | relLangURL }}"></a>
             {{range .Site.Home.Sections.ByWeight}}
               {{ if eq .FirstSection $currentNode.FirstSection }}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
@@ -61,10 +62,10 @@
             {{ end }}
 
             {{with ($.Scratch.Get "prevPage")}}
-            <a class="nav nav-prev" href="{{.Permalink }}"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">{{.Title}}</span></a>
+            <a class="nav nav-prev" href="{{.Permalink }}" aria-label="Previous page" ><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">{{.Title}}</span></a>
             {{end}}
             {{with ($.Scratch.Get "nextPage")}}
-            <a class="nav nav-next" href="{{.Permalink }}"> <span class="d-none d-md-block">{{.Title}}</span><i class="ti-arrow-right ml-2"></i></a>
+            <a class="nav nav-next" href="{{.Permalink }}" aria-label="Previous page" > <span class="d-none d-md-block">{{.Title}}</span><i class="ti-arrow-right ml-2"></i></a>
             {{end}}
           </nav>
         </div>
