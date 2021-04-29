@@ -22,6 +22,11 @@ logo = ""
 logo_white = ""
 # when logo is empty, it will shown your site title
 
+# OpenGraph / Twitter Card metadata
+description = "This is meta description"
+author = "Themefisher"
+image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+
 # customize color
 primary_color = "#02007e"
 body_color = "#f9f9f9"
