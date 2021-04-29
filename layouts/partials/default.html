@@ -67,6 +67,33 @@
             <a class="nav nav-next" href="{{.Permalink }}"> <span class="d-none d-md-block">{{.Title}}</span><i class="ti-arrow-right ml-2"></i></a>
             {{end}}
           </nav>
+
+          <section class="my-3 py-3" id="related-articles">
+            {{$c := .Section}}
+            {{$p := .Params.Categories}} 
+            <h5 class="text-center">Related Articles</h5>
+            <div class="row">
+                {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+                {{if eq $key $p}}
+                    {{ range  $taxonomy.Pages}}
+                    <a href="{{ .Permalink}}">
+                      <div class="col-sm-3">
+                        <div class="card" style="width: 12rem;">
+                          <img class="card-img-top" {{ with .Params.image }} src="{{ . }}"{{ end }} alt="{{ .Params.Title }}">
+                          <div class="card-body">
+                            <h5 class="card-title">{{ .Title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{.Params.Categories}}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">{{.Section}}</h6>
+                          </div>
+                        </div>
+                      </div>     
+                    </a>
+                    {{ end }}
+                {{ end }}
+                {{end}}
+              </div>
+          </section>
+
         </div>
       </div>
     </div>
