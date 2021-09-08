@@ -31,9 +31,9 @@
 - Multiple language support (Fr, En) 
 - Google analytics  support
 - CSS and Js bundle with hugo pipe
-- Google page speed optimized ( 81% )
 - Color and fonts variable in config file
 - Contact form Support
+- Google page speed optimized ( 81% )
 - Open graph meta tag
 - Twitter card meta tag
 
@@ -108,10 +108,10 @@ share those images.
 
 ## Hire Us
 We are available for **Hiring** for your next HUGO project. Please, check our
-[services](https://cutt.ly/ght-service)
+[services](https://gethugothemes.com/services/?ref=github)
 
 <!-- premium themes -->
 ## Premium Themes By Us
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![godocs](https://demo.gethugothemes.com/thumbnails/godocs.webp)](https://gethugothemes.com/products/godocs/) | [![academia](https://demo.gethugothemes.com/thumbnails/academia.webp)](https://gethugothemes.com/products/academia/) |
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![Agen](https://demo.gethugothemes.com/thumbnails/agen.webp)](https://gethugothemes.com/products/agen/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/wishfund.webp)](https://gethugothemes.com/products/wishfund/) |
 |:---:|:---:|:---:|
-| **Premium Theme Bundle (40+)** | **Godocs** | **Academia** |
+| **Premium Theme Bundle (40+)** | **Agen** | **Wishfund** |
