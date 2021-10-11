@@ -2,7 +2,7 @@
 # provide your domain here
 baseURL = "https://examplesite.com/"
 # theme
-theme = "dot"
+theme = "dot-hugo"
 # site title
 title = "Dot"
 # disable language
