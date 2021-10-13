@@ -130,8 +130,9 @@
 
   // Download page to pdf format
   window.onload = function() {
-      document.getElementById("generatePDF")
-          .addEventListener("click", () => {
+      var generatePDF = document.getElementById('generatePDF');
+      if (typeof(generatePDF) != 'undefined' && generatePDF != null) {
+          generatePDF.addEventListener("click", () => {
               const content = this.document.getElementById("content");
               console.log(content);
               console.log(window);
