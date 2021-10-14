@@ -145,6 +145,7 @@
               };
               html2pdf().from(content).set(opt).save();
           })
+      }
     }
 
 })(jQuery);
