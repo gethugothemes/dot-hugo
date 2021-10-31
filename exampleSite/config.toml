@@ -2,7 +2,7 @@
 # provide your domain here
 baseURL = "https://examplesite.com/"
 # theme
-theme = "dot"
+theme = "dot-hugo"
 # site title
 title = "Dot"
 # disable language
@@ -68,7 +68,7 @@ link = "#"
 languageName = "En"
 languageCode = "en-us"
 weight = 1
-copyright = "Copyright © 2020 a Hugo theme by [Gethugothemes](https://gethugothemes.com/)"
+copyright = "Copyright &copy; 2021 a Hugo theme by [Gethugothemes](https://gethugothemes.com/)"
 
 # banner
 [Languages.en.params.banner]
@@ -135,7 +135,7 @@ hasChildren = true
 languageName = "Fr"
 languageCode = "fr-fr"
 weight = 2
-copyright = "Copyright © 2020 un thème Hugo par [Gethugothemes](https://gethugothemes.com/)"
+copyright = "Copyright &copy; 2021 un thème Hugo par [Gethugothemes](https://gethugothemes.com/)"
 
 # banner
 [Languages.fr.params.banner]

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md {{ if .IsHome }}navbar-dark{{ else }}navbar-light{{ end }}">
-  <div class="container">
+  <div class="container px-2 px-md-0">
     <a class="navbar-brand px-2" href="{{ site.BaseURL | relLangURL }}">
       {{ $logo:= site.Params.logo }}
       {{ $logoWhite:= site.Params.logo_white }}
@@ -43,7 +43,7 @@
       </ul>
       <!-- Language List -->
       {{- if site.IsMultiLingual }}
-      <select class="lang-list {{ if not .IsHome }}dark{{ end }}" id="select-language"
+      <select class="lang-list {{ if not .IsHome }}dark mb-3 mb-md-0{{ end }}" id="select-language"
         onchange="location = this.value;">
         {{ $siteLanguages := site.Languages}}
         {{ $pageLang := .Page.Lang}}

@@ -127,4 +127,25 @@
     $(this).removeClass('active')
   })
 
+
+  // Download page to pdf format
+  window.onload = function() {
+      var generatePDF = document.getElementById('generatePDF');
+      if (typeof(generatePDF) != 'undefined' && generatePDF != null) {
+          generatePDF.addEventListener("click", () => {
+              const content = this.document.getElementById("content");
+              console.log(content);
+              console.log(window);
+              var opt = {
+                  margin: 1,
+                  filename: document.querySelector('#title').innerHTML,
+                  image: { type: 'jpeg', quality: 0.98 },
+                  html2canvas: { scale: 2 },
+                  jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+              };
+              html2pdf().from(content).set(opt).save();
+          })
+      }
+    }
+
 })(jQuery);

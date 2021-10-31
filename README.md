@@ -1,89 +1,117 @@
-<div align="center">
 
-<h1><a href="https://gethugothemes.com/products/hugo-documentation-theme/">Dot Hugo Documentation Theme [Version : 2.0]</a></h1>
+<h1 align=center>Dot Hugo | <a target="_blank" href="https://demo.gethugothemes.com/dot" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fdot%2F">Page Speed (81%)</a></h1>
 
-<p><a href="https://github.com/themefisher/dot-hugo-documentation-theme/stargazers"><img src="https://camo.githubusercontent.com/7d6b302902df5eaa1a880850777f6cbc089abc5b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
-<a href="https://github.com/themefisher/dot-hugo-documentation-theme/issues"><img src="https://camo.githubusercontent.com/82ea79e787e3159369049285257d62b85e2c0d35/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a>
-<a href="/themefisher/dot-hugo-documentation-theme/blob/master"><img src="https://camo.githubusercontent.com/5cb0da6a96f0f7b4861202b46486e3b36f813831/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d636c6f7365642d7261772f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e7376673f6d61784167653d32353932303030" alt="GitHub issues closed" data-canonical-src="https://img.shields.io/github/issues-closed-raw/themefisher/dot-hugo-documentation-theme.svg?maxAge=2592000" style="max-width:100%;"></a>
-<a href="https://github.com/themefisher/dot-hugo-documentation-theme/network"><img src="https://camo.githubusercontent.com/a740e4878301293eb179787617f3335fe6b7dbe6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f7468656d656669736865722f646f742d6875676f2d646f63756d656e746174696f6e2d7468656d652e737667" alt="GitHub forks" data-canonical-src="https://img.shields.io/github/forks/themefisher/dot-hugo-documentation-theme.svg" style="max-width:100%;"></a></p>
+<p align=center>
+  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.64.0" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.64.0&color=f00&logo=hugo" />
+  </a>
 
+  <a href="https://github.com/themefisher/dot-hugo/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/themefisher/dot-hugo" alt="license"></a>
+
+  <img src="https://img.shields.io/github/languages/code-size/themefisher/dot-hugo" alt="code size">
+
+  <a href="https://github.com/themefisher/dot-hugo/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/themefisher/dot-hugo" alt="contributors"></a>
+
+  <a href="https://twitter.com/intent/follow?screen_name=gethugothemes">
+    <img src="https://img.shields.io/twitter/follow/gethugothemes?style=social&logo=twitter"
+      alt="follow on Twitter"></a>
+</p>
+
+---
+
+<p align="center">
+  
 <img src="https://user-images.githubusercontent.com/37659754/54081086-cc7ce200-4328-11e9-9f7d-74d9b32fa68c.gif" alt="screenshot" width="100%">
+</p>
 
-</div>
+---
+## Features
+- Multiple language support (Fr, En) 
+- Google analytics  support
+- CSS and Js bundle with hugo pipe
+- Color and fonts variable in config file
+- Contact form Support
+- Google page speed optimized ( 81% )
+- Open graph meta tag
+- Twitter card meta tag
 
-Dot, a responsive and feature reach documentation theme ever build in hugo eco system . We have analysised a lot of documentation and knowledge base theme to come up with this design . The readability and the cleaness is also another key feature of this theme. 
 
+## Local development
 
-### What's New in version 2.0
-This template is now in a new layout. You can create page with folder, and also gives required images in this folder. Multilangual is now more fun. No more bugs and issues. It's all like a new experience. Configuration of this theme is now more easier.
+```bash
+# clone the repository
+git clone git@github.com:themefisher/dot-hugo.git
 
-**Version 2.0 comes with MIT Licence**
+# cd in the project directory
+$ cd dot-hugo/exampleSite/
 
-## Table of Contents
-
-- [Demo](#demo)
-- [Installation](#installation)
-- [Main Features](#main-features)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions-(paid))
-- [More Hugo Themes](https://themefisher.com/hugo-themes/)
-
-## Demo
-
-| Elements  | FAQ  | Inner Page  | Contact  |
-|---|---|---|---|
-| ![Elements page](https://user-images.githubusercontent.com/37659754/54081094-e1f20c00-4328-11e9-90e8-eeda5e3cb427.png) | ![FAQ page](https://user-images.githubusercontent.com/37659754/54081095-e1f20c00-4328-11e9-8009-24987d98e2d0.png) | ![Inner page](https://user-images.githubusercontent.com/37659754/54081096-e28aa280-4328-11e9-97d2-6eb94da191ca.png) | ![Contact page](https://user-images.githubusercontent.com/37659754/54081093-e1597580-4328-11e9-981b-859b1a7e94d9.png) |
-
-**The images are only for demonstration purpose, Please don't use those images.**
-
-[Live Demo](http://demo.themefisher.com/dot-hugo/).
-
-## Installation
-
-Navigate to your themes folder in your Hugo site and use the following commands:
-
-```
-$ mkdir themes
-$ cd themes
-$ git clone git@github.com:themefisher/dot-hugo-documentation-theme.git
+# Start local dev server
+$ hugo server --themesDir ../..
 ```
 Or Check out [Full Documentation](https://docs.gethugothemes.com/dot/?ref=github).
 
-## Main features
+## Content Management System
 
-- Automatic Search
-- Search Suggestion
-- Syntax highlighting
-- Multilingual mode
-- Bootstrap 4 Powered
-- Google Analytics 
-- Color Scheme
-- Next/Prev buttons in single post page
-- Contact Page , Faq Page
-- Buttons, Tip/Note/Info/Warning boxes, Expand
-- Responsive Ready
+[![import to
+Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=themefisher/dot-hugo&engine=hugo&version=0.87.0)
 
-## Reporting Issues or Contributing
-We use GitHub Issues as the official bug tracker for the Navigator Template. Please Search [existing issues](https://github.com/themefisher/dot-hugo-documentation-theme/issues). It’s possible someone has already reported the same problem.
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/dot-hugo-documentation-theme/issues)
+This project has been pre-configured to work with [Forestry](https://forestry.io) a git-based CMS, [import your
+repository in Forestry](https://app.forestry.io/quick-start?repo=themefisher/dot-hugo&engine=hugo&version=0.87.0) and
+you will be able to edit and preview your site ✨.
 
-Contributions are welcome and we will review and consider pull requests.
-Primary goals are:
-- Keep it simple.
-- Keep minimal (or zero) default configuration.
-- Avoid interference with user-defined layouts.
-- Avoid using JS if it can be solved by CSS.
+Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
+## Deployment and hosting
 
-## Technical Support or Questions (Paid)
+[![Deploy to
+Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/themefisher/dot-hugo)
 
-If you have questions or need help integrating the product please [contact us](mailto:mehedi@themefisher.com) instead of opening an issue.
+Follow the steps.
+
+## Prefer a video? (Hugo + Netlify + Forestry)
+Build your website with **Dot Hugo** theme by following these easy steps (No Coding Required!)
+[Video Tutorial](https://youtu.be/ResipmZmpDU).
+
+<!-- reporting issue -->
+## Reporting Issues
+We use GitHub Issues as the official bug tracker for the dot Template. Please Search [existing
+issues](https://github.com/themefisher/dot-hugo/issues). Someone may have already reported the same problem.
+If your problem or idea has not been addressed yet, feel free to [open a new
+issue](https://github.com/themefisher/dot-hugo/issues).
+
+## Dot Hugo theme Powered Websites
+- https://beatcovid.info/
+- https://hannuvierimaa.fi/
+
+Want to submit your own website powered by Dot Hugo theme? You can submit it [here](https://github.com/themefisher/dot-hugo/discussions/170).
+
+<!-- licence -->
+## License
+Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
+[Gethugothemes](https://gethugothemes.com)
+
+**Code License:** Released under the [MIT](https://github.com/themefisher/dot-hugo/blob/master/LICENSE) license.
+
+**Image license:** The images are only for demonstration purposes. They have their licenses. We don't have permission to
+share those images.
+
+<!-- resources -->
+## Special Thanks
+- [Bootstrap](https://getbootstrap.com)
+- [Jquery](https://jquery.com)
+- [Themify Icons](https://themify.me/themify-icons)
+- [Jquery Match Height](https://brm.io/jquery-match-height/)
+- [Google Fonts](https://fonts.google.com/)
+- [All Contributors](https://github.com/themefisher/dot-hugo/graphs/contributors)
+
 
 ## Hire Us
-We are available for Hiring of your next HUGO project. Drop Us a mail [mehedi@themefisher.com](mailto:mehedi@themefisher.com)
+We are available for **Hiring** for your next HUGO project. Please, check our
+[services](https://gethugothemes.com/services/?ref=github)
 
-
-## Premium Themes
-
-| [![Mega-Bundle-HUGO](https://gethugothemes.com/wp-content/uploads/edd/2019/09/Mega-Bundle-HUGO.png)](https://themefisher.com/products/hugo-mega-bundle/) | [![GoDocs](https://gethugothemes.com/wp-content/uploads/edd/2020/02/Home-Page-2.png)](https://gethugothemes.com/products/godocs-hugo-documentation-theme/) | [![Academia](https://gethugothemes.com/wp-content/uploads/edd/2019/08/Academia.jpg)](https://gethugothemes.com/products/academia/) |
+<!-- premium themes -->
+## Premium Themes By Us
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![Agen](https://demo.gethugothemes.com/thumbnails/agen.webp)](https://gethugothemes.com/products/agen/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/wishfund.webp)](https://gethugothemes.com/products/wishfund/) |
 |:---:|:---:|:---:|
-| **Hugo Mega Bundle**  | **GoDocs**  | **Academia**  |
+| **Premium Theme Bundle (40+)** | **Agen** | **Wishfund** |
