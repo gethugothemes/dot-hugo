@@ -1,5 +1,12 @@
 {{ define "main" }}
 
+  {{ if .Content }}
+  <section class="section text-center">
+    <div class="container-fluid">
+    {{ .Content }}
+    </div>
+  </section>
+  {{ end }}
   {{ "<!-- topics -->" | safeHTML }}
   <section class="section">
     <div class="container">
