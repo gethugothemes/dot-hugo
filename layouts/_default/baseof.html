@@ -13,7 +13,7 @@
     {{ else }}
     {{ "<!-- header -->" | safeHTML }}
     <header class="shadow-bottom sticky-top bg-white">
-      {{ partialCached "navigation.html" . }}
+      {{ partial "navigation.html" . }}
     </header>
     {{ "<!-- /header -->" | safeHTML }}
     {{ end }}
