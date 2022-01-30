@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
   {{ partial "head.html" . }}
-  
+
   <body>
-    {{ if .IsHome }}
-    {{ "<!-- header -->" | safeHTML }}
-    <header class="banner {{if .Site.Params.banner.bg_image}}overlay bg-cover{{else}}bg-primary{{end}}" data-background="{{ .Site.Params.banner.bg_image | absURL }}">
-      {{ partial "navigation.html" . }}
-      {{ partialCached "banner.html" . }}
+    {{ if .IsHome }} 
+    <!-- header -->
+    <header
+      class="banner {{if .Site.Params.banner.bg_image}}overlay bg-cover{{else}}bg-primary{{end}}"
+      data-background="{{ .Site.Params.banner.bg_image | absURL }}"
+    >
+      {{ partial "navigation.html" . }} {{ partialCached "banner.html" . }}
     </header>
-    {{ "<!-- /header -->" | safeHTML }}
+    <!-- /header -->
     {{ else }}
-    {{ "<!-- header -->" | safeHTML }}
+    <!-- header -->
     <header class="shadow-bottom sticky-top bg-white">
       {{ partial "navigation.html" . }}
     </header>
-    {{ "<!-- /header -->" | safeHTML }}
-    {{ end }}
-    {{ block "main" . }}{{ end }}
+    <!-- /header -->
+    {{ end }} {{ block "main" . }}{{ end }}
     {{ partialCached "footer.html" . }}
   </body>
-
 </html>
