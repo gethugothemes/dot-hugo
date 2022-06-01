@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8" />
-  <title>{{ .Title }}</title>
+  <title>{{ .Title | default site.Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ hugo.Generator }}
   <meta name="description" content="{{ .Title }} - {{ .Site.Title }} " />
@@ -52,10 +52,10 @@
   <link href="{{ $css.Permalink }}" rel="stylesheet" media="screen" />
 
   <!-- ** JS Plugins Needed for the Project ** -->
-  <!-- jquiry -->
+  <!-- jquery -->
   <script src="{{ `plugins/jquery/jquery-1.12.4.js` | absURL }}"></script>
 
-  <!-- jquary ui -->
+  <!-- jquery ui -->
   <script src="{{ `plugins/jquery/jquery-ui.js`| absURL }}"></script>
 
   <!-- Bootstrap JS -->

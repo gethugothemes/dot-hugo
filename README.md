@@ -115,12 +115,15 @@ share those images.
 
 ## Hire Us
 
-We are available for **Hiring** for your next HUGO project. Please, check our
-[services](https://gethugothemes.com/services/?ref=github)
+Besides developing unique, blazing-fast Hugo themes, we also provide customized services. We specialize in creating affordable, high-quality static websites based on Hugo.
+
+If you need to customize the theme or complete website development from scratch, you can hire us.
+Check Our
+[Services](https://gethugothemes.com/services/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme)
 
 <!-- premium themes -->
 ## Premium Themes By Us
 
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle) | [![Agen](https://demo.gethugothemes.com/thumbnails/agen.png)](https://gethugothemes.com/products/agen/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/wishfund.png)](https://gethugothemes.com/products/wishfund/) |
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://demo.gethugothemes.com/thumbnails/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/academia.png)](https://gethugothemes.com/products/academia/) |
 |:---:|:---:|:---:|
-| **Premium Theme Bundle (40+)** | **Agen** | **Wishfund** |
+| **Get 50+ Premium Hugo Themes Bundle** | **Godocs** | **Academia** |
