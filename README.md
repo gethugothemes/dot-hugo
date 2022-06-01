@@ -27,8 +27,10 @@
 </p>
 
 ---
+
 ## Features
-- Multiple language support (Fr, En) 
+
+- Multiple language support (Fr, En)
 - Google analytics  support
 - CSS and Js bundle with hugo pipe
 - Color and fonts variable in config file
@@ -36,7 +38,6 @@
 - Google page speed optimized ( 81% )
 - Open graph meta tag
 - Twitter card meta tag
-
 
 ## Local development
 
@@ -50,6 +51,7 @@ $ cd dot-hugo/exampleSite/
 # Start local dev server
 $ hugo server --themesDir ../..
 ```
+
 Or Check out [Full Documentation](https://docs.gethugothemes.com/dot/?ref=github).
 
 ## Content Management System
@@ -62,6 +64,7 @@ repository in Forestry](https://app.forestry.io/quick-start?repo=themefisher/dot
 you will be able to edit and preview your site ✨.
 
 Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
+
 ## Deployment and hosting
 
 [![Deploy to
@@ -70,24 +73,28 @@ Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com
 Follow the steps.
 
 ## Prefer a video? (Hugo + Netlify + Forestry)
+
 Build your website with **Dot Hugo** theme by following these easy steps (No Coding Required!)
 [Video Tutorial](https://youtu.be/ResipmZmpDU).
 
 <!-- reporting issue -->
 ## Reporting Issues
+
 We use GitHub Issues as the official bug tracker for the dot Template. Please Search [existing
 issues](https://github.com/themefisher/dot-hugo/issues). Someone may have already reported the same problem.
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/themefisher/dot-hugo/issues).
 
 ## Dot Hugo theme Powered Websites
-- https://beatcovid.info/
-- https://hannuvierimaa.fi/
+
+- <https://beatcovid.info/>
+- <https://hannuvierimaa.fi/>
 
 Want to submit your own website powered by Dot Hugo theme? You can submit it [here](https://github.com/themefisher/dot-hugo/discussions/170).
 
 <!-- licence -->
 ## License
+
 Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
 [Gethugothemes](https://gethugothemes.com)
 
@@ -98,6 +105,7 @@ share those images.
 
 <!-- resources -->
 ## Special Thanks
+
 - [Bootstrap](https://getbootstrap.com)
 - [Jquery](https://jquery.com)
 - [Themify Icons](https://themify.me/themify-icons)
@@ -105,13 +113,14 @@ share those images.
 - [Google Fonts](https://fonts.google.com/)
 - [All Contributors](https://github.com/themefisher/dot-hugo/graphs/contributors)
 
-
 ## Hire Us
+
 We are available for **Hiring** for your next HUGO project. Please, check our
 [services](https://gethugothemes.com/services/?ref=github)
 
 <!-- premium themes -->
 ## Premium Themes By Us
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![Agen](https://demo.gethugothemes.com/thumbnails/agen.webp)](https://gethugothemes.com/products/agen/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/wishfund.webp)](https://gethugothemes.com/products/wishfund/) |
+
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle) | [![Agen](https://demo.gethugothemes.com/thumbnails/agen.png)](https://gethugothemes.com/products/agen/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/wishfund.png)](https://gethugothemes.com/products/wishfund/) |
 |:---:|:---:|:---:|
 | **Premium Theme Bundle (40+)** | **Agen** | **Wishfund** |
