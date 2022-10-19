@@ -38,7 +38,7 @@
 - CSS and Js bundle with hugo pipe
 - Color and fonts variable in config file
 - Contact form Support
-- Google page speed optimized ( 81% )
+- Google page speed optimized ( 96% )
 - Open graph meta tag
 - Twitter card meta tag
 
