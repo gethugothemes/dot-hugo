@@ -1,5 +1,8 @@
 
-<h1 align=center>Dot Hugo | <a target="_blank" href="https://demo.gethugothemes.com/dot" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fdot%2F">Page Speed (81%)</a></h1>
+<h1 align=center>Dot Hugo </h1>
+<p align=center>Dot is a simple Hugo documentation theme with a professional outlook. </p>
+<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/dot" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fdot%2Fsite%2F&form_factor=desktop">Page Speed (96%)</a> </h2>
+
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.64.0" alt="Contributors">
@@ -28,7 +31,7 @@
 
 ---
 
-## Features
+## Key Features
 
 - Multiple language support (Fr, En)
 - Google analytics  support
@@ -89,8 +92,12 @@ issue](https://github.com/themefisher/dot-hugo/issues).
 
 - <https://beatcovid.info/>
 - <https://hannuvierimaa.fi/>
+- <https://www.jptechnical.com/>
+- <https://dndiction.de/>
+- <https://www.truthxc.com/>
+- <https://open.dosm.gov.my/>
 
-Want to submit your own website powered by Dot Hugo theme? You can submit it [here](https://github.com/themefisher/dot-hugo/discussions/170).
+View all the websites powered by Dot Hugo [here](https://gethugothemes.com/showcase). Want to submit your own website powered by Dot Hugo theme? You can submit it [here](https://gethugothemes.com/showcase).
 
 <!-- licence -->
 ## License
@@ -126,4 +133,4 @@ Check Our
 
 | [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://demo.gethugothemes.com/thumbnails/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/academia.png)](https://gethugothemes.com/products/academia/) |
 |:---:|:---:|:---:|
-| **Get 50+ Premium Hugo Themes Bundle** | **Godocs** | **Academia** |
+| **Get 55+ Premium Hugo Themes Bundle** | **Godocs** | **Academia** |
