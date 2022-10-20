@@ -88,16 +88,16 @@ issues](https://github.com/themefisher/dot-hugo/issues). Someone may have alread
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/themefisher/dot-hugo/issues).
 
-## Dot Hugo theme Powered Websites
+## Submit Your Website To Our Showcase
 
-- <https://beatcovid.info/>
-- <https://hannuvierimaa.fi/>
-- <https://www.jptechnical.com/>
-- <https://dndiction.de/>
-- <https://www.truthxc.com/>
-- <https://open.dosm.gov.my/>
+Are you using Dot Hugo theme? Submit it to our [showcase](https://gethugothemes.com/showcase). 
 
-View all the websites powered by Dot Hugo [here](https://gethugothemes.com/showcase). Want to submit your own website powered by Dot Hugo theme? You can submit it [here](https://gethugothemes.com/showcase).
+Our showcase aims to demonstrate to the world what amazing websites people like you have created utilizing our Hugo themes and to show that Hugo has tremendous capabilities as a Static Site Generator. 
+
+View all the websites powered by Dot Hugo from [here](https://gethugothemes.com/showcase?theme=dot). 
+
+[Submit](https://gethugothemes.com/showcase?submit=show) your Dot Hugo powered website.
+
 
 <!-- licence -->
 ## License
