@@ -1,197 +1,73 @@
-################################# Default configuration ###################
-# provide your domain here
-baseURL = "https://demo.gethugothemes.com/dot/examplesite/"
-# theme
-theme = "dot-hugo"
-# site title
-title = "Dot"
-# disable language
-disableLanguages = []
-# google analytics
-googleAnalytics = "" # paste your analytics ID here. (Ex: UA-123-45)
-# unsafe html
-[markup.goldmark.renderer]
-unsafe = true
+# DON'T REMOVE THIS FILE.
+# This file is for render site varibles and plugins
+#
+# The actual configuration files are stored in the `config/_default/` folder.
 
 
-############################# Default Parameters ##########################
-[params]
-# logo is for all page
-logo = ""
-# logo white is for homepage logo, you can use colorful logo too...
-logo_white = ""
-# when logo is empty, it will shown your site title
-
-# OpenGraph / Twitter Card metadata
-description = "This is meta description"
-author = "Themefisher"
-image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
-
-# customize color
-primary_color = "#02007e"
+######################### site variables ##############################
+# customize your color and font from here.
+[params.variables]
+color_primary = "#02007e"
 body_color = "#f9f9f9"
 text_color = "#636363"
-text_color_dark = "#242738"
-white_color = "#ffffff"
-light_color = "#f8f9fa"
+text_dark = "#242738"
+text_light = "#f8f9fa"
+black = "#000"
+white = "#fff"
+dark = "#222"
+light = "#eee"
 
-# font family
-font_family = "lato" # Choose font family from : https://fonts.google.com/
+# font variables
+# base font size for full website, 
+font_size = "16px" # default is 16px
 
-# contact form action
-contact_form_action = "#" # contact form works with : https://formspree.io
+# Font Scale Sizes
+# "minorSecond": 1.067,
+# "majorSecond": 1.125,
+# "minorThird": 1.2,
+# "majorThird": 1.25,
+# "perfectFourth": 1.333,
+# "augmentedFourth": 1.414,
+# "perfectFifth": 1.5,
+# "goldenRatio": 1.618
+font_scale = "1.25" # default is "majorThird": 1.25
 
-
-############################## social links ##############################
-[[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-name = "Facebook"
-link = "#"
-
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-name = "Twitter"
-link = "#"
-  
-[[params.social]]
-icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
-name = "Github"
-link = "#"
-  
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-name = "Linkedin"
-link = "#"
-
-################################ English Language ######################
-[Languages.en]
-languageName = "En"
-languageCode = "en-us"
-weight = 1
-copyright = "Copyright &copy; 2021 a Hugo theme by [Gethugothemes](https://gethugothemes.com/)"
-
-# banner
-[Languages.en.params.banner]
-title = "Support Center & Knowledge base"
-subtitle = "Find advice and answers from our support team fast or get in touch"
-bg_image = "images/banner.jpg"
-placeholder = "Have a question? Just ask here or enter terms"
-
-# call to action
-[Languages.en.params.cta]
-enable = true
-title = "Didn't find an answer to your question?"
-content = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
-# call to action button
-[Languages.en.params.cta.button]
-enable = true
-label = "contact us"
-link = "contact/"
+# go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
+# example: "Work+Sans:wght@400;500;600"
+font_primary = "lato@400;500;600"
+font_primary_type = "sans-serif"            # [serif/sans-serif]
+font_secondary = ""
+font_secondary_type = ""                    # [serif/sans-serif]
+font_icon = "Font Awesome 6 Free"           # https://fontawesome.com/v6/icons
 
 
-################## english navigation #################
-[[Languages.en.menu.main]]
-name = "Home"
-url = ""
-weight = 1
+############################# Plugins ##############################
 
-[[Languages.en.menu.main]]
-name = "Faq"
-url = "faq/"
-weight = 2
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/brands.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/solid.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/icons.css"
+# [[params.plugins.css]]
+# link = "plugins/themify-icons/icons.css"
 
-[[Languages.en.menu.main]]
-name = "contact"
-url = "contact/"
-weight = 3
-
-# Dropdown menu
-[[Languages.en.menu.main]]
-weight = 4
-name = "docs"
-hasChildren = true
-
-  [[Languages.en.menu.main]]
-  parent = "docs"
-  name = "Installation"
-  url = "installation/"
-  weight = 1
-
-  [[Languages.en.menu.main]]
-  parent = "docs"
-  name = "Billing and Pricing"
-  url = "billing-pricing/"
-  weight = 2
-
-  [[Languages.en.menu.main]]
-  parent = "docs"
-  name = "Features"
-  url = "features/"
-  weight = 3
-
-
-################################### Franch Language ######################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-weight = 2
-copyright = "Copyright &copy; 2021 un thème Hugo par [Gethugothemes](https://gethugothemes.com/)"
-
-# banner
-[Languages.fr.params.banner]
-title = "Comment pouvons nous aider?"
-subtitle = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
-bg_image = "images/banner.jpg"
-placeholder = "Avoir une question? Il suffit de demander ici ou de saisir les termes"
-
-# call to action
-[Languages.fr.params.cta]
-enable = true
-title = "Vous n'avez pas trouvé de réponse à votre question?"
-content = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
-# call to action button
-[Languages.fr.params.cta.button]
-enable = true
-label = "Contactez nous"
-link = "contact/"
-
-
-################## french navigation #################
-[[Languages.fr.menu.main]]
-name = "Accueil"
-url = "/"
-weight = 1
-
-[[Languages.fr.menu.main]]
-name = "Faq"
-url = "faq/"
-weight = 2
-
-[[Languages.fr.menu.main]]
-name = "contact"
-url = "contact/"
-weight = 3
-
-# Dropdown menu
-[[Languages.fr.menu.main]]
-weight = 4
-name = "docs"
-hasChildren = true
-
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Installation"
-  url = "installation/"
-  weight = 1
-
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Billing and Pricing"
-  url = "billing-pricing/"
-  weight = 2
-
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Features"
-  url = "features/"
-  weight = 3
+# JS Plugins
+# [[params.plugins.js]]
+# link = "plugins/jquery/jquery.js"
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.js"
+[[params.plugins.js]]
+link = "plugins/webfont/webfont-loader-2.js"
+[[params.plugins.js]]
+link = "plugins/glightbox.js"
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+[[params.plugins.js]]
+link = "plugins/lazy-loader.js"
+[[params.plugins.js]]
+link = "https://cpwebassets.codepen.io/assets/embed/ei.js"
+attributes = "async"

@@ -1,7 +1,8 @@
-############# English navigation ##############
+############# French navigation ##############
+
 [[main]]
-name = "Home"
-url = ""
+name = "Accueil"
+url = "/"
 weight = 1
 
 [[main]]
