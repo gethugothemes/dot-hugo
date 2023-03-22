@@ -191,4 +191,4 @@ Markdown | Less | Pretty
 
 ##### Youtube video
 
-{{< youtube C0DPdy98e4c >}}
+{{< youtube-lite 6FIoOJm3vYA >}}

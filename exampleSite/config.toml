@@ -55,6 +55,8 @@ link = "plugins/webfont/webfont-loader-2.js"
 [[params.plugins.js]]
 link = "plugins/glightbox.js"
 [[params.plugins.js]]
+link = "plugins/youtube-lite.js"
+[[params.plugins.js]]
 link = "plugins/cookie.js"
 [[params.plugins.js]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
