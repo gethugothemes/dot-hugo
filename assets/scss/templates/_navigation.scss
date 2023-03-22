@@ -1,0 +1,69 @@
+// for color
+.navbar-light .navbar-nav .nav-item {
+  .nav-link {
+    color: $text-dark;
+    &:hover {
+      color: $color-primary;
+    }
+    &.active {
+      color: $color-primary !important;
+    }
+  }
+}
+
+// for padding
+.navbar-expand-lg .navbar-nav .nav-item {
+  .nav-link {
+    padding: 0 0.7rem;
+    @include tablet {
+      padding: 0.5rem;
+    }
+  }
+}
+
+/* search */
+.search-btn {
+  border: 0;
+  background: transparent;
+}
+
+.search-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+  visibility: hidden;
+  transition: 0.2s ease;
+  opacity: 0;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.search-box {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background: $white;
+  font-size: 1.5rem;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.search-close {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  page-break-after: 10px;
+  font-size: 1.5rem;
+}
