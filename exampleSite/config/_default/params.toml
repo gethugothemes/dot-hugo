@@ -112,20 +112,20 @@ button = "I Accept"
 ############################# social site ########################
 [[social]]
 title = "facebook"
-icon = "fab fa-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
+icon = "ti-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "#"
 
 [[social]]
 title = "twitter"
-icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
+icon = "ti-twitter-alt" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "#"
 
 [[social]]
 title = "github"
-icon = "fab fa-github" # fontawesome icon pack : https://fontawesome.com/icons/
+icon = "ti-github" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "#"
 
 [[social]]
 title = "linkedin"
-icon = "fab fa-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
+icon = "ti-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "#"
