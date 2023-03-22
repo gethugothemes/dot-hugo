@@ -13,6 +13,7 @@ require (
 	github.com/gethugothemes/hugo-modules/components/valine-comment v0.0.0-20230321035648-5ac20298ba66 // indirect
 	github.com/gethugothemes/hugo-modules/gzip-caching v0.0.0-20230321105418-880984c9644a // indirect
 	github.com/gethugothemes/hugo-modules/icons/font-awesome v0.0.0-20230321035648-5ac20298ba66 // indirect
+	github.com/gethugothemes/hugo-modules/icons/themify-icons v0.0.0-20230321105739-5c49e1e2f059 // indirect
 	github.com/gethugothemes/hugo-modules/images v0.0.0-20230321035648-5ac20298ba66 // indirect
 	github.com/gethugothemes/hugo-modules/pwa v0.0.0-20230321035648-5ac20298ba66 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/baidu-analytics v0.0.0-20230321035648-5ac20298ba66 // indirect

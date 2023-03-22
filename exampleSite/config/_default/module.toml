@@ -1,6 +1,6 @@
 [hugoVersion]
 extended = true
-min = "0.106.0"
+min = "0.109.0"
 
 [[imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
