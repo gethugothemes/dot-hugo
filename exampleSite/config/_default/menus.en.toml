@@ -1,0 +1,32 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = ""      # don't use a slash for home url
+weight = 1
+
+[[main]]
+name = "Elements"
+url = "elements/"
+weight = 2
+
+[[main]]
+name = "Test"
+url = "test/"
+weight = 3
+
+[[main]]
+weight = 4
+name = "Pages"
+hasChildren = true
+
+[[main]]
+parent = "Pages"
+name = "Blog"
+url = "blog/"
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 4
