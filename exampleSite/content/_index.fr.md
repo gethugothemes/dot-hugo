@@ -1,7 +1,6 @@
 ---
 
 banner:
-  enable: true
   title: "Support Center & Knowledge base"
   subtitle: "Find advice and answers from our support team fast or get in touch"
   bg_image: "images/banner.jpg"

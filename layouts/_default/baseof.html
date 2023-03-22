@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
-  {{ partial "head.html" . }}
+<html
+  lang="{{ site.LanguageCode | default `en-US` }}"
+  itemscope
+  itemtype="http://schema.org/WebPage">
+  <head>
+    <!-- head (don't cache it) -->
+    {{ partial "essentials/head.html" . }}
+
+
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "essentials/style.html" . }}
+    {{ else }}
+      {{ partial "essentials/style.html" . }}
+    {{ end }}
+  </head>
 
   <body>
-    {{ if .IsHome }} 
-    <!-- header -->
-    <header
-      class="banner {{if .Site.Params.banner.bg_image}}overlay bg-cover{{else}}bg-primary{{end}}"
-      data-background="{{ .Site.Params.banner.bg_image | absURL }}"
-    >
-      {{ partial "navigation.html" . }} {{ partialCached "banner.html" . }}
-    </header>
-    <!-- /header -->
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "preloader.html" . }}
+      {{ partialCached "gtm-noscript.html" . }}
     {{ else }}
-    <!-- header -->
-    <header class="shadow-bottom sticky-top bg-white">
-      {{ partial "navigation.html" . }}
-    </header>
-    <!-- /header -->
-    {{ end }} {{ block "main" . }}{{ end }}
-    {{ partialCached "footer.html" . }}
+      {{ partial "preloader.html" . }}
+    {{ end }}
+
+
+    <!-- header (don't cache it) -->
+    {{ partial "essentials/header.html" . }}
+
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "essentials/footer.html" . }}
+      {{ partialCached "essentials/script.html" . }}
+    {{ else }}
+      {{ partial "essentials/footer.html" . }}
+      {{ partial "essentials/script.html" . }}
+    {{ end }}
   </body>
 </html>
