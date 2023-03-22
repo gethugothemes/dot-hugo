@@ -1,4 +1,5 @@
-{{ define "main" }} {{ $data := index .Site.Data .Site.Language.Lang }}
+{{ define "main" }}
+
 <!-- faq -->
 <section class="section pb-0">
   <div class="container">
@@ -6,7 +7,9 @@
       <div class="col-12">
         <h2 class="section-title text-primary">{{ .Title }}</h2>
         <!-- accordion -->
-        <div id="accordion">{{ .Content }}</div>
+        <div id="accordion-wrapper">
+          {{.Content}}
+        </div>
       </div>
     </div>
   </div>

@@ -3,8 +3,18 @@ body {
   overflow-x: hidden;
 }
 
+/* preloader */
 .preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: $body-bg;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ::selection {
@@ -19,9 +29,14 @@ img {
   height: auto;
 }
 
+pre {
+  padding: 20px;
+}
+
 a,
 a:hover,
 a:focus {
+  color: $color-primary;
   text-decoration: none;
 }
 
@@ -40,10 +55,6 @@ a:hover {
   color: $color-primary;
 }
 
-.slick-slide {
-  outline: 0;
-}
-
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -51,6 +62,15 @@ a:hover {
   &-sm {
     padding-top: 4rem;
     padding-bottom: 4rem;
+
+    @include tablet {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  &-title {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -65,32 +85,48 @@ a:hover {
 }
 
 /* overlay */
-
 .overlay {
   position: relative;
 
+  &>.container {
+    position: relative;
+    z-index: 1;
+  }
+
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background: $black;
-    opacity: 0.5;
+    background: $color-primary;
+    opacity: .8;
   }
-}
-
-.outline-0 {
-  outline: 0 !important;
 }
 
 .bg-primary {
   background: $color-primary !important;
 }
 
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-light {
+  background-color: $text-light !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
 .text-primary {
   color: $color-primary !important;
+}
+
+.text-color {
+  color: $text-color !important;
 }
 
 .text-default {
@@ -103,6 +139,18 @@ a:hover {
 
 .lazy {
   transition: background-image 0.3s ease;
+}
+
+.form-control {
+  height: 50px;
+  border-radius: 25px;
+  border: 0;
+  padding: 0 20px;
+}
+
+.form-control:focus {
+  border: 0;
+  box-shadow: none !important;
 }
 
 // content style

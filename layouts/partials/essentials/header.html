@@ -1,5 +1,8 @@
-<!-- header -->
-<header class="banner{{if not .IsHome}} shadow-bottom sticky-top bg-white{{end}} {{if .Params.banner.bg_image}}overlay{{end}}" {{if and .Params.banner.bg_image .IsHome}} {{ partial `bg-image.html` (dict `Src` .Params.banner.bg_image ) | safeHTMLAttr }} {{end}}>
+<!-- Navigation -->
+<header
+  class="{{if not .IsHome}} shadow-bottom sticky-top bg-white{{end}} {{if .Params.banner.bg_image}}banner overlay{{end}}"
+  {{if and .Params.banner.bg_image .IsHome}} {{ partial `bg-image.html` (dict `Src` .Params.banner.bg_image ) |
+  safeHTMLAttr }} {{end}}>
   <nav class="navbar navbar-expand-md {{ if .IsHome }}navbar-dark{{ else }}navbar-light{{ end }}">
     <div class="container px-2 px-md-0">
       <a class="navbar-brand px-2" href="{{ site.BaseURL | relLangURL }}">
@@ -9,17 +12,18 @@
         {{ site.Params.logo_text }}
         {{ end }}
       </a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="ti-menu"></span>
+        <span class="ti-close"></span>
       </button>
 
       <div class="collapse navbar-collapse text-center" id="navigation">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           {{ range site.Menus.main }}
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               {{ .Name }}
             </a>
@@ -62,12 +66,26 @@
     </div>
   </nav>
   {{ if .IsHome }}
-  {{ partialCached "banner.html" . }}
+  {{ with .Params.banner }}
+  <!-- banner -->
+  <div class="container section">
+    <div class="row">
+      <div class="col-lg-8 text-center mx-auto">
+        <h1 class="text-white mb-3">
+          {{ .title | markdownify }}
+        </h1>
+        <p class="text-white mb-4">
+          {{ .subtitle | markdownify }}
+        </p>
+        <div class="position-relative">
+          <input id="search" class="form-control" placeholder="{{ .placeholder }}" />
+          <i class="ti-search search-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /banner -->
+  {{ end }}
   {{ end }}
 </header>
-<!-- /header -->
-
-<!-- header -->
-<header class="">
-</header>
-<!-- /header -->
+<!-- /Navigation -->

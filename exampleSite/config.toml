@@ -30,11 +30,11 @@ font_size = "16px" # default is 16px
 # "augmentedFourth": 1.414,
 # "perfectFifth": 1.5,
 # "goldenRatio": 1.618
-font_scale = "1.25" # default is "majorThird": 1.25
+font_scale = "1.19" # default is "majorThird": 1.25
 
 # go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
 # example: "Work+Sans:wght@400;500;600"
-font_primary = "lato@300,400,700"
+font_primary = "Lato:wght@300;400;700"
 font_primary_type = "sans-serif"            # [serif/sans-serif]
 font_secondary = ""
 font_secondary_type = ""                    # [serif/sans-serif]
@@ -44,24 +44,18 @@ font_icon = "Font Awesome 6 Free"           # https://fontawesome.com/v6/icons
 ############################# Plugins ##############################
 
 # CSS Plugins
-# [[params.plugins.css]]
-# link = "plugins/swiper/swiper-bundle.css"
 [[params.plugins.css]]
 link = "plugins/themify-icons/icons.css"
 
 # JS Plugins
 # [[params.plugins.js]]
 # link = "plugins/jquery/jquery.js"
-# [[params.plugins.js]]
-# link = "plugins/swiper/swiper-bundle.js"
 [[params.plugins.js]]
 link = "plugins/webfont/webfont-loader-2.js"
 [[params.plugins.js]]
 link = "plugins/glightbox.js"
 [[params.plugins.js]]
 link = "plugins/cookie.js"
-[[params.plugins.js]]
-link = "plugins/match-height/jquery.matchHeight-min.js"
 [[params.plugins.js]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
 [[params.plugins.js]]
