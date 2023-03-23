@@ -37,6 +37,8 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'templates/main';
 
+@import 'templates/search-modal';
+
 @import 'notice';
 
 @import 'tabs';

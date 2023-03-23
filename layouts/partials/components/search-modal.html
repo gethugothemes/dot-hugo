@@ -1,0 +1,93 @@
+<div class="modal search-modal" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog search-modal-dialog">
+    <div class="modal-content border-0"><div class="modal-header border-0" style="padding:1rem"><div class="input-group border-0">
+      <span class="input-group-text bg-transparent text-dark border-end-0" id="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+      </span>
+      <input type="text" id="searchInput" class="form-control search-form-control shadow-none text-dark border-start-0 ps-0 ms-0 border-end-0" placeholder="{{i18n `search_placeholder`}}" aria-label="Search" aria-describedby="Search">
+      <span class="input-group-text bg-transparent text-muted border-start-0" style="font-size:14px;">
+        <span class="border border-muted rounded-1 px-1" data-bs-dismiss="modal" aria-label="Close">ESC</span>
+      </span>
+    </div></div>
+    <div class="modal-body">
+      <div id="search-result-body"></div>
+    </div></div>
+  </div>
+</div>
+
+<script>
+  const searchModal = document.getElementById('searchModal');
+  const searchInput = document.getElementById('searchInput');
+  const searchResult = document.getElementById("search-result-body");
+  searchModal.addEventListener('shown.bs.modal', () => {searchInput.focus()});
+  let jsonData = [];
+  let indexJSON = {{"index.json" | relURL}};
+
+  const loadJsonData = async () => {
+    try {
+      const res = await fetch(indexJSON);
+      jsonData = await res.json();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  searchInput.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    let filteredJSON = jsonData.reduce((prev, item) => [...new Set([...prev, item.section])], []).map((item) => {
+        let filteredItems = jsonData.filter((i) => i.section === item);
+        return {
+          section: item,
+          data: filteredItems,
+        };
+      });
+
+    let searchItem = filteredJSON.filter((item) => {
+      if (searchString === "" ) {
+        return "";
+      }
+      else if (item.data.find((el) => (el.title?.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.description?.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.searchKeyword?.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.content?.toLowerCase().includes(searchString)))) {
+        return item
+      }
+    });
+
+    displayResult(searchItem, searchString);
+  });
+
+  const displayResult = (searchItems, searchString) => {
+    const htmlString = searchItems.map((item) => {
+      const contentValue = item.data.filter((d) => d.content?.toLowerCase().includes(searchString)).map((innerItem) =>  {
+        const position = innerItem.content?.toLowerCase().indexOf(searchString.toLowerCase());
+        let matches = innerItem.content?.substring(position, searchString.length + position);
+        let matchesAfter = innerItem.content?.substring(searchString.length + position, searchString.length + position + 100);
+        const highlighted = innerItem.content?.replace(innerItem.content, '<mark>' + matches + '</mark>' + matchesAfter);
+        return highlighted;
+      });
+      
+      return`
+      <div class="search-result-item">
+        <p class="section">${item.section}</p>
+        ${item.data.filter((d) => 
+          d.title?.toLowerCase().includes(searchString) || 
+          d.description?.toLowerCase().includes(searchString) || 
+          d.searchKeyword?.toLowerCase().includes(searchString) || 
+          d.content?.toLowerCase().includes(searchString)).map((innerItem) => 
+            `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`
+          ).join("")}
+      </div>`
+    }).join("");
+    searchResult.innerHTML = htmlString;
+  };
+  loadJsonData();
+
+</script>

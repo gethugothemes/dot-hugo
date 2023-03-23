@@ -24,86 +24,58 @@
 }
 
 /* search */
+.search-wrapper {
+  cursor: text;
+  margin: auto;
+  display: inline-block;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
 
-#project-icon {
-  float: left;
-  height: 32px;
-  width: 32px;
-}
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: rgba($dark, 0.7);
+    font-weight: 900;
+    transform: translateY(-50%);
+  }
 
-#project-description {
-  margin: 0;
-  padding: 0;
-}
+  .form-control {
+    height: 54px;
+    border: 1px solid $border-color;
+    padding-left: 40px !important;
+    border-radius: 5px;
+    width: 100%;
+    @extend .shadow;
 
-.ui-helper-hidden-accessible {
-  display: none;
-}
+    &-sm {
+      height: 45px;
+      width: 220px;
+    }
 
-.ui-menu {
-  background: $white;
-  padding: 5px 20px 20px;
-  right: 0 !important;
-  max-height: 200px;
-  overflow: hidden;
-  border-radius: 0 0 25px 25px;
-  z-index: 9999;
-  box-shadow: 0px 13px 20px 0px rgba(0, 0, 0, .07)
-}
+    &::placeholder {
+      color: rgba($text-dark, 0.5);
+      font-size: 15px;
+    }
+  }
 
+  .search-button {
+    border: 1px solid rgba($text-dark, 0.2);
+    color: rgba($text-dark, 0.5);
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    cursor: text;
+  }
 
-@media (max-width: 575px) {
-  .ui-menu {
-    width: calc(100% - 30px) !important;
+  @include mobile {
+    width: 250px;
   }
 }
-
-@media (min-width: 576px) {
-  .ui-menu {
-    max-width: 510px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .ui-menu {
-    max-width: 690px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .ui-menu {
-    max-width: 610px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .ui-menu {
-    max-width: 730px !important;
-  }
-}
-
-.ui-menu-item a {
-  color: $text-color;
-  padding: 8px 0;
-  font-size: 15px;
-}
-
-.ui-menu-item a:hover {
-  color: $color-primary;
-}
-
-.ui-menu-item:not(:last-child) {
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.ui-menu-item * {
-  display: none;
-}
-
-.ui-menu-item .ui-corner-all {
-  display: block;
-}
-
 
 /* /navigation */
 textarea.form-control {
@@ -392,23 +364,6 @@ li.sidelist li a {
   z-index: 1;
   left: -5px;
   top: -5px;
-}
-
-.ui-autocomplete-input {
-  border-bottom: 1px solid rgb(212, 212, 212) !important;
-  padding-right: 50px;
-}
-
-.ui-autocomplete-input.active {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.search-icon {
-  position: absolute;
-  right: 20px;
-  top: 18px;
-  font-size: 14px;
 }
 
 i {

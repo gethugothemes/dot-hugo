@@ -1,5 +1,14 @@
 - id: topics_title
-  translation: Trouvez votre réponse par sujet
-  
+  translation: Find your answer by subject
+
 - id: send
-  translation: Envoyer
+  translation: Send
+
+- id: search
+  translation: Search
+
+- id: search_placeholder
+  translation: Search...
+
+- id: search_result
+  translation: Search result for

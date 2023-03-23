@@ -1,0 +1,126 @@
+// search-modal
+.search-modal-dialog {
+  margin-top: 150px;
+  max-width: 600px;
+
+  @include desktop {
+    margin-top: 80px;
+  }
+}
+
+.search-modal {
+
+  .input-group-text,
+  .search-form-control {
+    border: 1px solid rgba($dark, .8);
+  }
+
+  .search-form-control {
+    padding-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .modal-body {
+    max-height: calc(100vh - 350px);
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f5f6f7;
+    box-shadow: inset 0px 2px 18px #ddd;
+    border-bottom-left-radius: calc(0.3rem - 1px);
+    border-bottom-right-radius: calc(0.3rem - 1px);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+
+      &-track {
+        background: $white;
+      }
+
+      &-thumb {
+        background: #c7c7c7;
+      }
+    }
+  }
+}
+
+.search-result-item {
+  &:first-child {
+    .section:not(:empty) {
+      margin-top: -15px;
+    }
+  }
+
+  &:not(:last-child) a {
+    margin-bottom: -1px;
+  }
+
+  >.section {
+    padding: 0 0.75rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .block {
+    display: block;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    transition: 0.1s;
+
+    p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      font-weight: 500;
+
+      mark:not(:first-child) {
+        background-color: transparent;
+      }
+
+      mark {
+        color: $color-primary;
+        background-color: rgba($color-primary, 0.05);
+      }
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      background-color: rgba($color-primary, 0.8);
+
+      * {
+        color: white !important;
+      }
+
+      mark {
+        color: $color-primary !important;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+#search-result-body {
+  &:empty {
+    &::after {
+      content: "No result to show!";
+      display: block;
+      text-align: center;
+      margin: 1.5rem 0;
+      opacity: 0.5;
+    }
+  }
+}

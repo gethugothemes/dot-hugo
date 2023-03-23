@@ -65,6 +65,7 @@
       </div>
     </div>
   </nav>
+
   {{ if .IsHome }}
   {{ with .Params.banner }}
   <!-- banner -->
@@ -77,10 +78,11 @@
         <p class="text-white mb-4">
           {{ .subtitle | markdownify }}
         </p>
-        <div class="position-relative">
-          <input id="search" class="form-control" placeholder="{{ .placeholder }}" />
-          <i class="ti-search search-icon"></i>
-        </div>
+        <form class="search-wrapper mt-2 mx-2 mx-lg-0" name="search-form" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <i class="search-icon ti-search"></i>
+          <input class="form-control px-4 text-dark" placeholder="{{ i18n `search_placeholder`}}" readonly>
+          <button type="button" class="search-button" data-search-toggler>{{ i18n "search" }}</button>
+        </form>
       </div>
     </div>
   </div>
@@ -89,3 +91,5 @@
   {{ end }}
 </header>
 <!-- /Navigation -->
+
+{{ partial "components/search-modal" . }}
