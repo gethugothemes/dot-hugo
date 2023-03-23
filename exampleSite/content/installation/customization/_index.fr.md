@@ -15,9 +15,9 @@ keywords: [""]
 
 In `config.toml` you will find a logo variable. you can change your logo there.
 
-{{% notice tip %}}
-The size of the logo will adapt automatically
-{{% /notice %}}
+{{< notice "tip" >}}
+  The size of the logo will adapt automatically
+{{< /notice >}}
 
 ### Change the favicon
 
@@ -35,21 +35,24 @@ If you need to change this default behavior, create a new file in `layouts/parti
 
 
 ```toml
-[params]
-  # Change default color scheme with a color name or color code.
-  primary_color = "#02007e"
-  body_color = "#f9f9f9"
-  text_color = "#636363"
-  text_color_dark = "#242738"
-  white_color = "#ffffff"
-  light_color = "#f8f9fa"
+# customize your color and font from here.
+[params.variables]
+color_primary = "#02007e"
+body_color = "#f9f9f9"
+text_color = "#636363"
+text_dark = "#242738"
+text_light = "#f8f9fa"
+black = "#000"
+white = "#fff"
+dark = "#222"
+light = "#eee"
 ```
 
 ### Change default Fonts
 
 
 ```toml
-[params]
-  # font family
-  font_family = "lato" # Choose font family from : https://fonts.google.com/
+# go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
+# example: "Work+Sans:wght@400;500;600"
+font_primary = "Lato:wght@300;400;700"
 ```

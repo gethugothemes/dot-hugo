@@ -8,28 +8,40 @@ draft: false
 keywords: [""]
 ---
 
+#### Heading example
+
+Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
+
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 <hr>
 
-##### Emphasis
+### Emphasis
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+The emphasis, aka italics, with *asterisks* or *underscores*.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
-Combined emphasis with **asterisks and _underscores_**.
+The combined emphasis with **asterisks and *underscores***.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+Strike through uses two tildes. ~~Scratch this.~~
+
+{{< button "hello" "#" >}}
 
 <hr>
 
-##### Link
+### Link
+
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -42,25 +54,25 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+<http://www.example.com> or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+[arbitrary case-insensitive reference text]: https://www.themefisher.com
+[1]: https://gethugothemes.com
+[link text itself]: https://www.getjekyllthemes.com
 
 <hr>
 
-##### Paragraph
+### Paragraph
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
 
 <hr>
 
-##### Ordered List
+### Ordered List
 
 1. List item
 2. List item
@@ -70,7 +82,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 <hr>
 
-##### Unordered List
+### Unordered List
 
 * List item
 * List item
@@ -80,74 +92,102 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 <hr>
 
-#### Notice
+### Notice
 
-{{< notice note >}}
+{{< notice "note" >}}
   This is a simple note.
 {{< /notice >}}
 
-{{< notice tip >}}
+{{< notice "tip" >}}
   This is a simple tip.
 {{< /notice >}}
 
-{{< notice info >}}
+{{< notice "info" >}}
   This is a simple info.
 {{< /notice >}}
 
-{{< notice warning >}}
+{{< notice "warning" >}}
   This is a simple warning.
 {{< /notice >}}
 
 <hr>
 
-#### Tab
+### Tab
 
-{{< tabs >}}
+{{< tabs "code" >}}
 
-  {{< tab "first" >}}
-   This is first tab
-  {{< /tab >}}
+{{< tab "python" >}}
 
-  {{< tab "second" >}}
-  this is second tab
-  {{< /tab >}}
+```python
+print("Hello World!")
+```
 
-  {{< tab "third" >}}
-  this is third tab
-  {{< /tab >}}
+{{< /tab >}}
 
-{{</ tabs >}}
+{{< tab "R" >}}
+
+```R
+> print("Hello World!")
+```
+
+{{< /tab >}}
+
+{{< tab "Bash" >}}
+
+```Bash
+echo "Hello World!"
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 <hr>
 
-##### Code and Syntax Highlighting
+### Collapse
 
-Inline `code` has `back-ticks around` it.
+{{< collapse "Why should you need to do this?" >}}
+##### This is title
+
+elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
+{{< /collapse >}}
+
+{{< collapse "How can I adjust Horizontal centering" >}}
+##### This is title
+
+elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
+{{< /collapse >}}
+
+{{< collapse "Should you use Negative margin?" >}}
+##### This is title
+
+elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
+{{< /collapse >}}
+
+<hr>
+
+### Code and Syntax Highlighting
+
+This is an `Inline code` sample.
 
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
-```
 
 <hr>
 
-##### Blockquote
+### Blockquote
 
 > This is a blockquote example.
 
 <hr>
 
-##### Inline HTML
+### Inline HTML
 
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
@@ -159,10 +199,15 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
+<hr>
+
+### Codepen
+
+{{< codepen id="QWvKwmq" theme="light" height="600" >}}
 
 <hr>
 
-##### Tables
+### Tables
 
 Colons can be used to align columns.
 
@@ -173,7 +218,7 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
+The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
@@ -183,12 +228,24 @@ Markdown | Less | Pretty
 
 <hr>
 
-##### Image
+### Image
 
-![image](img-1.jpg)
+{{< image src="images/favicon.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 
 <hr>
 
-##### Youtube video
+### Gallery
 
-{{< youtube C0DPdy98e4c >}}
+{{< gallery dir="images/gallery" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+<hr>
+
+### Youtube video
+
+{{< youtube ResipmZmpDU >}}
+
+<hr>
+
+### Custom video
+
+{{< video src="https://www.w3schools.com/html/mov_bbb.mp4" width="500" height="auto" autoplay="false" loop="false" muted="false" controls="true" class="" >}}

@@ -375,22 +375,6 @@ li.sidelist li a {
   line-height: 1.4;
 }
 
-p:empty,
-p a:empty {
-  display: none !important;
-}
-
-pre {
-  display: block;
-  padding: 9.5px;
-  margin: 10px 0px 10px;
-}
-
-code {
-  margin-bottom: 0 !important;
-  font-size: 100%;
-}
-
 .back-btn {
   position: relative;
 }
@@ -433,61 +417,4 @@ i {
 
 a:hover i {
   color: $color-primary;
-}
-
-/* custom scrollbar */
-pre code::-webkit-scrollbar {
-  height: 5px;
-}
-
-pre code::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-pre code::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* content tabs */
-.code-tabs {
-  border: 1px solid #dee2e6;
-  overflow: hidden;
-  margin: 20px 0px;
-}
-
-.code-tabs .tab-content {
-  padding: 20px 15px;
-  margin-bottom: 0;
-}
-
-.code-tabs .tab-content .tab-pane {
-  margin-bottom: 0;
-}
-
-.code-tabs .nav-tabs {
-  margin-bottom: 0;
-}
-
-.code-tabs .nav-tabs .nav-item {
-  padding-left: 0;
-  border-right: 1px solid #dee2e6;
-}
-
-.code-tabs .nav-tabs .nav-item .nav-link {
-  text-decoration: none;
-  font-weight: 500;
-  border: 0;
-  margin-bottom: 0;
-}
-
-.code-tabs .nav-tabs .nav-item::before {
-  display: none;
-}
-
-.code-tabs .nav-tabs .nav-item.active {
-  background: $color-primary;
-}
-
-.code-tabs .nav-tabs .nav-item.active .nav-link {
-  color: $white;
 }

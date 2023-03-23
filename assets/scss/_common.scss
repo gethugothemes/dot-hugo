@@ -155,10 +155,131 @@ a:hover {
 
 // content style
 .content {
-  // image
 
-  a {
-    color: $text-dark;
+  * {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .accordion {
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    p {
+      margin-bottom: 0px;
+    }
+
+    &-item {
+      border-radius: 0px;
+      margin-bottom: 10px;
+    }
+
+    &-button {
+      box-shadow: none;
+      padding: 6px 18px;
+      color: $text-dark;
+      background-color: transparent;
+
+      &::after {
+        transform: scale(0.8);
+      }
+
+      &[aria-expanded="true"] {
+        &::after {
+          transform: scale(0.8) rotate(180deg);
+        }
+      }
+    }
+
+    &-body {
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+
+    &.img-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.img-left {
+      display: block;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &.img-right {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    &.img-float-left {
+      float: left;
+      margin-right: 1.5rem;
+    }
+
+    &.img-float-right {
+      float: right;
+      margin-left: 1.5rem;
+    }
+  }
+
+  figure {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+
+    img {
+      margin-bottom: .7rem;
+    }
+
+    &.img-center {
+      display: block;
+      text-align: center;
+    }
+
+    &.img-left {
+      display: block;
+      text-align: left;
+    }
+
+    &.img-right {
+      display: block;
+      text-align: right;
+    }
+
+    &.img-float-left {
+      float: left;
+      margin-right: 1.5rem;
+    }
+
+    &.img-float-right {
+      float: right;
+      margin-left: 1.5rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  a:not(a.btn):not(a.glightbox) {
+    color: $text-color;
+    border-bottom: 1px dotted $dark;
 
     &:hover {
       color: $color-primary;
@@ -167,36 +288,42 @@ a:hover {
 
   ol,
   ul {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
 
     li {
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.62rem;
     }
   }
 
   ul {
     padding-left: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     list-style-type: none;
 
     li {
-      padding-left: 1.5rem;
+      padding-left: 1.25rem;
       position: relative;
 
       &::before {
         position: absolute;
-        content: "";
-        height: 0.5rem;
-        width: 0.5rem;
+        content: '';
+        height: 5px;
+        width: 5px;
         border-radius: 50%;
-        background: $color-primary;
+        background: rgba($color-primary, 0.5);
         left: 3px;
-        top: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
+
   }
 
-  // table
+  .quote i {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
   table {
     width: 100%;
     max-width: 100%;
@@ -206,7 +333,7 @@ a:hover {
 
   table td,
   table th {
-    padding: 0.75rem;
+    padding: .75rem;
     vertical-align: top;
     margin-bottom: 0;
   }
@@ -233,26 +360,41 @@ a:hover {
     margin-bottom: 0;
   }
 
-  // blockquote
+  .accordion-button {
+    font-size: 18px;
+    padding: 15px 20px;
+    background-color: transparent !important;
+  }
+
+  .notices p::before {
+    width: 15px;
+    height: 15px;
+    line-height: 9px;
+  }
+
+  .notices p::adter {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   blockquote {
-    font-size: 1.5rem !important;
     color: $text-color;
-    padding: 1.5rem 3.5rem;
+    padding: 1.25rem 2.5rem;
     border-left: 2px solid $color-primary;
-    margin: 3.5rem 0;
+    margin: 2.5rem 0;
     font-weight: bold;
     background: $light;
 
     p {
+      font-size: 1.25rem !important;
       margin-bottom: 0 !important;
     }
   }
 
-  //code
   pre {
     display: block;
     padding: 9.5px;
-    margin: 0.7rem 0;
+    margin: 10px 0px 0.62rem;
     white-space: pre-wrap;
   }
 
@@ -261,6 +403,7 @@ a:hover {
     font-size: 100%;
   }
 }
+
 
 // pagination
 .pagination {

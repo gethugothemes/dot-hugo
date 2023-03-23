@@ -22,20 +22,32 @@ Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendiss
   This is a simple info.
 {{</ notice >}}
 
+{{< tabs "code" >}}
 
-{{< tabs >}}
-  {{< tab "first" >}}
-   This is first tab
-  {{</ tab >}}
+{{< tab "python" >}}
 
-  {{< tab "second" >}}
-  this is second tab
-  {{</ tab >}}
+```python
+print("Hello World!")
+```
 
-  {{< tab "third" >}}
-  this is third tab
-  {{</ tab >}}
-{{</ tabs >}}
+{{< /tab >}}
+
+{{< tab "R" >}}
+
+```R
+> print("Hello World!")
+```
+
+{{< /tab >}}
+
+{{< tab "Bash" >}}
+
+```Bash
+echo "Hello World!"
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.
 
@@ -43,7 +55,7 @@ Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi vari
 
 Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.
 
-![image example](img-1.jpg "image")
+{{< image src="img-1.jpg" >}}
 
 Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.
 
@@ -51,7 +63,7 @@ Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna vari
 
 In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-```html
+``` html
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

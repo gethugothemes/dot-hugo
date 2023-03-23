@@ -65,11 +65,11 @@ path = "github.com/gethugothemes/hugo-modules/shortcodes/gallery"
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/table-of-contents"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/youtube-lite"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/shortcodes/youtube-lite"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/vimeo-lite"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/shortcodes/vimeo-lite"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/seo-tools/baidu-analytics"
