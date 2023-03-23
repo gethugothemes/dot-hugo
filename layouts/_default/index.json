@@ -15,19 +15,18 @@
 {{- if .Section -}}
 {{- $section := (where site.Pages "Section" .Section) | intersect (where site.Pages ".Title" "!=" .Title) -}}
 {{- $sectionLen := len (where site.Pages "Section" .Section) -}}
-{{- $sectionLenTotal := sub $sectionLen 2 -}}
+{{- $sectionLenTotal := sub $sectionLen 3 -}}
 
 {{- range $index, $page := $section -}}
 {{- if and (not .Params.ignoreSearch) (ne $page.Type "json") -}}
   {
+    "sectionLen": "{{$sectionLen}}",
     "section": "{{$page.Section | humanize}}",
     "url": "{{ $page.Permalink }}",
     "title": "{{ with $page.Params.bannertext }}{{htmlEscape .}}{{else}}{{htmlEscape $page.Title}}{{end}}",
     "description": "{{ htmlEscape .Description}}",
     "searchKeyword": "{{ htmlEscape .Params.searchKeyword}}",
-    "content": {{$page.Plain | jsonify}},
-    "index": {{$index}},
-    "sectionLenTotal": {{$sectionLenTotal}}
+    "content": {{$page.Plain | jsonify}}
   }{{- if eq $item $len -}}{{- if ne $index $sectionLenTotal -}},{{- end -}}{{- else -}},{{- end -}}
 {{- end -}}
 {{- end -}}

@@ -2,6 +2,7 @@
 title: "Frequently Asked Questions"
 draft: false
 layout: "faq"
+ignoreSearch: true
 ---
 
 {{< collapse "Will updates also be free?" >}}
