@@ -59,10 +59,6 @@ link = "plugins/youtube-lite.js"
 [[params.plugins.js]]
 link = "plugins/cookie.js"
 [[params.plugins.js]]
-link = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
-[[params.plugins.js]]
-link = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"
-[[params.plugins.js]]
 link = "plugins/lazy-loader.js"
 [[params.plugins.js]]
 link = "https://cpwebassets.codepen.io/assets/embed/ei.js"
