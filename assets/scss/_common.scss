@@ -404,49 +404,29 @@ a:hover {
   }
 }
 
-
 // pagination
 .pagination {
   justify-content: center;
-  padding: 30px 0;
   margin-bottom: 0;
 
-  .page-item {
-    .page-link {
-      display: inline-block;
-      width: 42px;
-      height: 42px;
-      border-radius: 0;
-      border: 1px solid $border-color;
-      text-align: center;
-      margin: 0 4px;
-      font-weight: 500;
-      color: $dark;
-      padding: 0;
-      line-height: 41px;
-      box-shadow: 0 5px 25px rgba($black, 0.05);
-
-      &:focus,
-      &:hover {
-        box-shadow: none;
-        background: $color-primary;
-        color: $white;
-      }
+  .nav-prev {
+    i {
+      padding-left: 10px;
+      transition: transform 0.4s;
     }
 
-    &:first-child,
-    &:last-child {
-      .page-link {
-        border-radius: 0;
-      }
+    &:hover i {
+      transform: translateX(-5px);
+    }
+  }
+  .nav-next {
+    i {
+      padding-right: 10px;
+      transition: transform 0.4s;
     }
 
-    &.active {
-      .page-link {
-        background: $color-primary;
-        color: $white;
-        border-color: $color-primary;
-      }
+    &:hover i {
+      transform: translateX(5px);
     }
   }
 }
