@@ -15,8 +15,9 @@
         <ul class="list-inline">
           {{ range site.Params.social }}
           <li class="list-inline-item">
-            <a class="text-color d-inline-block p-2" href="{{ .link | safeURL }}" aria-label="{{ .name }}"><i
-                class="{{ .icon }}"></i></a>
+            <a class="text-color d-inline-block p-2" href="{{ .link | safeURL }}" aria-label="{{ .name }}">
+              <span class="visually-hidden">{{.title}}</span>
+              <i class="{{ .icon }}"></i></a>
           </li>
           {{ end }}
         </ul>
