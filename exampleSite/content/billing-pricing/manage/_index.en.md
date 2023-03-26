@@ -1,7 +1,7 @@
 ---
 title: "Manage My Sprint account"
-date: 2018-12-29T11:02:05+06:00
-lastmod: 2020-01-05T10:42:26+06:00
+date: 2022-12-29T11:02:05+06:00
+lastmod: 2023-01-05T10:42:26+06:00
 weight: 2
 draft: false
 # search related keywords
