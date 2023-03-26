@@ -70,10 +70,28 @@
     transform: translateY(-50%);
     border-radius: 4px;
     cursor: text;
+    font-size: 14px;
   }
 
   @include mobile {
     width: 250px;
+  }
+}
+
+.single {
+  .search-wrapper {
+    max-width: 100%;
+
+    input {
+      background-color: $white !important;
+      border: 0px;
+      border-bottom: 1px solid $border-color;
+      border-radius: 0px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -285,12 +303,28 @@ tbody {
 /* /single page */
 
 /* side list */
+.sidebar-wrapper {
+  top: 67px;
+  position: sticky;
+  margin-bottom: 30px;
+}
+
 .sidebar {
   background-color: $white;
   position: sticky;
   top: 50px;
-  margin-bottom: 30px;
   padding: 40px 10px 20px 10px;
+
+  &>.list-styled {
+    padding-left: 40px;
+  }
+
+  .sidelist {
+    &>ul {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+  }
 }
 
 .sidelist {
@@ -298,7 +332,7 @@ tbody {
 }
 
 li.sidelist>a {
-  margin-left: 20px;
+  margin-left: 0px;
   margin-bottom: 10px;
   display: block;
   font-size: 20px;
@@ -356,8 +390,7 @@ li.sidelist li a {
   font-family: 'themify';
   content: "\e6bc";
   font-size: 25px;
-  height: 30px;
-  width: 40px;
+  width: 30px;
   background-color: $white;
   color: inherit;
   text-align: right;
