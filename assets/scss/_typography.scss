@@ -13,7 +13,6 @@ body {
   background-color: $body-bg;
 }
 
-
 P {
   color: $text-color;
   font-size: 15px;
@@ -34,35 +33,75 @@ h6 {
 h1,
 .h1 {
   font-size: 45px;
+
+  @include mobile {
+    font-size: 40px;
+  }
 }
 
-h2,
-.h2 {
-  font-size: 32px;
-}
+// h2,
+// .h2 {
+//   font-size: 32px;
+// }
 
-h3,
-.h3 {
-  font-size: 26px;
-}
+// h3,
+// .h3 {
+//   font-size: 26px;
+// }
 
-h4,
-.h4 {
-  font-size: 20px;
-}
+// h4,
+// .h4 {
+//   font-size: 20px;
+// }
 
-h5,
-.h5 {
-  font-size: 18px;
-}
+// h5,
+// .h5 {
+//   font-size: 18px;
+// }
 
-h6,
-.h6 {
-  font-size: 14px;
-}
-
+// h6,
+// .h6 {
+//   font-size: 14px;
+// }
 
 small,
 .small {
   font-size: 0.8rem;
+}
+
+// List in descending order to prevent extra sort function
+$type-levels: 6, 5, 4, 3, 2;
+
+@each $level in $type-levels {
+  $font-size: $font-size * $font-scale;
+
+  // Output heading styles
+  h#{$level},
+  .h#{$level} {
+    font-size: $font-size;
+    line-height: calc(2px + 2ex + 2px);
+    margin-bottom: 0.65em;
+
+    // responsive for h1, h2, h3, h4
+    &:not(h5, .h5, h6, .h6) {
+      @include desktop {
+        font-size: calc(#{$font-size} * 0.9);
+        margin-bottom: 0.55em;
+      }
+
+      @include tablet {
+        font-size: calc(#{$font-size} * 0.8);
+      }
+    }
+
+    // responsive for h5, h6
+    @include desktop {
+      font-size: calc(#{$font-size} * 0.95);
+      margin-bottom: 0.55em;
+    }
+
+    @include tablet {
+      font-size: calc(#{$font-size} * 0.9);
+    }
+  }
 }

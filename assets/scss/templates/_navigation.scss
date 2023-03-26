@@ -34,6 +34,7 @@
         opacity: 0;
         transform: translateY(20px);
         background: $white;
+        margin: 0px;
 
         &.show {
           visibility: hidden;
