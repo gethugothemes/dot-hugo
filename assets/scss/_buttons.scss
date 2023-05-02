@@ -24,6 +24,7 @@
   background: $color-primary;
   color: $white;
   padding: 16px 44px;
+  font-weight: 600;
 
   &:hover,
   &:active,
@@ -31,6 +32,7 @@
   &:focus,
   &.focus {
     background: rgba($color-primary, 0.8) !important;
+    color: $white;
   }
 }
 
