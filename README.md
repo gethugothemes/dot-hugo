@@ -1,7 +1,7 @@
 
 <h1 align=center>Dot Hugo </h1>
 <p align=center>Dot is a simple Hugo documentation theme with a professional outlook. </p>
-<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/dot" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fdot%2Fsite%2F&form_factor=desktop">Page Speed (96%)</a> </h2>
+<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/dot" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fdot%2Fsite%2F&form_factor=desktop">Page Speed (96%)🚀</a> </h2>
 
 
 <p align=center>
@@ -31,18 +31,29 @@
 
 ---
 
-## Key Features
+## 🔑Key Features
+- 📄 8+ Pre-designed pages
+- 🈳Multiple language support (Fr, En)
+- 〽️Google analytics  support
+- 📂CSS and Js bundle with hugo pipe
+- 👉Color and fonts variable in config file
+- 📨Contact form Support
+- ⚡Google page speed optimized ( 96% )
+- 👉Open graph meta tag
+- 👉Twitter card meta tag
 
-- Multiple language support (Fr, En)
-- Google analytics  support
-- CSS and Js bundle with hugo pipe
-- Color and fonts variable in config file
-- Contact form Support
-- Google page speed optimized ( 96% )
-- Open graph meta tag
-- Twitter card meta tag
+## 📄 8+ Pre-Designed Pages
 
-## Local development
+- 🏠Home
+- 👤About
+- 📞Contact
+- ❔Faq Page
+- 🌟Features Page
+- 🔧Installation Page
+- 💰Pricing Page
+- ❔404 Page
+
+## 🛠️Local development
 
 ```bash
 # clone the repository
@@ -57,7 +68,7 @@ $ hugo server --themesDir ../..
 
 Or Check out [Full Documentation](https://docs.gethugothemes.com/dot/?ref=github).
 
-## Content Management System
+## 🔧Content Management System
 
 [![import to
 Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=themefisher/dot-hugo&engine=hugo&version=0.87.0)
@@ -68,27 +79,27 @@ you will be able to edit and preview your site ✨.
 
 Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
 
-## Deployment and hosting
+## 🔧Deployment and hosting
 
 [![Deploy to
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/themefisher/dot-hugo)
 
 Follow the steps.
 
-## Prefer a video? (Hugo + Netlify + Forestry)
+## 📹Prefer a video? (Hugo + Netlify + Forestry)
 
 Build your website with **Dot Hugo** theme by following these easy steps (No Coding Required!)
 [Video Tutorial](https://youtu.be/ResipmZmpDU).
 
 <!-- reporting issue -->
-## Reporting Issues
+## 🐞Reporting Issues
 
 We use GitHub Issues as the official bug tracker for the dot Template. Please Search [existing
 issues](https://github.com/themefisher/dot-hugo/issues). Someone may have already reported the same problem.
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/themefisher/dot-hugo/issues).
 
-## Submit Your Website To Our Showcase
+## 📱Submit Your Website To Our Showcase
 
 Are you using Dot Hugo theme? Submit it to our [showcase](https://gethugothemes.com/showcase). 
 
@@ -100,7 +111,7 @@ View all the websites powered by Dot Hugo from [here](https://gethugothemes.com/
 
 
 <!-- licence -->
-## License
+## 📝License
 
 Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
 [Gethugothemes](https://gethugothemes.com)
@@ -111,7 +122,7 @@ Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed 
 share those images.
 
 <!-- resources -->
-## Special Thanks
+## 👍Special Thanks
 
 - [Bootstrap](https://getbootstrap.com)
 - [Jquery](https://jquery.com)
@@ -120,7 +131,7 @@ share those images.
 - [Google Fonts](https://fonts.google.com/)
 - [All Contributors](https://github.com/themefisher/dot-hugo/graphs/contributors)
 
-## Hire Us
+## 👨‍💻Hire Us
 
 Besides developing unique, blazing-fast Hugo themes, we also provide customized services. We specialize in creating affordable, high-quality static websites based on Hugo.
 
@@ -129,7 +140,7 @@ Check Our
 [Services](https://gethugothemes.com/services/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme)
 
 <!-- premium themes -->
-## Premium Themes By Us
+## 🔥Premium Themes By Us
 
 | [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://demo.gethugothemes.com/thumbnails/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/academia.png)](https://gethugothemes.com/products/academia/) |
 |:---:|:---:|:---:|
