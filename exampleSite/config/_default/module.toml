@@ -71,17 +71,17 @@ path = "github.com/gethugothemes/hugo-modules/shortcodes/table-of-contents"
 # [[imports]]
 # path = "github.com/gethugothemes/hugo-modules/shortcodes/vimeo-lite"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/seo-tools/baidu-analytics"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/seo-tools/baidu-analytics"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/seo-tools/matomo-analytics"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/seo-tools/matomo-analytics"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/seo-tools/plausible-analytics"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/seo-tools/plausible-analytics"
 
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/seo-tools/counter-analytics"
+# [[imports]]
+# path = "github.com/gethugothemes/hugo-modules/seo-tools/counter-analytics"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager"

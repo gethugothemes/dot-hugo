@@ -1,7 +1,7 @@
 #################### default parameters ################################
-# favicon
+# favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
-# logo
+# logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
 logo = ""
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
@@ -10,23 +10,17 @@ logo_width = "100px"
 logo_webp = true
 # logo text will only show when logo is missing.
 logo_text = "Dot"
-
-# purgeCSS
-purge_css = true
-
 # Main Sections
 mainSections = ["blog"]
-
-# image gallery shortcode
-image_gallery = true
-
 # contact form action
 contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
-
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "" # example: G-XXXXXXXXXX
 google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
-
+# purgeCSS
+purge_css = true
+# image gallery shortcode
+image_gallery = true
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 
@@ -34,67 +28,34 @@ custom_script = ""
 theme_copyright = true
 copyright = "Copyright by your company"
 
-# Preloader
-[preloader]
-enable = true
-preloader = "" # use jpg, png, svg or gif format.
-
 # contact info
 [contact_info]
 address = "9567 Turner Trace Apt. BC C3G8A4"
 mobile = "+211234565523"
 email = "info@email.com"
 
-# Crisp Chat
+# preloader
+# module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
+[preloader]
+enable = true
+preloader = "" # use jpg, png, svg or gif format.
+
+# crisp chat - module: https://github.com/gethugothemes/hugo-modules/tree/master/components/crisp-chat
 [crisp_chat]
 enable = false
 crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code with yours
 # Check this video tutorial to get your crisp website ID - https://www.youtube.com/watch?v=nW5UX6iVdFc
 
-# Valine Comment
-[valine_comment]
-enable = false
-appId = ""     # replace this code with yours [ex: QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI]
-appKey = ""    # replace this code with yours [ex: WBmoGyJtbqUswvfLh6L8iEBr]
-# language = "change language translation from `i18n`"
-avatar = ""      # see : https://valine.js.org/en/avatar.html
-pageSize = 10    # will show 10 comments per page
-visitor = true
-highlight = true # Code highlighting
-recordIP = true  # Record reviewer IP.
-enableQQ = false # https://valine.js.org/en/configuration.html#enableQQ
-# serverURLs = "" # https://leancloud.your_website.com
-# Check Valine's official documentation here - https://valine.js.org/en/configuration.html
-
 # seo meta data for OpenGraph / Twitter Card
+# seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = ["Boilerplate", "Hugo", "Themefisher", "GetHugoThemes"]
 description = "This is meta description"
 author = "Themefisher"
 image = "images/favicon.png"      # this image will be used as fallback if a page has no image of its own
 
-# matomo tracking: see https://matomo.org/
-[matomo]
-enable = false
-url = ""       # your matomo url
-id = ""        # your matomo id
-
-# baidu analytics: see https://tongji.baidu.com/
-[baidu]
-enable = false
-analytics_id = "" # Your ID
-
-# plausible analytics: see https://plausible.io/
-[plausible]
-enable = false
-domain = ""    # yourdomain.com
-
-# counter analytics: see https://counter.dev/setup.html
-[counter]
-enable = false
-username = ""  # your username
-
 # site verifications
+# verification module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/site-verifications
 [site_verification]
 google = ""   # Your verification code
 bing = ""     # Your verification code
@@ -103,6 +64,7 @@ facebook = "" # Your verification code
 mastodon = "" # Your verification code
 
 # cookies
+# cookies module: https://github.com/gethugothemes/hugo-modules/tree/master/components/cookie-consent
 [cookies]
 enable = true
 expire_days = 2
