@@ -2,8 +2,8 @@
 
 # default versions
 NODE_VERSION='18.16.1';
-GO_VERSION='1.20.5';
-HUGO_VERSION='0.115.1';
+GO_VERSION='1.22.0';
+HUGO_VERSION='0.123.8';
 
 # install Node.js
 # echo "Installing Node.js $NODE_VERSION..."
