@@ -22,6 +22,7 @@
   {{ end }}
 {{ end }}
 
+
 <!-- main script -->
 {{ $scripts = $scripts | append (resources.Get "js/script.js") }}
 {{ $scripts = $scripts | resources.Concat "js/scripts.js" }}
@@ -47,8 +48,10 @@
 <!-- progressive web app -->
 {{ partialCached "pwa.html" . }}
 
+
 <!-- cookie consent -->
 {{ partialCached "cookie-consent.html" . }}
+
 
 <!-- google adsense -->
 {{ partialCached "adsense-script.html" . }}

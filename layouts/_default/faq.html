@@ -1,19 +1,17 @@
 {{ define "main" }}
-
-<!-- faq -->
-<section class="section pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-title text-primary">{{ .Title }}</h2>
-        <!-- accordion -->
-        <div id="accordion-wrapper">
-          {{.Content}}
+  <!-- faq -->
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-title text-primary">{{ .Title }}</h2>
+          <!-- accordion -->
+          <div id="accordion-wrapper">
+            {{ .Content }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- /faq -->
-
+  </section>
+  <!-- /faq -->
 {{ end }}

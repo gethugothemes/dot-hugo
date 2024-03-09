@@ -6,19 +6,28 @@
         <p>
           {{ site.Params.copyright | markdownify }}
           {{ if site.Params.theme_copyright }}
-          | Theme by
-          <a target="_blank" rel="noopener noreferrer" href="https://gethugothemes.com/">GetHugoThemes</a>
+            | Theme by
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://gethugothemes.com/">
+              GetHugoThemes
+            </a>
           {{ end }}
         </p>
       </div>
       <div class="col-md-4 text-center text-md-end">
         <ul class="list-inline">
           {{ range site.Params.social }}
-          <li class="list-inline-item">
-            <a class="text-color d-inline-block p-2" href="{{ .link | safeURL }}" aria-label="{{ .name }}">
-              <span class="visually-hidden">{{.title}}</span>
-              <i class="{{ .icon }}"></i></a>
-          </li>
+            <li class="list-inline-item">
+              <a
+                class="text-color d-inline-block p-2"
+                href="{{ .link | safeURL }}"
+                aria-label="{{ .name }}">
+                <span class="visually-hidden">{{ .title }}</span>
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
           {{ end }}
         </ul>
       </div>

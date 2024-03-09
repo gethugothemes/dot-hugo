@@ -1,7 +1,10 @@
 <!-- DNS preconnect -->
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="preconnect" href="//ajax.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin="anonymous" />
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="preconnect" href="//cdnjs.cloudflare.com" />
 <link rel="preconnect" href="//www.googletagmanager.com" />
@@ -21,7 +24,12 @@
 {{ $styles := slice }}
 {{ range site.Params.plugins.css }}
   {{ if findRE "^http" .link }}
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="{{ .link | relURL }}" {{ .attributes | safeHTMLAttr }} />
+    <link
+      crossorigin="anonymous"
+      media="all"
+      rel="stylesheet"
+      href="{{ .link | relURL }}"
+      {{ .attributes | safeHTMLAttr }} />
   {{ else }}
     {{ $styles = $styles | append (resources.Get .link) }}
   {{ end }}
