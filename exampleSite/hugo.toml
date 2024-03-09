@@ -1,7 +1,122 @@
-# DON'T REMOVE THIS FILE.
-# This file is for render site varibles and plugins
-#
-# The actual configuration files are stored in the `config/_default/` folder.
+######################## default configuration ####################
+# The base URL of your site (required). This will be prepended to all relative URLs.
+baseURL = "https://demo.gethugothemes.com/dot/site/"
+# Title of your website (required).
+title = "Dot"
+# Your theme name
+theme = "dot-hugo"
+# Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+timeZone = "America/New_York"
+# post pagination
+paginate = 2 # see https://gohugo.io/extras/pagination/
+# post excerpt
+summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+# disable language
+disableLanguages = [
+] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
+hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
+# default language
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+########################## Permalinks ############################
+[permalinks.page]
+"pages" = "/:slugorfilename/"
+
+########################### Services #############################
+[services]
+[services.googleAnalytics]
+ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
+
+[services.disqus]
+shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+
+############################# Modules ############################
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/watching/hugo_stats.json"
+
+############################# Build ##############################
+[build]
+writeStats = true
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/watching/hugo_stats\.json'
+target = 'style\.css'
+[[build.cachebusters]]
+source = '(postcss)\.config\.js'
+target = 'css'
+[[build.cachebusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = 'js'
+[[build.cachebusters]]
+source = 'assets/.*\.(css|scss|sass)'
+target = 'css'
+[[build.cachebusters]]
+source = 'data/.*\.(.*)$'
+target = 'css'
+[[build.cachebusters]]
+source = 'assets/.*\.(.*)$'
+target = '$1'
+
+############################# Outputs ############################
+[outputs]
+home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+
+############################# Imaging ##############################
+[imaging]
+# See https://github.com/disintegration/imaging
+# Default JPEG or WebP quality setting. Default is 75.
+quality = 90
+
+############################# Caches ###############################
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+
+############################# Markup ###############################
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 5
+ordered = true
+
+########################### Media types ###########################
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+########################### Output Format ##########################
+[outputFormats]
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"
+
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
 
 
 ######################### site variables ##############################
@@ -48,6 +163,8 @@ font_icon = "Font Awesome 6 Free"           # https://fontawesome.com/v6/icons
 link = "plugins/themify-icons/icons.css"
 
 # JS Plugins
+[[params.plugins.js]]
+link = "js/search.js"
 # [[params.plugins.js]]
 # link = "plugins/jquery/jquery.js"
 [[params.plugins.js]]
