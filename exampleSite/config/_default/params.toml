@@ -10,8 +10,6 @@ logo_width = "100px"
 logo_webp = true
 # logo text will only show when logo is missing.
 logo_text = "Dot"
-# Main Sections
-mainSections = ["blog"]
 # contact form action
 contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
@@ -33,6 +31,14 @@ copyright = "Copyright by your company"
 address = "9567 Turner Trace Apt. BC C3G8A4"
 mobile = "+211234565523"
 email = "info@email.com"
+
+# search
+# module - https://github.com/gethugothemes/hugo-modules/tree/master/search
+[search]
+enable = true
+primary_color = "#02007e"
+include_all_sections = true # if `include_all_sections` is true, then comment out the `include_sections`
+show_image = false
 
 # preloader
 # module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
