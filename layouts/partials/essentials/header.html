@@ -66,37 +66,38 @@
           {{ end }}
         </ul>
         <!-- Language List -->
-        {{- if site.IsMultiLingual }}
-          <select
-            class="lang-list {{ if not .IsHome }}dark mb-3 mb-md-0{{ end }}"
-            id="select-language"
-            onchange="location = this.value;">
-            {{ $siteLanguages := site.Languages }}
-            {{ $pageLang := .Page.Lang }}
-            {{ range .Page.AllTranslations }}
-              {{ $translation := . }}
-              {{ range $siteLanguages }}
-                {{ if eq $translation.Lang .Lang }}
-                  {{ $selected := false }}
-                  {{ if eq $pageLang .Lang }}
-                    <option
-                      id="{{ $translation.Language }}"
-                      value="{{ $translation.Permalink }}"
-                      selected>
-                      {{ .LanguageName }}
-                    </option>
-                  {{ else }}
-                    <option
-                      id="{{ $translation.Language }}"
-                      value="{{ $translation.Permalink }}">
-                      {{ .LanguageName }}
-                    </option>
-                  {{ end }}
+        {{- if hugo.IsMultilingual }}
+        <select
+          class="lang-list {{ if not .IsHome }}dark mb-3 mb-md-0{{ end }}"
+          id="select-language"
+          onchange="location = this.value;">
+          {{ $siteLanguages := site.Languages }}
+          {{ $pageLang := .Page.Lang }}
+          {{ range .Page.AllTranslations }}
+            {{ $translation := . }}
+            {{ range $siteLanguages }}
+              {{ if eq $translation.Lang .Lang }}
+                {{ $selected := false }}
+                {{ if eq $pageLang .Lang }}
+                  <option
+                    id="{{ $translation.Language }}"
+                    value="{{ $translation.Permalink }}"
+                    selected>
+                    {{ .LanguageName }}
+                  </option>
+                {{ else }}
+                  <option
+                    id="{{ $translation.Language }}"
+                    value="{{ $translation.Permalink }}">
+                    {{ .LanguageName }}
+                  </option>
                 {{ end }}
               {{ end }}
             {{ end }}
-          </select>
-        {{ end }}
+          {{ end }}
+        </select>
+      {{ end }}
+      
       </div>
     </div>
   </nav>
