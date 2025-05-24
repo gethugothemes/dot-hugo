@@ -21,7 +21,7 @@ defaultContentLanguageInSubdir = false
 
 ########################## Permalinks ############################
 [permalinks.page]
-"pages" = "/:slugorfilename/"
+"pages" = "/:slugorcontentbasename/"
 
 ########################### Services #############################
 [services]

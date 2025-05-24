@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # default versions
-NODE_VERSION='18.16.1';
-GO_VERSION='1.22.0';
-HUGO_VERSION='0.123.8';
+NODE_VERSION='20.10.0';
+GO_VERSION='1.24.3';
+HUGO_VERSION='0.147.2';
 
 # install Node.js
 # echo "Installing Node.js $NODE_VERSION..."
