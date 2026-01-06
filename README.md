@@ -136,6 +136,6 @@ Check Our
 <!-- premium themes -->
 ## 💎Premium Themes By Us
 
-| [![Mega-Bundle-HUGO]https://assets.teamosis.com/thumbs/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://assets.teamosis.com/thumbs/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://assets.teamosis.com/thumbs/academia.png)](https://gethugothemes.com/products/academia/) |
+| [![Mega-Bundle-HUGO](https://assets.teamosis.com/thumbs/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://assets.teamosis.com/thumbs/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://assets.teamosis.com/thumbs/academia.png)](https://gethugothemes.com/products/academia/) |
 |:---:|:---:|:---:|
 | **Get 55+ Premium Hugo Themes Bundle** | **Godocs** | **Academia** |
