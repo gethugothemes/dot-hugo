@@ -71,10 +71,19 @@ Or Check out [Full Documentation](https://docs.gethugothemes.com/dot/?ref=github
 
 ## 🔧Deployment and hosting
 
-[![Deploy to
-Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/themefisher/dot-hugo)
+<!-- edit with sitepins -->
 
-Follow the steps.
+## 📝 Edit Content with CMS
+
+This template comes pre-configured with [**Sitepins**](https://sitepins.com), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
+
+**How to get started:**
+
+Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.
+
+  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Dot%20Hugo&repository=https://github.com/gethugothemes/dot-hugo/">
+    <img src="https://sitepins.com/button.svg" alt="Edit with Sitepins">
+  </a>
 
 <!-- reporting issue -->
 ## 🐞Reporting Issues
@@ -127,6 +136,6 @@ Check Our
 <!-- premium themes -->
 ## 💎Premium Themes By Us
 
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://demo.gethugothemes.com/thumbnails/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://demo.gethugothemes.com/thumbnails/academia.png)](https://gethugothemes.com/products/academia/) |
+| [![Mega-Bundle-HUGO]https://assets.teamosis.com/thumbs/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=dot_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Godocs](https://assets.teamosis.com/thumbs/godocs.png)](https://gethugothemes.com/products/godocs/) | [![wishfund](https://assets.teamosis.com/thumbs/academia.png)](https://gethugothemes.com/products/academia/) |
 |:---:|:---:|:---:|
 | **Get 55+ Premium Hugo Themes Bundle** | **Godocs** | **Academia** |
