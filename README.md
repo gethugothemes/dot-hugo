@@ -72,13 +72,13 @@ Or Check out [Full Documentation](https://docs.gethugothemes.com/dot/?ref=github
 
 ## 📝 Edit Content with CMS
 
-This template comes pre-configured with [**Sitepins**](https://sitepins.com), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
+This template comes pre-configured with [**Sitepins**](https://sitepins.com/?aff=ghtgithub), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
 
 **How to get started:**
 
 Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.
 
-  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Dot%20Hugo&repository=https://github.com/gethugothemes/dot-hugo/">
+  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Dot%20Hugo&repository=https://github.com/gethugothemes/dot-hugo/?aff=ghtgithub">
     <img src="https://sitepins.com/button.svg" alt="Edit with Sitepins">
   </a>
 
