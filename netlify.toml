@@ -1,8 +1,8 @@
 [build]
 publish = "public"
-command = "yarn project-setup && yarn build"
+command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm project-setup && pnpm build"
 
 [build.environment]
-HUGO_VERSION = "0.147.2"
-GO_VERSION = "1.24.3"
+HUGO_VERSION = "0.163.3"
+GO_VERSION = "1.25.5"
 HUGO_BASEURL = "/"

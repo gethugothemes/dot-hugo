@@ -15,9 +15,9 @@ permissions:
 # Environment variables available to all jobs and steps in this workflow
 env:
   HUGO_ENV: production
-  HUGO_VERSION: "0.147.2"
-  GO_VERSION: "1.24.3"
-  NODE_VERSION: "18.15.0"
+  HUGO_VERSION: "0.163.3"
+  GO_VERSION: "1.25.5"
+  NODE_VERSION: "24.18.0"
   TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
   TINA_TOKEN: ${{ vars.TINA_TOKEN }}
 
@@ -49,13 +49,16 @@ jobs:
           go version
 
       - name: Setup Project
-        run: npm run project-setup
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm run project-setup
 
-      - name: Install npm dependencies
-        run: npm install
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Publish to GitHub Pages
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

@@ -77,6 +77,11 @@ expire_days = 2
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"
 
+[open_remark]
+enable = true
+site_key = "cmqnb3wd5000104kww7862ku4"
+embed_url = "https://open-remark.zeon.studio/embed.js"
+
 ############################# social site ########################
 [[social]]
 title = "facebook"

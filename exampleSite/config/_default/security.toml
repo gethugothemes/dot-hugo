@@ -1,0 +1,6 @@
+[node]
+  [node.permissions]
+    allowAddons = ["postcss"]
+    allowChildProcess = ["postcss"]
+    allowRead = [".", "..", "/"]
+    allowWorker = ["postcss"]

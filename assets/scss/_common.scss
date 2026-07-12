@@ -88,20 +88,20 @@ a:hover {
 .overlay {
   position: relative;
 
-  &>.container {
+  & > .container {
     position: relative;
     z-index: 1;
   }
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: $color-primary;
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -154,50 +154,63 @@ a:hover {
   box-shadow: none !important;
 }
 
+.accordion {
+  border-radius: 0px;
+  margin-bottom: 10px;
+  background-color: $white;
+  border: 0 !important;
+  box-shadow: 0px 0px 5px rgba($color: $text-color, $alpha: 0.1) !important;
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  &-header {
+    box-shadow: none;
+    padding: 6px 18px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px !important;
+    width: 100%;
+    text-align: left;
+    border: 0;
+  }
+
+  &-icon {
+    color: $text-dark;
+    transition: transform 0.3s ease;
+  }
+
+  &-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    p {
+      padding-block: 10px;
+      font-size: 17px;
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  &.active {
+    .accordion-content {
+      max-height: 1200px;
+    }
+
+    .accordion-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 // content style
 .content {
-
   * {
     word-break: break-word;
     overflow-wrap: break-word;
-  }
-
-  .accordion {
-    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
-    &-item {
-      background-color: $white !important;
-    }
-
-    p {
-      margin-bottom: 0px;
-    }
-
-    &-item {
-      border-radius: 0px;
-      margin-bottom: 10px;
-    }
-
-    &-button {
-      box-shadow: none;
-      padding: 6px 18px;
-      color: $text-dark;
-      background-color: transparent;
-
-      &::after {
-        transform: scale(0.8);
-      }
-
-      &[aria-expanded="true"] {
-        &::after {
-          transform: scale(0.8) rotate(180deg);
-        }
-      }
-    }
-
-    &-body {
-      border-top: 1px solid $border-color;
-    }
   }
 
   img {
@@ -240,7 +253,7 @@ a:hover {
     margin-bottom: 1.5rem;
 
     img {
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
     }
 
     &.img-center {
@@ -310,7 +323,7 @@ a:hover {
 
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         height: 5px;
         width: 5px;
         border-radius: 50%;
@@ -320,7 +333,6 @@ a:hover {
         transform: translateY(-50%);
       }
     }
-
   }
 
   .quote i {
@@ -337,7 +349,7 @@ a:hover {
 
   table td,
   table th {
-    padding: .75rem;
+    padding: 0.75rem;
     vertical-align: top;
     margin-bottom: 0;
   }

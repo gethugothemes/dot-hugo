@@ -2,7 +2,7 @@
 ignoreSearch: true
 
 # don't create a separete page
-_build:
+build:
   list: false
   render: never
   publishResources: false

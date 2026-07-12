@@ -39,9 +39,9 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'notice';
 
-@import 'tabs';
+@import 'tab';
 
-@import 'collapse';
+@import 'accordion';
 
 @import 'social-share';
 
@@ -52,5 +52,5 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 @import 'search';
 
 {{ if site.Params.image_gallery }}
-@import 'gallery';
+@import 'gallery-slider';
 {{ end }}

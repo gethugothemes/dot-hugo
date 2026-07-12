@@ -145,23 +145,23 @@ echo "Hello World!"
 
 ### Collapse
 
-{{< collapse "Why should you need to do this?" >}}
+{{< accordion title="Why should you need to do this?" >}}
 ##### This is title
 
 elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
-{{< /collapse >}}
+{{< /accordion >}}
 
-{{< collapse "How can I adjust Horizontal centering" >}}
+{{< accordion title="How can I adjust Horizontal centering" >}}
 ##### This is title
 
 elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
-{{< /collapse >}}
+{{< /accordion >}}
 
-{{< collapse "Should you use Negative margin?" >}}
+{{< accordion title="Should you use Negative margin?" >}}
 ##### This is title
 
 elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.elit sit amet consectetur adipisicing elit. consectetur dolor adipisicing elit. sit amet consectetur dolor sit amet consectetur adipisicing elit.
-{{< /collapse >}}
+{{< /accordion >}}
 
 <hr>
 

@@ -2,14 +2,14 @@
 # English language
 # ------------------------------------------------------------
 [en]
-languageName = "En"
-languageCode = "en-us"
+label = "En"
+locale = "en-us"
 weight = 1
 
 # ------------------------------------------------------------
 # French language
 # ------------------------------------------------------------
 [fr]
-languageName = "Fr"
-languageCode = "fr-fr"
+label = "Fr"
+locale = "fr-fr"
 weight = 2

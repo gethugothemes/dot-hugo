@@ -1,2 +1,20 @@
 // This file is empty within the template
 // You can use it to override CSS from within your project
+
+// tab module (hugo-modules/tab) theme integration
+.tab-nav-item {
+  background-color: $light;
+  color: $text-dark;
+  border: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-nav-item.active {
+  background-color: $color-primary;
+  color: $white;
+  border-bottom: 3px solid $color-primary;
+}
+
+.tab-content-panel {
+  padding: 1rem 0;
+}

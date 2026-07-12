@@ -1,6 +1,6 @@
 [hugoVersion]
 extended = true
-min = "0.147.2"
+min = "0.163.3"
 
 [[imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
@@ -30,9 +30,6 @@ path = "github.com/gethugothemes/hugo-modules/components/render-link"
 path = "github.com/gethugothemes/hugo-modules/icons/themify-icons"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/components/valine-comment"
-
-[[imports]]
 path = "github.com/gethugothemes/hugo-modules/components/crisp-chat"
 
 [[imports]]
@@ -42,31 +39,28 @@ path = "github.com/gethugothemes/hugo-modules/pwa"
 path = "github.com/gethugothemes/hugo-modules/images"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/buttons"
+path = "github.com/gethugothemes/hugo-modules/shortcodes/button"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/codepen"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/collapse"
+path = "github.com/gethugothemes/hugo-modules/accordion"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/notice"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/video"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/tabs"
+path = "github.com/gethugothemes/hugo-modules/tab"
 
 # [[imports]]
 # path = "github.com/gethugothemes/hugo-modules/shortcodes/image"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/gallery"
+path = "github.com/gethugothemes/hugo-modules/gallery-slider"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/table-of-contents"
+path = "github.com/gethugothemes/hugo-modules/table-of-contents"
 
 # [[imports]]
 # path = "github.com/gethugothemes/hugo-modules/shortcodes/youtube-lite"
@@ -103,3 +97,6 @@ path = "github.com/gethugothemes/hugo-modules/adsense"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/videos"
+
+[[imports]]
+path = "github.com/gethugothemes/hugo-modules/components/open-remark"

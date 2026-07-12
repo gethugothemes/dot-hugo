@@ -71,25 +71,24 @@
           class="lang-list {{ if not .IsHome }}dark mb-3 mb-md-0{{ end }}"
           id="select-language"
           onchange="location = this.value;">
-          {{ $siteLanguages := site.Languages }}
           {{ $pageLang := .Page.Lang }}
           {{ range .Page.AllTranslations }}
             {{ $translation := . }}
-            {{ range $siteLanguages }}
-              {{ if eq $translation.Lang .Lang }}
+            {{ range hugo.Sites }}
+              {{ if eq $translation.Lang .Language.Lang }}
                 {{ $selected := false }}
-                {{ if eq $pageLang .Lang }}
+                {{ if eq $pageLang .Language.Lang }}
                   <option
                     id="{{ $translation.Language }}"
                     value="{{ $translation.Permalink }}"
                     selected>
-                    {{ .LanguageName }}
+                    {{ .Language.Label }}
                   </option>
                 {{ else }}
                   <option
                     id="{{ $translation.Language }}"
                     value="{{ $translation.Permalink }}">
-                    {{ .LanguageName }}
+                    {{ .Language.Label }}
                   </option>
                 {{ end }}
               {{ end }}
