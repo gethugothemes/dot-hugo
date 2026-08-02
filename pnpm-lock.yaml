@@ -10,13 +10,13 @@ importers:
     devDependencies:
       '@fullhuman/postcss-purgecss':
         specifier: ^5.0.0
-        version: 5.0.0(postcss@8.5.16)
+        version: 5.0.0(postcss@8.5.18)
       postcss:
-        specifier: ^8.4.21
-        version: 8.5.16
+        specifier: ^8.5.18
+        version: 8.5.18
       postcss-cli:
         specifier: ^10.1.0
-        version: 10.1.0(postcss@8.5.16)
+        version: 10.1.0(postcss@8.5.18)
       prettier:
         specifier: ^2.8.4
         version: 2.8.8
@@ -205,8 +205,8 @@ packages:
     resolution: {integrity: sha512-7o1wEA2RyMP7Iu7GNba9vc0RWWGACJOCZBJX2GJWip0ikV+wcOsgVuY9uE8CPiyQhkGFSlhuSkZPavN7u1c2Fw==}
     engines: {node: '>=10'}
 
-  nanoid@3.3.15:
-    resolution: {integrity: sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==}
+  nanoid@3.3.16:
+    resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -261,8 +261,8 @@ packages:
     resolution: {integrity: sha512-bIoJLOmjCO1S9XdY/DcnR5hJxvrDir1PbGChrzXG3vw0/FOliy/fA3dmdhQ441kah4gKv+TwckGzex6wNS5cnQ==}
     engines: {node: '>=4'}
 
-  postcss@8.5.16:
-    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
+  postcss@8.5.18:
+    resolution: {integrity: sha512-xdB1oSLHbz1vRWgCDalrCqEFTWzFlhqFC5tIHLMOSUIjhm3XXQ1qrFy8S/ESr1JYRRXqM3c1QFiMZUJdUTqyMQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier-plugin-go-template@0.0.13:
@@ -369,9 +369,9 @@ packages:
 
 snapshots:
 
-  '@fullhuman/postcss-purgecss@5.0.0(postcss@8.5.16)':
+  '@fullhuman/postcss-purgecss@5.0.0(postcss@8.5.18)':
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.18
       purgecss: 5.0.0
 
   '@nodelib/fs.scandir@2.1.5':
@@ -542,7 +542,7 @@ snapshots:
     dependencies:
       brace-expansion: 2.1.2
 
-  nanoid@3.3.15: {}
+  nanoid@3.3.16: {}
 
   normalize-path@3.0.0: {}
 
@@ -558,7 +558,7 @@ snapshots:
 
   pify@2.3.0: {}
 
-  postcss-cli@10.1.0(postcss@8.5.16):
+  postcss-cli@10.1.0(postcss@8.5.18):
     dependencies:
       chokidar: 3.6.0
       dependency-graph: 0.11.0
@@ -566,9 +566,9 @@ snapshots:
       get-stdin: 9.0.0
       globby: 13.2.2
       picocolors: 1.1.1
-      postcss: 8.5.16
-      postcss-load-config: 4.0.2(postcss@8.5.16)
-      postcss-reporter: 7.1.0(postcss@8.5.16)
+      postcss: 8.5.18
+      postcss-load-config: 4.0.2(postcss@8.5.18)
+      postcss-reporter: 7.1.0(postcss@8.5.18)
       pretty-hrtime: 1.0.3
       read-cache: 1.0.0
       slash: 5.1.0
@@ -576,17 +576,17 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  postcss-load-config@4.0.2(postcss@8.5.16):
+  postcss-load-config@4.0.2(postcss@8.5.18):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.9.0
     optionalDependencies:
-      postcss: 8.5.16
+      postcss: 8.5.18
 
-  postcss-reporter@7.1.0(postcss@8.5.16):
+  postcss-reporter@7.1.0(postcss@8.5.18):
     dependencies:
       picocolors: 1.1.1
-      postcss: 8.5.16
+      postcss: 8.5.18
       thenby: 1.4.1
 
   postcss-selector-parser@6.1.4:
@@ -594,9 +594,9 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.5.16:
+  postcss@8.5.18:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -613,7 +613,7 @@ snapshots:
     dependencies:
       commander: 9.5.0
       glob: 8.1.0
-      postcss: 8.5.16
+      postcss: 8.5.18
       postcss-selector-parser: 6.1.4
 
   queue-microtask@1.2.3: {}
